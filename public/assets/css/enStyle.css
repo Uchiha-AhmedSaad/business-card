@@ -1,0 +1,391 @@
+body{
+    direction: ltr;
+}
+.top_header .header_links,.upper_nav .upper_nav_row .company_logo .nav_logo,.home_content .doc_card_title,.home_content .home_special_ads .special_ads_title h4,.home_content .card_holder .job_ad,footer .footer_links .copy,.path .path_row,.about_us p,.my-account .my-account-navs .navs-header,.my-account .my-account-navs a,.my-account .new-ads-most-search .most-search-header h5,.my-account .account-info-form,.my-account .most-search-header #job_date_span,.my-account .most-search-header .job_details,.my-account .most-search-header .job_location,.my-account .favorite_card .card_cont .exp_date,.my-account .fav_jobcard_dropdown .click_btn,.search_jobs .job_cards .job_card,.search_jobs .job_describtion p,.my-account .most-search-header .notify_container,.add_card .subscribe_row,.add_job .job_details_container,.card_details_content .client_title,.card_details_content .client_details,.add_card .card_cont .card_title,.login .login-form .code_label,.contact_us .contact_us_row,.doctor_jobs .job_card,.forget_password .login-form .forget_text,.forget_label,.job_details_container .job_describtion,.job_details_container .client_title,.job_details_container .client_details,.job_details_container .employee_details,.payment .payment_collapse,.payment .bank-account,.search
+{
+   text-align: left;    
+}
+.top_header .header_social,.upper_nav .upper_nav_row .nav_links,.home_content .more_cards,.home_content .card_holder .job_ad .contact,footer .footer_social,.upper_nav .upper_nav_row .login_welcome,.my-account .most-search-header .my_cards .card_edit_btn,.my-account .most-search-header .edit_btn,.my-account .most-search-header .remove_btn,.my-account .card_cont .remove_icon,.contact,.card_details_content .add_contact_btn,.card_details_content .report_btn,.login .login-form .forget_link,.job_details_container .rep_text
+{
+    text-align: right;
+}
+
+.filter_search .filter_container .filter_btn,.doctor_jobs .job_ad_img,.doctor_jobs .job_ad .job_ad_details p,.job_details_container .job_ad_img,.job_details_container .job_ad .job_ad_details p,.job_details_container .fav_bt
+{
+    text-align: left;
+}
+.doctor_jobs .job_ad .job_ad_details{
+    margin-left: 20%;
+    margin-right: 0%;
+}
+.job_details_container .job_ad .job_ad_details{
+    margin-left: 10%;
+    margin-right: 0%;
+}
+.doctor_jobs .job_ad_img span, .job_details_container .job_ad_img span{
+    margin-left: 25px;
+    margin-right: 0px;
+}
+.home_content .special_cards_title h4,.doctor_cards .special_cards_title h3
+{
+    text-align: left;
+    padding-left: 5%;
+}
+footer ul
+{
+    text-align: right;
+    direction: rtl;
+}
+.my-account .my-account-navs .nav-link i,.add_job .job_details_container .ad_type input
+{
+    margin-left: 0px;
+}
+.my-account .tab-content .account-info-form .personal-img .per
+{
+    left: 100px;
+}
+.en_fav_report,.card_details_fav,.doctor_jobs .fav_report_btn,.home_content .fav_report_btn,.job_details_container .fav_report_btn,.login .check_input,.payment .client_data
+{
+    text-align: left;
+    direction: rtl;
+}
+.add_job .job_details_container .ad_type label
+{
+    margin-left: 0px;
+    margin-right:0px;
+}
+.add_job .jon_type
+{
+    direction: rtl;
+}
+.add_job .job_details_container .ad_type input{
+    margin-right: 95px;
+}
+.job_details_container .ad_type input
+{
+    margin-right:190px ;
+}
+.fa-check
+{
+    margin-right: 0px;
+    margin-left: 40%;
+}
+.job_details_container .employee_details li
+{
+    margin-left: -35px;
+}
+.job_details_container .employee_details li i
+{
+    margin: 10px;
+}
+.payment .bank-account .card .card-img{
+    left: 20px;
+}
+.payment .bank-account .card .card-text{
+    margin-right: 0px;
+    margin-left: 90px;
+    text-align: left;
+}
+.type{
+    text-align: center;
+}
+.type_s{
+    margin: 0px 5px 0px 5px;
+}
+
+.close_ic{
+    position: absolute;
+    top: -3%;
+    left: 31%;
+    cursor: pointer;
+}
+.add_card .close_ic img{
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    box-shadow: none;
+}
+#r{
+    font-size: 30px;
+    opacity: 1 !important;
+    color: #000;
+    position: relative;
+    left:100%;
+    visibility: visible;
+    order: 2;
+}
+#l{
+    font-size: 30px;
+    opacity: 1 !important;
+    color: #000;
+    position: relative;
+    left: -100%;
+    text-align: left;
+}
+.show_pass{
+    right: 10px;
+    text-align: right;
+}
+.req_nm{
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    color: #FB2828;
+}
+.req_em{
+    position: absolute;
+    top: 5px;
+    left: 120px;
+    color: #FB2828;
+}
+.req_ps1{
+    position: absolute;
+    top: -28px;
+    left: 80px;
+    color: #FB2828;
+}
+.req_ps2{
+    position: absolute;
+    top: -28px;
+    left: 115px;
+    color: #FB2828;
+}
+.req_subj{
+    position: absolute;
+    top: 5px;
+    left: 80px;
+    color: #FB2828;
+  }
+  .up_text{
+      margin-left: 10px;
+  }
+  .upper_nav .add_new_btn{
+    margin-left: 15px;
+  }
+
+  .upper_nav .upper_nav_row .login_welcome{
+   
+    margin-left: 0%;
+    margin-right: 19.5%;
+  }
+
+  @media (min-width:400px) and (max-width:990.9px){
+    .upper_nav .upper_nav_row .login_welcome{
+      margin-left: 0%;
+      margin-right: 35%;
+    }
+  }
+  @media (min-width:990.5px) and (max-width:1190px){
+    .upper_nav .upper_nav_row .login_welcome{
+      margin-left: 0%;
+      margin-right: 27%;
+    }
+  }
+  @media (min-width:1190px) and (max-width:1300px){
+    .upper_nav .upper_nav_row .login_welcome{
+      margin-left: 0%;
+      margin-right: 23.5%;
+    }
+  }
+  @media (min-width:1300px) and (max-width:1450px){
+    .upper_nav .upper_nav_row .login_welcome{
+      margin-left: 0%;
+      margin-right: 20.5%;
+    }
+  }
+  @media (min-width:1450px) and (max-width:1550px){
+    .upper_nav .upper_nav_row .login_welcome{
+      margin-left: 0%;
+      margin-right: 19%;
+    }
+  }
+  @media (min-width:1550px) and (max-width:1619.8px){
+    .upper_nav .upper_nav_row .login_welcome{
+      margin-left: 0%;
+      margin-right: 18%;
+    }
+  }
+  @media (min-width:1620px) and (max-width:1800px){
+    .upper_nav .upper_nav_row .login_welcome{
+      margin-left: 0%;
+      margin-right: 17%;
+    }
+  }
+  @media (min-width:1800px) and (max-width:1940px){
+    .upper_nav .upper_nav_row .login_welcome{
+      margin-left: 0%;
+      margin-right: 15.5%;
+    }
+  }
+  @media (min-width:1940px) and (max-width:2340px){
+    .upper_nav .upper_nav_row .login_welcome{
+      margin-left: 0%;
+      margin-right: 14.5%;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+@media (min-width: 200px) and (max-width: 475px){
+    .upper_nav .upper_nav_row .login_welcome {
+        right: 0%;
+        left: 0%;
+    }
+}
+@media (min-width:330px) and (max-width:487px){
+ .close_ic{
+    left:-66%;
+}
+.add_card .card_data h5{
+    font-size: 16px;
+    }
+}
+
+@media (min-width:390px) and (max-width:445px){
+ .close_ic{
+    left: -33%;
+}
+}
+@media (min-width:446px) and (max-width:605px){
+ .close_ic{
+    left: -22%;
+}
+}
+@media (min-width:606px) and (max-width:736px){
+    .close_ic{
+       left: 2%;
+   }
+  
+}
+@media (min-width:736px) and (max-width:820px){
+.close_ic{
+    left: 6%;
+}
+}
+@media (min-width:821px) and (max-width:991px){
+    .close_ic{
+        left: 17%;
+    }
+}
+@media (min-width: 300px) and (max-width: 992px)
+{
+    .contact, .home_content .card_holder .job_ad .contact{
+        text-align: left;
+    }
+    .job_details_container .contact{
+        text-align: right;
+    }
+    .upper_nav .upper_nav_row .login_welcome{
+        left: 0%;
+    }
+    .rep_text{
+        float: right;
+    }
+   
+}
+@media (min-width:300px) and (max-width:767.9px){
+    footer .footer_social,footer .footer_links .copy{
+        text-align: center;
+    }
+    .home_content .card_holder .job_ad .rep {
+        text-align: left;
+    }
+    .job_ad .rep_text{
+        float: right;
+    }
+    
+}
+
+
+
+@media (min-width:300px) and (max-width:520px){
+    .upper_nav .upper_nav_row .login_welcome {
+        margin-right: 14%;
+        margin-left: 0%;
+      }
+}
+
+@media (min-width:295px) and (max-width:768px){
+    .upper_nav .upper_nav_row .company_logo .nav_logo,.upper_nav .upper_nav_row .nav_links,.top_header .header_links,.top_header .header_social{
+        text-align: center;
+    }
+    .card_details_content .add_contact_btn{
+        text-align: right;
+    }
+    .add_job .job_details_container .ad_type input{
+        margin-right: 35px;
+    }
+    
+  
+}
+
+@media (min-width:992px) and (max-width:1313px){
+    .filter_search .filter_container .filter_btn{
+      text-align: center;
+    }
+    .filter_search .filter_container .filter_btn .dropdown{
+        margin-bottom: 5px;
+    }
+  }
+
+  @media (min-width:1200px) and (max-width:1800px){
+    .upper_nav .upper_nav_row .login_welcome{
+        position: relative;
+        padding-left: 30%;
+        overflow: hidden;
+    }
+  }
+  @media (min-width:1400px) and (max-width:1560px){
+    .add_job .job_details_container .up_img .up_img_cont .rem_icon{
+      position: absolute;
+      right:30%
+    }
+  }
+
+  @media (min-width:1200px) and (max-width:2180px){
+    .pn{
+      margin-right: 15px;
+      margin-left: -18px;
+    }
+  }
+  @media (min-width:767.8px) and (max-width:992px){
+    .pn{
+      margin-right: -51px;
+      margin-left: 15px;
+    }
+    .card_details_content .add_contact_btn{
+      margin-top: 6%;
+    }
+  }
+  @media (min-width: 521px) and (max-width: 767px){
+    .pn {
+        margin-right: -51px;
+        margin-left: 45px;
+    }
+}
+
+@media (min-width: 484px) and (max-width: 521px){
+    .pn {
+        margin-right: -51px;
+        margin-left: 45px;
+    }
+}
+@media (min-width: 409px) and (max-width: 484px){
+    .pn {
+        margin-right: -41px;
+        margin-left: 45px;
+    }
+}
+@media (min-width: 309px) and (max-width: 409px){
+    .pn {
+        margin-right: -55px;
+        margin-left: 45px;
+    }
+}
+

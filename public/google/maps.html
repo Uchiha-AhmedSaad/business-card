@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google maps</title>
+<script type="text/javascript"
+src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBPdZC2REZi8k0VCE36xgxA0LnS8vpqSI0&sensor=false&language=ar"></script>
+
+
+<script type="text/javascript">
+
+/*initialize*/
+
+function initialize(){
+
+	/* propertis*/
+
+
+	var MapProp = {
+          
+          center: new google.maps.LatLng(31.040948 , 31.378470) , 
+          zoom: 9 ,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+
+	/*Map Opject*/
+       var Map = new google.maps.Map(document.getElementById("DivMap"),MapProp);
+       var marker  = new google.maps.Marker({
+          position: new google.maps.LatLng(31.030063287818443 , 31.378470) ,
+          animation : google.maps.Animation.BOUNCE 
+          
+
+
+       });
+
+       /* set the marker */
+      marker.setMap(Map);
+
+      /* text on the map*/
+      var text  = '<div style="width : 300px; color:#f90; ">'+'hello in mansoura '+'</div>'; 
+     var info  = new google.maps.InfoWindow({
+      	content: text
+     });
+     info.open(Map,marker);
+}
+
+/*load the map */
+
+      google.maps.event.addDomListener(window, 'load' , initialize);
+</script>
+</head>
+
+<body>
+	<h3>Maps</h3>
+<div id="DivMap" style="width:600px; height:500px; margin:0 auto;"></div>
+</body>
+
+
+</html>

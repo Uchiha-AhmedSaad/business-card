@@ -1,0 +1,4 @@
+        $('.fancybox').fancybox();
+ <a href="images/1.jpg" data-fancybox-group="gallery" class="view fa fa-plus-circle fancybox ">
+
+                        </a>
