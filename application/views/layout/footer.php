@@ -98,7 +98,24 @@
                   }
                });
          });
-
+         $('#job_country_id').on('change',function(){
+            $('.como').remove();
+               var url = "<?php echo base_url('site/getCities'); ?>";
+               var country = $('#job_country_id :selected').val();
+               $.ajax({
+                  cache: false,
+                  type: "POST",
+                  url: url,
+                  dataType:'json',
+                  data: {country:country},
+                  success: function(data){
+                     for (var i = 0; i < data.length; i++) {
+                        $('#city').append("<option class='como' value='"+data[i].city_id+"'>"+data[i].city_name+"</option>");
+                     }
+                     
+                  }
+               });
+         });
             <?php 
                if (!empty($this->session->userdata('Flash_message'))) 
                {

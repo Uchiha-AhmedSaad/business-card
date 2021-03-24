@@ -279,6 +279,85 @@ class Site extends CI_Controller
 	public function addJob()
 	{
 		$data = [];
+
+		$categories = $this->db->get('cat')->result_array();
+		$countries = $this->db->get('country')->result_array();
+		if (!empty($_SESSION['language'])) 
+		{
+			if ($_SESSION['language'] == 'ar') {
+				$countries = array_column($countries,'country_name','country_id');
+				$categories = array_column($categories,'cat_name','cat_id');
+			}
+			else{
+				$countries = array_column($countries,'country_name_en','country_id');
+				$categories = array_column($categories,'cat_name_en','cat_id');
+			}
+		}
+		else{
+			$countries = array_column($countries,'country_name','country_id');
+			$categories = array_column($categories,'cat_name','cat_id');
+		}
+		$data['categories'] = $categories;
+		$data['countries'] = $countries;
+		if (!empty($_POST)) 
+		{
+			$data_insert['details'] 		= $this->input->post('details');
+			$data_insert['job_name'] 		= $this->input->post('job_name');
+			$data_insert['job_type'] 		= $this->input->post('job_type');
+			$data_insert['job_country_id'] 	= $this->input->post('job_country_id');
+			$data_insert['job_city_id'] 	= $this->input->post('job_city_id');
+			$data_insert['job_cat_id'] 		= $this->input->post('job_cat_id');
+			$data_insert['job_email'] 		= $this->input->post('job_email');
+			$data_insert['job_telephone'] 	= $this->input->post('job_telephone');
+			$data_insert['job_info'] 		= $this->input->post('job_info');
+
+			$this->form_validation->set_rules('details',e_lang('Details'), 'required');
+			$this->form_validation->set_rules('job_name',e_lang('Name'), 'required');
+			$this->form_validation->set_rules('job_type',e_lang('Type'), 'required');
+			$this->form_validation->set_rules('job_country_id',e_lang('Country'), 'required');
+			$this->form_validation->set_rules('job_city_id',e_lang('City'), 'required');
+			$this->form_validation->set_rules('job_cat_id',e_lang('Category'), 'required');
+
+
+			if (!empty($_FILES['job_pictures'])) 
+			{
+		
+				$extract = [];
+				for ($i=0; $i < count($_FILES['job_pictures']['name']); $i++) { 
+					$extract[$i]['name'] 		= $_FILES['job_pictures']['name'][$i];
+					$extract[$i]['type'] 		= $_FILES['job_pictures']['type'][$i];
+					$extract[$i]['tmp_name'] 	= $_FILES['job_pictures']['tmp_name'][$i];
+					$extract[$i]['error'] 		= $_FILES['job_pictures']['error'][$i];
+					$extract[$i]['size'] 		= $_FILES['job_pictures']['size'][$i];
+				}
+				
+				foreach ($extract as $images) {
+					$data_insert['job_pictures'][] = uploadMedia($images);
+				}
+
+				$data_insert['job_pictures'] = implode('|', $data_insert['job_pictures']);
+			}
+
+            if ($this->form_validation->run() == FALSE)
+            {
+				$this->load->view('layout/header',$data);
+				$this->load->view('add_job',$data);
+				$this->load->view('layout/footer');
+            }
+            else
+            {
+
+            	$insert = $this->db->insert('jobs',$data_insert);
+            	if (empty($insert)) 
+            	{
+					$this->session->set_flashdata('error', e_lang('wrong'));
+					return redirect(base_url('site/addJob'));
+            	}
+            	else{
+            		return redirect(base_url('site/addJob'));
+            	}
+            }
+		}
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('add_job',$data);
 	    $this->load->view('layout/footer');
