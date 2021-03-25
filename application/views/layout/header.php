@@ -152,9 +152,6 @@
                         else{
                           echo e_lang('Arabic');
                         }
-                        
-                        
-                        
                         ?>
                      </a>
                      <div class="dropdown-menu lang_dropdown" aria-labelledby="dropdownMenuLink">
@@ -256,7 +253,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                            <a class="dropdown-item" href="<?php echo base_url('site/addCard') ?>"><input type="radio" name="add" /><?php echo e_lang('business card') ?></a>
-                           <a class="dropdown-item" href="<?php echo e_lang('site/addJob') ?>"><input type="radio" name="add" /> <?php echo e_lang('Jobs') ?></a>
+                           <a class="dropdown-item" href="<?php echo base_url('site/addJob') ?>"><input type="radio" name="add" /> <?php echo e_lang('Jobs') ?></a>
                         </div>
                      </div>
                      <?php

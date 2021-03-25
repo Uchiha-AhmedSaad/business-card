@@ -17,7 +17,6 @@ class Site extends CI_Controller
 	    $this->load->view('index',$data);
 	    $this->load->view('layout/footer');
 	}
-
     // ------------------ login page  --------------------------
 	public function login()
 	{
@@ -367,6 +366,25 @@ class Site extends CI_Controller
 	public function package()
 	{
 		$data = [];
+		$countries = $this->db->get('country')->result_array();
+		if (!empty($_SESSION['language'])) 
+		{
+			if ($_SESSION['language'] == 'ar') {
+				$countries = array_column($countries,'country_name','country_id');
+
+			}
+			else{
+				$countries = array_column($countries,'country_name_en','country_id');
+
+			}
+		}
+		else{
+			$countries = array_column($countries,'country_name','country_id');
+
+		}
+
+		$data['countries'] = $countries;
+		$data['packages'] = $this->db->get('package')->result();
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('bouquet',$data);
 	    $this->load->view('layout/footer');
