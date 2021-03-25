@@ -1537,6 +1537,10 @@ public function setting(){
            'instgram'               => $this->input->post('instgram'),
            'snap'                   => $this->input->post('snap'),
            'linkedin'               => $this->input->post('linkedin'),
+           'bank_name'              => $this->input->post('bank_name'),
+           'bank_own_account'       => $this->input->post('bank_own_account'),
+           'account_namber'         => $this->input->post('account_namber'),
+
          );
          $this->load->model('setting');
          $up= $this->setting->update('setting_id','1',$data);
@@ -1596,7 +1600,9 @@ public function setting(){
     $data['snap']= $con->snap;
     $data['linkedin']= $con->linkedin;
 
-
+    $data['bank_name']= $con->bank_name;
+    $data['bank_own_account']= $con->bank_own_account;
+    $data['account_namber']= $con->account_namber;
 
     $this->load->view('admin/header');
     $this->load->view('admin/sidebar');

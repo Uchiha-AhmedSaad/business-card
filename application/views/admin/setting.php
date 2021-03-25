@@ -105,6 +105,27 @@
                   <!-- tinyMCE -->
                   <textarea name="setting_rules_en" class="mytextarea form-control myTextEditor" rows="4" ><?php echo $setting_rules_en; ?></textarea>
                 </div>
+
+
+                <div class="form-group">
+                  <label for="bank_name">إسم البنك :</label>
+                  <input type="text" value="<?php echo $bank_name; ?>" name="bank_name" class="form-control" id="bank_name" placeholder="">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="bank_own_account">إسم صاحب الحساب :</label>
+                  <input type="text" value="<?php echo $bank_own_account; ?>" name="bank_own_account" class="form-control" id="bank_own_account" placeholder="">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="account_namber">رقم  الحساب :</label>
+                  <input type="text" value="<?php echo $account_namber; ?>" name="account_namber" class="form-control" id="account_namber" placeholder="">
+                </div>
+
+
+
                 <div class="form-group">
                   <label for="exampleInputEmail1">مدة عرض الإعلان :</label>
                   <input type="number" value="<?php echo $annonce_days; ?>" name="annonce_days" class="form-control" id="exampleInputEmail1" placeholder="Enter by days">

@@ -3,10 +3,9 @@
         <div class="container-fluid">
             <form action="<?php echo base_url('site/addJob'); ?>" method="POST" enctype="multipart/form-data">
                 <div class="job_details_container row">
-
                     <div class="col-sm-12 col-lg-12">
                         <div class="form-group">
-                          <label for="details" class="add_job_label"><?php echo e_lang('adsense details'); ?></label>
+                          <label for="details" class="add_job_label"><?php echo e_lang('Details'); ?></label>
                           <textarea name="details"  class="form-control ad_details_area"><?php echo set_value('job_info') ?></textarea>
                         </div>
                     </div>
@@ -14,7 +13,7 @@
                     <div class="col-sm-12 col-lg-12">
                         <div class="form-group">
                           <label for="job_name"><?php echo e_lang('Name'); ?></label>
-                          <input class="form-control" value="<?php echo set_value('job_name')?>" type="text" name="job_name" id="job_name" placeholder="إسم">
+                          <input class="form-control" value="<?php echo set_value('job_name')?>" type="text" name="job_name" id="job_name" placeholder="<?php echo e_lang('Name'); ?>">
                         </div>
                     </div>
 
@@ -93,18 +92,16 @@
                             <input type="file" value="" name="job_pictures[]" id="file" onchange="showImage(this)" data-multiple-caption="{count} files selected" multiple/>
                             <div class="upload text-center"><?php echo e_lang('Add picture'); ?></div>
                         </div> 
-                        <div class="up_img row">
-                            <div class="up_img_cont col-sm-3">
-                                <img src="<?php echo base_url('public/assets/images/car-4.png'); ?>" class="img-thumbnail" />
-                                <i class="rem_icon"> <img src="<?php echo base_url('public/assets/images/remove.svg'); ?>" /></i>
-                            </div>
-                            <div class="up_img_cont col-sm-3">
-                                <img src="<?php echo base_url('public/assets/images/car-3.png'); ?>" class="img-thumbnail" />
-                                <i class="rem_icon"> <img src="<?php echo base_url('public/assets/images/remove.svg'); ?>" /></i>
-                            </div>
-                        </div>    
+  
                     </div>
-
+                    <div class="col-sm-12 col-md-6">
+                       <div class="form-group">
+                          <label for="job_country_id"><?php echo e_lang('Package'); ?></label>
+                          <select name="job_country_id" id="job_country_id" class="form-control search_select">
+                             <option selected disabled><?php echo e_lang('choose country'); ?></option>
+                          </select>
+                       </div>
+                    </div>
                     <div class="col-12 add_job_btn">
                         <div class="btn-group">
                             <button type="submit" class="btn btn-info add_job_button"><?php echo e_lang('Add Job') ?></button>
@@ -112,13 +109,6 @@
                                 <a class="btn btn-outline-info dropdown-toggle choose_bouquet_btn" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     أختر الباقة
                                 </a>
-                                
-                                <div class="dropdown-menu choose_bouq" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="bouquet.html"><input type="radio" /> شهر واحد &nbsp;&nbsp;<i class="f-1 fas fa-angle-double-left"></i></a>
-                                    <a class="dropdown-item" href="bouquet.html"><input type="radio" /> 3 شهور &nbsp;&nbsp;<i class="f-2 fas fa-angle-double-left"></i></a>
-                                    <a class="dropdown-item" href="bouquet.html"><input type="radio" /> 6 شهور &nbsp;&nbsp;<i class="f-3 fas fa-angle-double-left"></i></a>
-                                    <a class="dropdown-item" href="bouquet.html"><input type="radio" /> 12 شهور &nbsp;&nbsp;<i class="f-4 fas fa-angle-double-left"></i></a>
-                                </div>
                             </div>
                         </div>
                     </div>

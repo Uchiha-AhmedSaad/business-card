@@ -90,30 +90,7 @@
       </style>
    </head>
    <body >
-      <?php 
-         if (!empty(validation_errors())) {
-             ?> 
-      <div class="alert alert-danger" role="alert">
-         <?php echo  validation_errors(); ?>
-      </div>
-      <?php
-         }
-         if (!empty($this->session->flashdata('error'))) {
-             ?> 
-      <div class="alert alert-danger" role="alert">
-         <?php echo  $this->session->flashdata('error'); ?>
-      </div>
-      <?php
-         }
-         if (!empty($this->session->flashdata('success'))) {
-             ?> 
-      <div class="alert alert-success" role="alert">
-         <?php echo  $this->session->flashdata('success'); ?>
-      </div>
-      <?php
-         }
-         
-         ?>
+
       <!-- top header -->
       <div class="top_header">
          <div class="container-fluid">
@@ -508,4 +485,28 @@
       </div>
       <!-- header slider-->
       <!-- Home Content -->
-
+      <br>
+      <?php 
+         if (!empty(validation_errors())) {
+             ?> 
+      <div class="alert alert-danger" role="alert">
+         <?php echo  validation_errors(); ?>
+      </div>
+      <?php
+         }
+         if (!empty($this->session->flashdata('error'))) {
+             ?> 
+      <div class="alert alert-danger" role="alert">
+         <?php echo  $this->session->flashdata('error'); ?>
+      </div>
+      <?php
+         }
+         if (!empty($this->session->flashdata('success'))) {
+             ?> 
+      <div class="alert alert-success" role="alert">
+         <?php echo  $this->session->flashdata('success'); ?>
+      </div>
+      <?php
+         }
+         
+         ?>

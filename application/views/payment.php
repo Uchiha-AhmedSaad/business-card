@@ -8,7 +8,7 @@
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
                                     <button class="btn btn-link btn-block payment_collapse" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <span><i class="far fa-check-square"> </i></span><span> الحساب البنكى</span> 
+                                        <span><i class="far fa-check-square"> </i></span><span> <?php echo e_lang('bank account'); ?></span> 
                                     </button>
                                 </h2>
                             </div>
@@ -18,17 +18,17 @@
                                     <div class="bank-account">
                                         <div class="card row bank_details">
                                           <div class="card-img col-3">
-                                            <img src="./assets/images/earth.png" alt="">
+                                            <img src="<?php echo base_url('public/assets/images/earth.png'); ?>" alt="">
                                           </div>
                                           <div class="card-body">
                                             <p class="card-text col-8">
-                                              <span class="name">اسم البنك: </span><span>اسم البنك</span>
+                                              <span class="name"><?php echo e_lang('Bank name'); ?>: </span><span><?php echo $setting->bank_name;  ?></span>
                                             </p>
                                             <p class="card-text col-8">
-                                              <span class="name">إسم صاحب الحساب: </span><span>user name</span>
+                                              <span class="name"><?php echo e_lang('Bank user owner'); ?>: </span><span><?php echo $setting->bank_own_account;  ?></span>
                                             </p>
                                             <p class="card-text col-8">
-                                              <span class="name">رقم الحساب: </span><span>5687555</span>
+                                              <span class="name"><?php echo e_lang('account number'); ?>: </span><span><?php echo $setting->account_namber ; ?></span>
                                             </p>
                                           </div>
                                         </div>
@@ -38,60 +38,45 @@
                                                 المبلغ: <span>150$</span>
                                             </span>
                                         </div>
-                                        <div class="row client_data_inputs">
+                                        <form action="<?php echo base_url('site/payment'); ?>" method="POST" enctype="multipart/form-data">
+                                            <div class="row client_data_inputs">
 
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                  <label for="name-add">اسم المحول</label>
-                                                  <input class="form-control" type="text" name="" id="name-add" placeholder="إسم">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                  <label for="name-add">البنك المحول منه</label>
-                                                  <input class="form-control" type="text" name="" id="name-add" placeholder="أسم البنك">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                  <label for="name-add">رقم الحساب</label>
-                                                  <input class="form-control" type="number" name="" id="name-add" placeholder="458685462">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="up_btn">
-                          
-                                                    <input type="file" name="files[]" id="file" onchange="showImage(this)" data-multiple-caption="{count} files selected" multiple/>
-                                                    <div class="upload text-center">اختر صورة</div>
-                                                </div> 
-                                                <div class="up_text">تم تحميل ملفين</div>
-                                                <div class="up_img row">
-                                                    <div class="up_img_cont col-md-2 col-4">
-                                                        <img src="assets/images/car-4.png" id="up" class="img-thumbnail" />
-                                                        <i class="rem_icon"> <img src="assets/images/remove.svg" /></i>
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                      <label for="name-add"><?php echo e_lang('transfer username'); ?></label>
+                                                      <input class="form-control" type="text" name="user_name" value="<?php echo set_value('user_name'); ?>" id="name-add" placeholder="<?php echo e_lang('username'); ?>">
                                                     </div>
-                                                    <div class="up_img_cont col-md-2 col-4">
-                                                        <img src="assets/images/car-3.png" class="img-thumbnail" />
-                                                        <i class="rem_icon"> <img src="assets/images/remove.svg" /></i>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                      <label for="name-add"><?php echo e_lang('bank name'); ?></label>
+                                                      <input value="<?php echo set_value('bank_name'); ?>" class="form-control" type="text" name="bank_name" id="name-add" placeholder="أسم البنك">
                                                     </div>
-                                                </div>    
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                  <label for="name-add">ملاحظات</label>
-                                                  <textarea class="form-control ad_details_area"></textarea>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                      <label for="name-add"><?php echo e_lang('account number'); ?></label>
+                                                      <input class="form-control" type="text" value="<?php echo set_value('account_number'); ?>" name="account_number" id="name-add" placeholder="458685462">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="up_btn">
+                              
+                                                        <input type="file" name="payment_pictures[]" id="file" onchange="showImage(this)" data-multiple-caption="{count} files selected" multiple/>
+                                                        <div class="upload text-center"><?php echo e_lang('Choose picture'); ?></div>
+                                                    </div>  
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                      <label for="notes"><?php echo e_lang('Notes'); ?></label>
+                                                      <textarea name="notes" id="notes" class="form-control ad_details_area"><?php echo set_value('notes'); ?></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 text-center">
+                                                    <button type="submit" class="btn btn-info subm"><?php echo e_lang('Send'); ?></button>
                                                 </div>
                                             </div>
-
-                                            <div class="col-12 text-center">
-                                                <button type="submit" class="btn btn-info subm">إرسال</button>
-                                            </div>
-
-                                        </div>
+                                        </form>
                                     </div> <!-- bank account -->
                                 </div> <!-- card body -->
                             </div> <!-- collapseOne -->

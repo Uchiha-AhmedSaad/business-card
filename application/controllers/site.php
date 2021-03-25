@@ -53,10 +53,7 @@ class Site extends CI_Controller
                 		return redirect(base_url('site'));
                 	}
                 }
-
 		}
-
-
 		$this->load->view('layout/header',$data);
 		$this->load->view('login',$data);
 		$this->load->view('layout/footer');
@@ -513,7 +510,68 @@ class Site extends CI_Controller
 	}
 	public function payment()
 	{
+		if (empty($this->session->userdata('user'))) {
+			redirect(base_url('site/login'));
+		}
 		$data = [];
+		$data['setting'] = $this->db->get('setting')->row();
+		if (!empty($_POST)) 
+		{
+			$user_name 		= $this->input->post('user_name');
+			$account_number = $this->input->post('account_number');
+			$bank_name 		= $this->input->post('bank_name');
+			$notes 			= $this->input->post('notes');
+		
+			$this->form_validation->set_rules('user_name',e_lang('user name'), 'required');
+			$this->form_validation->set_rules('account_number',e_lang('account number'), 'required');
+			$this->form_validation->set_rules('bank_name',e_lang('bank name'), 'required');
+			$this->form_validation->set_rules('notes',e_lang('notes'), 'required');
+
+
+                if ($this->form_validation->run() == FALSE)
+                {
+					$this->load->view('layout/header',$data);
+					$this->load->view('payment',$data);
+					$this->load->view('layout/footer');
+                }
+                else
+                {
+                	$data_insert = [
+                		'user_name' 		=> $user_name,
+                		'account_number' 	=> $account_number,
+                		'bank_name' 		=> $bank_name,
+                		'notes' 			=> $notes,
+                	];
+					if (!empty($_FILES['payment_pictures'])) 
+					{
+				
+						$extract = [];
+						for ($i=0; $i < count($_FILES['payment_pictures']['name']); $i++) { 
+							$extract[$i]['name'] 		= $_FILES['payment_pictures']['name'][$i];
+							$extract[$i]['type'] 		= $_FILES['payment_pictures']['type'][$i];
+							$extract[$i]['tmp_name'] 	= $_FILES['payment_pictures']['tmp_name'][$i];
+							$extract[$i]['error'] 		= $_FILES['payment_pictures']['error'][$i];
+							$extract[$i]['size'] 		= $_FILES['payment_pictures']['size'][$i];
+						}
+						
+						foreach ($extract as $images) {
+							$data_insert['payment_pictures'][] = uploadMedia($images);
+						}
+
+						$data_insert['payment_pictures'] = implode('|', $data_insert['payment_pictures']);
+					}
+                	$insert = $this->db->insert('payment',$data_insert);
+                	if (empty($insert)) 
+                	{
+                		SweetFlash('error','wrong','error');
+						return redirect(base_url('site/payment'));
+                	}
+                	else{
+                		return redirect(base_url('site/payment'));
+                	}
+                }
+		}		
+
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('payment',$data);
 	    $this->load->view('layout/footer');
@@ -536,6 +594,22 @@ class Site extends CI_Controller
 		echo json_encode($extract);
 	}
 
-
+	public function getPackages()
+	{
+		$country 	= $this->input->post('country_id');
+		$packages 	= $this->db->where('country_id',$country)->get('package')->result();
+		$extract 	= [];
+		foreach ($packages as $package) 
+		{
+			if (!empty($this->session->userdata('language')) && $this->session->userdata('language') == 'en') 
+			{
+				$extract[] = ['package_id' => $city->city_id,'package_name' => $city->package_name_en];
+			}
+			else{
+				$extract[] = ['package_id' => $city->city_id,'package_name' => $city->package_name];
+			}
+		}
+		echo json_encode($extract);
+	}
 }
 
