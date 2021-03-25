@@ -29,7 +29,18 @@
                                         <div class="cardi selected text-center" >
                                             <i><img style="height: 100; width: 100px; "  src="<?php echo base_url('uploads/'.$package->picture); ?>" /></i>
                                             <div class="card-body">
-                                                <p class="card-text"><?php echo $package->package_name; ?></p>
+                                                <?php 
+                                                    if ($this->session->userdata('language') == 'en') {
+                                                       ?> <p class="card-text"><?php echo $package->package_name_en; ?></p> <?php
+                                                    }
+                                                    else{
+                                                        ?> <p class="card-text"><?php echo $package->package_name; ?></p> <?php
+                                                    }
+
+
+
+                                                 ?>
+                                                
                                                 <p class="card-text"><?php echo $package->package_price; ?></p>
                                             </div>
                                             </div> <!-- card -->

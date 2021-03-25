@@ -486,7 +486,11 @@ class Site extends CI_Controller
 	}
 	public function terms()
 	{
+
+
 		$data = [];
+		$data['settings'] = $this->db->get('setting')->row();
+
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('terms',$data);
 	    $this->load->view('layout/footer');
