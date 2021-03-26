@@ -86,7 +86,7 @@
                           <textarea name="job_info" class="form-control ad_details_area"><?php echo set_value('job_info')?></textarea>
                         </div>
                     </div>
-                    <div class="col-md-7 col-sm-12">
+                    <div class="col-lg-12 col-sm-6">
                         <label><?php echo e_lang('Add Picture'); ?></label><br />
                         <div class="up_btn">
                             <input type="file" value="" name="job_pictures[]" id="file" onchange="showImage(this)" data-multiple-caption="{count} files selected" multiple/>
@@ -94,11 +94,11 @@
                         </div> 
   
                     </div>
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-lg-12 col-sm-6">
                        <div class="form-group">
-                          <label for="job_country_id"><?php echo e_lang('Package'); ?></label>
-                          <select name="job_country_id" id="job_country_id" class="form-control search_select">
-                             <option selected disabled><?php echo e_lang('choose country'); ?></option>
+                          <label for="package_id"><?php echo e_lang('Package'); ?></label>
+                          <select name="package_id" id="package_id" class="form-control search_select">
+                             <option selected disabled><?php echo e_lang('choose Package'); ?></option>
                           </select>
                        </div>
                     </div>

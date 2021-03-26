@@ -35,12 +35,21 @@
 
                                         <div class="client_data">
                                             <span class="client_data_title">
-                                                المبلغ: <span>150$</span>
+                                                المبلغ: <span><?php echo $package->package_price; ?></span>
+                                                <?php 
+                                                    if (!empty($this->session->userdata('language')) && $this->session->userdata('language') == 'en') {
+                                                       ?><span><?php echo $country->currency_en; ?></span> <?php
+                                                    }
+                                                    else{
+                                                        ?><span><?php echo $country->currency_ar; ?></span> <?php
+                                                    }
+                                                 ?>
+                                                
                                             </span>
                                         </div>
-                                        <form action="<?php echo base_url('site/payment'); ?>" method="POST" enctype="multipart/form-data">
+                                        <form action="<?php echo base_url('site/payment/'); ?>" method="POST" enctype="multipart/form-data">
                                             <div class="row client_data_inputs">
-
+                                                <input type="hidden" name="payment_package_id" value="<?php echo $this->uri->segment(3); ?>">
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                       <label for="name-add"><?php echo e_lang('transfer username'); ?></label>

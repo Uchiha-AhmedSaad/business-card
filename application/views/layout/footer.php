@@ -99,7 +99,7 @@
                });
          });
          $('#job_country_id').on('change',function(){
-            $('.como').remove();
+            $('.momo').remove();
                var url = "<?php echo base_url('site/getPackages'); ?>";
                var country = $('#job_country_id :selected').val();
                $.ajax({
@@ -110,7 +110,7 @@
                   data: {country:country},
                   success: function(data){
                      for (var i = 0; i < data.length; i++) {
-                        $('#city').append("<option class='como' value='"+data[i].package_id+"'>"+data[i].package_name+"</option>");
+                        $('#package_id').append("<option class='momo' value='"+data[i].package_id+"'>"+data[i].package_name+"</option>");
                      }
                      
                   }
@@ -118,8 +118,8 @@
          });
          $('#job_country_id').on('change',function(){
             $('.como').remove();
-               var url = "<?php echo base_url('site/getCities'); ?>";
-               var country = $('#job_country_id :selected').val();
+               var url        = "<?php echo base_url('site/getCities'); ?>";
+               var country    = $('#job_country_id :selected').val();
                $.ajax({
                   cache: false,
                   type: "POST",

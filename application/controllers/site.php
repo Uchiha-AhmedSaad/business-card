@@ -278,6 +278,7 @@ class Site extends CI_Controller
 
 		$categories = $this->db->get('cat')->result_array();
 		$countries = $this->db->get('country')->result_array();
+		$settings = $this->db->get('setting')->row();
 		if (!empty($_SESSION['language'])) 
 		{
 			if ($_SESSION['language'] == 'ar') {
@@ -314,6 +315,8 @@ class Site extends CI_Controller
 			$this->form_validation->set_rules('job_city_id',e_lang('City'), 'required');
 			$this->form_validation->set_rules('job_cat_id',e_lang('Category'), 'required');
 
+			$data_insert['expire_date'] 	 = date('Y-m-d H:i:s',strtotime('+'.$settings->setting_package.' days'));
+			$data_insert['expire_date_unix'] = strtotime('+'.$settings->setting_package.'days');
 
 			if (!empty($_FILES['job_pictures'])) 
 			{
@@ -350,6 +353,9 @@ class Site extends CI_Controller
 					return redirect(base_url('site/addJob'));
             	}
             	else{
+            		if (!empty($_POST['package_id'])) {
+            			return redirect(base_url('site/payment/'.$_POST['package_id']));
+            		}
             		return redirect(base_url('site/addJob'));
             	}
             }
@@ -500,7 +506,6 @@ class Site extends CI_Controller
 		SweetFlash('changed','language changed successfully');
 		return redirect($_SERVER['HTTP_REFERER']);
 	}
-
 	public function sendCodeInEmail()
 	{
 		$data = [];
@@ -513,21 +518,23 @@ class Site extends CI_Controller
 		if (empty($this->session->userdata('user'))) {
 			redirect(base_url('site/login'));
 		}
+
+		$package = $this->db->where('package_id',$this->uri->segment(3))->get('package')->row();
+
+
 		$data = [];
 		$data['setting'] = $this->db->get('setting')->row();
 		if (!empty($_POST)) 
 		{
-			$user_name 		= $this->input->post('user_name');
-			$account_number = $this->input->post('account_number');
-			$bank_name 		= $this->input->post('bank_name');
-			$notes 			= $this->input->post('notes');
-		
+			$user_name 						= $this->input->post('user_name');
+			$account_number 				= $this->input->post('account_number');
+			$bank_name 						= $this->input->post('bank_name');
+			$notes 							= $this->input->post('notes');
+			$payment_package_id 			= $this->input->post('payment_package_id');
 			$this->form_validation->set_rules('user_name',e_lang('user name'), 'required');
 			$this->form_validation->set_rules('account_number',e_lang('account number'), 'required');
 			$this->form_validation->set_rules('bank_name',e_lang('bank name'), 'required');
 			$this->form_validation->set_rules('notes',e_lang('notes'), 'required');
-
-
                 if ($this->form_validation->run() == FALSE)
                 {
 					$this->load->view('layout/header',$data);
@@ -544,7 +551,6 @@ class Site extends CI_Controller
                 	];
 					if (!empty($_FILES['payment_pictures'])) 
 					{
-				
 						$extract = [];
 						for ($i=0; $i < count($_FILES['payment_pictures']['name']); $i++) { 
 							$extract[$i]['name'] 		= $_FILES['payment_pictures']['name'][$i];
@@ -553,25 +559,30 @@ class Site extends CI_Controller
 							$extract[$i]['error'] 		= $_FILES['payment_pictures']['error'][$i];
 							$extract[$i]['size'] 		= $_FILES['payment_pictures']['size'][$i];
 						}
-						
 						foreach ($extract as $images) {
 							$data_insert['payment_pictures'][] = uploadMedia($images);
 						}
-
 						$data_insert['payment_pictures'] = implode('|', $data_insert['payment_pictures']);
 					}
+					$data_insert['payment_package_id'] = $payment_package_id;
                 	$insert = $this->db->insert('payment',$data_insert);
-                	if (empty($insert)) 
+                	
+                	if (!empty($insert)) 
                 	{
-                		SweetFlash('error','wrong','error');
-						return redirect(base_url('site/payment'));
+
+                		SweetFlash('Done','payment');
+						return redirect(base_url('site'));
                 	}
                 	else{
-                		return redirect(base_url('site/payment'));
+                		return redirect(base_url('site'));
                 	}
                 }
 		}		
+		$data['package'] = $package;
 
+
+		$country = $this->db->where('country_id',$package->country_id)->get('country')->row();
+		$data['country'] = $country;
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('payment',$data);
 	    $this->load->view('layout/footer');
@@ -596,17 +607,17 @@ class Site extends CI_Controller
 
 	public function getPackages()
 	{
-		$country 	= $this->input->post('country_id');
+		$country 	= $this->input->post('country');
 		$packages 	= $this->db->where('country_id',$country)->get('package')->result();
 		$extract 	= [];
 		foreach ($packages as $package) 
 		{
 			if (!empty($this->session->userdata('language')) && $this->session->userdata('language') == 'en') 
 			{
-				$extract[] = ['package_id' => $city->city_id,'package_name' => $city->package_name_en];
+				$extract[] = ['package_id' => $package->package_id,'package_name' => $package->package_name_en];
 			}
 			else{
-				$extract[] = ['package_id' => $city->city_id,'package_name' => $city->package_name];
+				$extract[] = ['package_id' => $package->package_id,'package_name' => $package->package_name];
 			}
 		}
 		echo json_encode($extract);
