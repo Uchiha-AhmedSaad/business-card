@@ -39,17 +39,17 @@
                 </div>
 
                 <div class="col-6 txt-l forget_link">
-                    <a href="forget_password.html">هل نسيت كلمة المرور ؟</a>
+                    <a href="forget_password.html"><?php echo e_lang('forget password') ?></a>
                 </div>
 
                 <div class="col-sm-12 col-lg-12">
                     <div class="btn-login">
-                    <button type="submit" class="btn btn-info">تسجيل الدخول</button>
+                    <button type="submit" class="btn btn-info"><?php echo e_lang('login'); ?></button>
                     </div>
                 </div>
 
                 <div class="col-sm-12 col-lg-12 txt-c reg_link">
-                    <p>لست مشترك؟ <a href="register.html">انشاء حساب جديد</a></p>
+                    <p><?php echo e_lang('Not A member'); ?> <a href="<?php echo base_url('site/register'); ?>"><?php echo e_lang('register'); ?></a></p>
                 </div>
                 </div>
             </form>

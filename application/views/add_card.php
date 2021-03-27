@@ -15,7 +15,8 @@
                  <div class="row">
                     <div class="col-sm-12">
                        <div class="card_img">
-                          <img src="<?php echo base_url('public/assets/images/card-1.png'); ?>" />
+                          <img src="<?php echo $card_url; ?>" />
+                          <input type="hidden" name="b_cards_card_id" value="<?php echo $_GET['card_number']; ?>">
                        </div>
                        <div class="logo_upload text-center">
                           <h4><?php echo e_lang('Choose or upload logo'); ?></h4>

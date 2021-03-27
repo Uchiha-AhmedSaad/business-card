@@ -14,7 +14,7 @@
                                     
                                 </div>
 
-                                <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#account-info" role="tab"
+                                <a class="nav-link <?php echo ($this->uri->segment(2) == 'account')? 'active':''; ?>" id="v-pills-home-tab" data-toggle="pill" href="#account-info" role="tab"
                                 aria-controls="v-pills-home" aria-selected="true">
                                 <i class="fas fa-cog"></i>
                                 <span><?php echo e_lang('Edit My account') ?></span>
@@ -63,10 +63,17 @@
 
                                         <div class="account-info-form">
                                               <form method="POST" action="<?php echo base_url('site/account') ?>" enctype="multipart/form-data" >
+
                                                     <div class="row">
                                                         <div class="col-sm-12 col-lg-12">
                                                         <div class="personal-img">
-                                                            <div class="per" style="background-image: url('./assets/images/avatar.png');"></div>
+                                                            <?php 
+                                                                $picture = base_url('uploads/'.$this->session->userdata('user')['user_photo']);
+
+
+
+                                                             ?>
+                                                            <div class="per" style="background-image: url('<?php echo $picture; ?>');"></div>
 
                                                             <div class="upload-btn-wrapper">
                                                             <h5 class="card-title"><?php echo e_lang('photo') ?></h5>
@@ -79,14 +86,14 @@
                                                         <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="exampleInputEmail1"><?php echo e_lang('name'); ?></label>
-                                                            <input type="text" class="form-control" name="user_name" value="<?php echo set_value('user_name',$this->session->userdata('user_name')); ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                            <input type="text" class="form-control" name="user_name" value="<?php echo set_value('user_name',$this->session->userdata('user')['user_name']); ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                         </div>
                                                         </div>
                                                     
                                                         <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="exampleInputEmail1"><?php echo e_lang('email') ?></label>
-                                                            <input type="text" class="form-control" name="user_email" value="<?php echo set_value('user_email',$this->session->userdata('user_email')); ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                            <input type="text" class="form-control" name="user_email" value="<?php echo set_value('user_email',$this->session->userdata('user')['user_email']); ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                         </div>
                                                         </div>
 

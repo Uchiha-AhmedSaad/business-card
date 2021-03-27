@@ -157,7 +157,10 @@
             $('#logo_qqq').trigger("click");
 
           });
-
+          $('.cardClick').on('click',function(){
+            var card_number = $(this).attr('data-number');
+            $('#card_number').val(card_number);
+          });
       </script>
    </body>
 </html>

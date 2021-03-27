@@ -119,17 +119,36 @@ class Site extends CI_Controller
 		{
 			$data['user_name'] 		= $this->input->post('user_name');
 			$data['user_email'] 	= $this->input->post('user_email');
-			$data['user_photo'] 	= $this->input->post('user_photo');
 			$this->form_validation->set_rules('user_name',e_lang('Name'), 'required');
 			$this->form_validation->set_rules('user_email',e_lang('Email'), 'required');
-			if (!empty($_FILES)) {
-				$data['user_photo'] = uploadMedia($_FILES['user_photo']);
+			if (!empty($this->input->post('user_pass')) && !empty($this->input->post('user_pass_conf'))) {
+				$this->form_validation->set_rules('user_pass', 'Password', 'required');
+				$this->form_validation->set_rules('password_confirmation', 'Password Confirmation', 'required|matches[user_pass]');
 			}
-			
+            if ($this->form_validation->run() == FALSE)
+            {
+			    $this->load->view('layout/header',$data);
+			    $this->load->view('account',$data);
+			    $this->load->view('layout/footer');
+            }
+            else
+            {
+            	if (!empty($this->input->post('user_pass'))) 
+            	{
+            		$data['user_pass'] = md5($this->input->post('user_pass'));
+            	}
+				if (!empty($_FILES['user_photo']['tmp_name'])) {
+
+					$data['user_photo'] = uploadMedia($_FILES['user_photo']);
+				}
+				$insert = $this->db->where('user_id',$this->session->userdata('user')['user_id'])->update('users',$data);
+				$user = $this->db->where('user_id',$this->session->userdata('user')['user_id'])->get('users')->row_array();
+				$this->session->set_userdata('user',$user);
+				SweetFlash('Created','user created successfully');
+				return redirect(base_url('site/account'));
+            }
 		}
 
-
-		SweetFlash('Created','user created successfully');
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('account',$data);
 	    $this->load->view('layout/footer');
@@ -184,12 +203,14 @@ class Site extends CI_Controller
 		{
 			$data_insert['b_cards_name'] 		= $this->input->post('b_cards_name');
 			$data_insert['b_cards_name_en'] 	= $this->input->post('b_cards_name_en');
-			$data_insert['b_cards_country_id'] = $this->input->post('b_cards_country_id');
+			$data_insert['b_cards_country_id']  = $this->input->post('b_cards_country_id');
 			$data_insert['b_cards_city_id'] 	= $this->input->post('b_cards_city_id');
 			$data_insert['b_cards_address'] 	= $this->input->post('b_cards_address');
-			$data_insert['b_cards_address_en'] = $this->input->post('b_cards_address_en');
+			$data_insert['b_cards_address_en']  = $this->input->post('b_cards_address_en');
 			$data_insert['b_cards_phone'] 		= $this->input->post('b_cards_phone');
 			$data_insert['b_cards_work'] 		= $this->input->post('b_cards_work');
+			$data_insert['b_cards_cat_id'] 		= $this->input->post('b_cards_cat_id');
+			
 			$data_insert['job'] 				= $this->input->post('job');
 			$data_insert['job_en'] 				= $this->input->post('job_en');
 			$data_insert['email'] 				= $this->input->post('email');
@@ -200,8 +221,7 @@ class Site extends CI_Controller
 			$data_insert['website'] 			= $this->input->post('website');
 			$data_insert['instegram'] 			= $this->input->post('instegram');
 			$data_insert['about_info'] 			= $this->input->post('about_info');
-
-
+			$data_insert['b_cards_card_id']		= $this->input->post('b_cards_card_id');
 			$this->form_validation->set_rules('b_cards_name',e_lang('b_cards_name'), 'required');
 			$this->form_validation->set_rules('b_cards_name_en',e_lang('b_cards_name_en'), 'required');
 			$this->form_validation->set_rules('b_cards_country_id',e_lang('b_cards_country_id'), 'required');
@@ -261,7 +281,8 @@ class Site extends CI_Controller
 
 
 	    $this->load->view('layout/header',$data);
-	    if (!empty($this->session->userdata('choose_card'))) {
+	    if (!empty($_GET['card_number'])) {
+	    	$data['card_url'] = base_url('uploads/cards/imgs/'.$_GET['card_number'].'/'.$_GET['card_number'].'-ar.png');
 	    	$this->load->view('add_card',$data);
 	    }
 	    else{
