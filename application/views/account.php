@@ -117,69 +117,47 @@
                                     <div class="tab-pane new-ads fade" id="account-ads" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                                     <div class="most-search-header">
                                         <div class="container">
-                                        <h5>كروتى</h5>
+                                        <h5><?php echo e_lang('My Card'); ?></h5>
 
                                         <div class="my_cards">
-                                            <div class="row my_card_row">
-                                                <div class="col-12">
-                                                    <div class="card">
+                                            <?php 
+                                                foreach ($cards as $card) 
+                                                {
+                                                    ?> 
+                                                        <div class="row my_card_row">
+                                                            <div class="col-12">
+                                                                <div class="card">
 
-                                                        <div class="card-body">
-                                                        <h5 class="card-title">تنتهى صلاحيته فى 1/4/2020</h5>
-                                                            <div class="my_cards_container">
-                                                                <img src="assets/images/card-2.png" />
+                                                                    <div class="card-body">
+                                                                    <h5 class="card-title"><?php echo e_lang('expire at'); ?> <?php echo  $card->expire_date;?></h5>
+                                                                        <div class="my_cards_container">
+                                                                            <img src="<?php echo base_url('public/assets/images/card-2.png'); ?>" />
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div> <!-- card -->
+                                                            </div> <!-- col-12 -->
+
+                                                            <div class="col-8">
+                                                                <div class="card_btn btn-group">
+                                                                    <button class="btn btn-info">طباعة الكارت</button>
+                                                                    <button class="btn btn-outline-warning">تمييز الكارت</button>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        
-                                                    </div> <!-- card -->
-                                                </div> <!-- col-12 -->
 
-                                                <div class="col-8">
-                                                    <div class="card_btn btn-group">
-                                                        <button class="btn btn-info">طباعة الكارت</button>
-                                                        <button class="btn btn-outline-warning">تمييز الكارت</button>
-                                                    </div>
-                                                </div>
+                                                            <div class="col-4">
+                                                                <div class="card_edit_btn">
+                                                                    <a href="#"><i class="far fa-edit"></i></a>
+                                                                    <a href="#" class="text-danger"><i class="far fa-trash-alt"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- row -->
+                                                    <?php
+                                                }
 
-                                                <div class="col-4">
-                                                    <div class="card_edit_btn">
-                                                        <a href="#"><i class="far fa-edit"></i></a>
-                                                        <a href="#" class="text-danger"><i class="far fa-trash-alt"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- row -->
+                                             ?>
 
-                                            <!-- repeated div -->
-                                            <div class="row my_card_row">
-                                                <div class="col-12">
-                                                <div class="card exp_card">
-
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">تنتهى صلاحيته فى 1/4/2020</h5>
-                                                        <div class="my_cards_container">
-                                                            <img src="assets/images/card-2.png" />
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    </div> <!-- card -->
-                                                </div> <!-- col-12 -->
-
-                                                <div class="col-8">
-                                                    <div class="card_btn btn-group">
-                                                        <button class="btn btn-info">طباعة الكارت</button>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-4">
-                                                    <div class="card_edit_btn">
-                                                    <a href="add_card.html"><i class="far fa-edit"></i></a>
-                                                    <a href="#" class="text-danger"><i class="far fa-trash-alt"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- row -->
-                                            <!-- repeated div -->
                                             
-
                                             <!-- add card btn-->
                                             <div class="row">
                                                 <div class="col-12">

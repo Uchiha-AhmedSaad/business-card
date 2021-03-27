@@ -598,10 +598,11 @@ public function add_city(){
       $this->form_validation->set_rules('city_order','الترتيب','required|xss_clean|integer|trim');
       if ($this -> form_validation -> run()){
          $data= array(
-           'city_name' => $this->input->post('city_name'),
-           'city_country' => $this->input->post('city_country'),
-            'city_adress' => $this->input->post('city_adress'),
-           'city_order' => $this->input->post('city_order')
+           'city_name'      => $this->input->post('city_name'),
+           'city_name_en'   => $this->input->post('city_name_en'),
+           'city_country'   => $this->input->post('city_country'),
+            'city_adress'   => $this->input->post('city_adress'),
+           'city_order'     => $this->input->post('city_order')
          );
          $this->load->model('city_m');
          $cre= $this->city_m->create($data);
@@ -688,6 +689,7 @@ public function do_edit_city(){
          if ($this -> form_validation -> run()){
          $data= array(
            'city_name' => $this->input->post('city_name'),
+           'city_name_en'   => $this->input->post('city_name_en'),
            'city_country' => $this->input->post('city_country'),
              'city_adress' => $this->input->post('city_adress'),
            'city_order' => $this->input->post('city_order')
@@ -706,6 +708,7 @@ public function do_edit_city(){
     $query = $this->city_m->find_all_where_desc('city_id',$segment,'city_id');
     $con = $query->row();
     $data['city_name']= $con->city_name;
+    $data['city_name_en']= $con->city_name_en;
     $data['city_country']= $con->city_country;
     $data['city_adress']= $con->city_adress;
     $data['city_order']= $con->city_order;

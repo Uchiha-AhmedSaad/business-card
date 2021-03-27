@@ -1,14 +1,3 @@
-
-
-<?php
-   $ci = &get_instance();
-   $ci -> load -> model('setting');
-   //select icons url
-   $q_setting= $ci->setting->find_all_where('setting_id','1');
-   $d_setting= $q_setting->row();
-   $lang = $ci -> session -> userdata('site_lang');
-   $base_url = base_url();
-   ?>
 <!DOCTYPE html>
 <html lang="en">
    <head class="swap_lang">

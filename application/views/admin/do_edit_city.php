@@ -157,7 +157,10 @@ $lang = $ci -> session -> userdata('site_lang');
 										<input type="text" value="<?php echo $city_name; ?>" name="city_name" class="form-control" id="exampleInputEmail1" placeholder="Enter text">
 							
 									</div>
-                                    
+									<div class="form-group">
+									   <label for="city_name_en">اسم المدينة  بالإنجليزية :</label>
+									   <input type="text" name="city_name_en" value="<?php echo $city_name_en; ?>" class="form-control" id="city_name_en" placeholder="Enter text">
+									</div>                                   
                            	<div class="form-group">
 										<label for="exampleInputEmail1">الدولة  :</label>
 										<select class="form-control" name="city_country">

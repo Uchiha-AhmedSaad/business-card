@@ -148,6 +148,8 @@ class Site extends CI_Controller
 				return redirect(base_url('site/account'));
             }
 		}
+		$data['cards'] = $this->db->where('b_cards_user_id',$this->session->userdata('user')['user_id'])->get('b_cards')->result();
+
 
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('account',$data);
@@ -179,25 +181,29 @@ class Site extends CI_Controller
 		$data = [];
 
 		$categories = $this->db->get('cat')->result_array();
-		$countries = $this->db->get('country')->result_array();
+		$countries 	= $this->db->get('country')->result_array();
+		$settings 	= $this->db->get('setting')->row();
 		if (!empty($_SESSION['language'])) 
 		{
-			if ($_SESSION['language'] == 'ar') {
-				$countries = array_column($countries,'country_name','country_id');
+			if ($_SESSION['language'] == 'ar') 
+			{
+				$countries 	= array_column($countries,'country_name','country_id');
 				$categories = array_column($categories,'cat_name','cat_id');
 			}
-			else{
-				$countries = array_column($countries,'country_name_en','country_id');
+			else
+			{
+				$countries 	= array_column($countries,'country_name_en','country_id');
 				$categories = array_column($categories,'cat_name_en','cat_id');
 			}
 		}
-		else{
-			$countries = array_column($countries,'country_name','country_id');
+		else
+		{
+			$countries 	= array_column($countries,'country_name','country_id');
 			$categories = array_column($categories,'cat_name','cat_id');
 		}
 		
 		$data['categories'] = $categories;
-		$data['countries'] = $countries;
+		$data['countries'] 	= $countries;
 
 		if (!empty($_POST)) 
 		{
@@ -210,7 +216,7 @@ class Site extends CI_Controller
 			$data_insert['b_cards_phone'] 		= $this->input->post('b_cards_phone');
 			$data_insert['b_cards_work'] 		= $this->input->post('b_cards_work');
 			$data_insert['b_cards_cat_id'] 		= $this->input->post('b_cards_cat_id');
-			
+			$data_insert['b_cards_user_id'] 	= $this->session->userdata('user')['user_id'];
 			$data_insert['job'] 				= $this->input->post('job');
 			$data_insert['job_en'] 				= $this->input->post('job_en');
 			$data_insert['email'] 				= $this->input->post('email');
@@ -234,10 +240,8 @@ class Site extends CI_Controller
 			$this->form_validation->set_rules('job',e_lang('job'), 'required');
 			$this->form_validation->set_rules('job_en',e_lang('job_en'), 'required');
 			$this->form_validation->set_rules('email',e_lang('email'), 'required');
-
 			if (!empty($_FILES['files'])) 
 			{
-		
 				$extract = [];
 				for ($i=0; $i < count($_FILES['files']['name']); $i++) { 
 					$extract[$i]['name'] = $_FILES['files']['name'][$i];
@@ -245,16 +249,15 @@ class Site extends CI_Controller
 					$extract[$i]['tmp_name'] = $_FILES['files']['tmp_name'][$i];
 					$extract[$i]['error'] = $_FILES['files']['error'][$i];
 					$extract[$i]['size'] = $_FILES['files']['size'][$i];
-					
 				}
-				
-
 				foreach ($extract as $images) {
 					$data_insert['user_photo'][] = uploadMedia($images);
 				}
+				$data_insert['expire_date'] 	 = date('Y-m-d H:i:s',strtotime('+'.$settings->setting_package.' days'));
 
-				$data_insert['user_photo'] = implode('|', $data_insert['user_photo']);
 			}
+			$data_insert['expire_date_unix'] = strtotime('+'.$settings->setting_package.'days');
+			$data_insert['user_photo'] = implode('|', $data_insert['user_photo']);
 			if (!empty($_FILES['logo'])) {
 				$data_insert['logo'] = uploadMedia($_FILES['logo']);
 			}
@@ -328,7 +331,6 @@ class Site extends CI_Controller
 			$data_insert['job_email'] 		= $this->input->post('job_email');
 			$data_insert['job_telephone'] 	= $this->input->post('job_telephone');
 			$data_insert['job_info'] 		= $this->input->post('job_info');
-
 			$this->form_validation->set_rules('details',e_lang('Details'), 'required');
 			$this->form_validation->set_rules('job_name',e_lang('Name'), 'required');
 			$this->form_validation->set_rules('job_type',e_lang('Type'), 'required');
@@ -341,7 +343,6 @@ class Site extends CI_Controller
 
 			if (!empty($_FILES['job_pictures'])) 
 			{
-		
 				$extract = [];
 				for ($i=0; $i < count($_FILES['job_pictures']['name']); $i++) { 
 					$extract[$i]['name'] 		= $_FILES['job_pictures']['name'][$i];
@@ -350,11 +351,9 @@ class Site extends CI_Controller
 					$extract[$i]['error'] 		= $_FILES['job_pictures']['error'][$i];
 					$extract[$i]['size'] 		= $_FILES['job_pictures']['size'][$i];
 				}
-				
 				foreach ($extract as $images) {
 					$data_insert['job_pictures'][] = uploadMedia($images);
 				}
-
 				$data_insert['job_pictures'] = implode('|', $data_insert['job_pictures']);
 			}
 
@@ -488,7 +487,7 @@ class Site extends CI_Controller
 	    $this->load->view('layout/footer');
 	}
 	public function docCard()
-	{ 
+	{
 		$data = [];
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('contact_us',$data);
@@ -590,7 +589,6 @@ class Site extends CI_Controller
                 	
                 	if (!empty($insert)) 
                 	{
-
                 		SweetFlash('Done','payment');
 						return redirect(base_url('site'));
                 	}

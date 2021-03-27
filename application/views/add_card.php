@@ -207,8 +207,7 @@
                        <div class="form-group">
                           <label for="description"><?php e_lang('Information about you'); ?></label>
                           <div class="description_area">
-                             <textarea id="description" value="<?php echo set_value('about_info'); ?>" name="about_info" class="form-control">
-                             </textarea>
+                             <textarea id="description"  name="about_info" class="form-control"><?php echo set_value('about_info'); ?></textarea>
                           </div>
                        </div>
                     </div>
@@ -219,16 +218,6 @@
                           <div class="upload text-center"><?php echo e_lang('Choose pictures'); ?></div>
                        </div>
                        <div class="up_text"><?php echo e_lang('uploaded files'); ?></div>
-                       <div class="up_img row">
-                          <div class="up_img_cont col-sm-3">
-                             <img src="assets/images/car-4.png" id="up" class="img-thumbnail" />
-                             <i class="rem_icon"> <img src="<?php echo base_url('public/assets/images/remove.svg'); ?>" /></i>
-                          </div>
-                          <div class="up_img_cont col-sm-3">
-                             <img src="assets/images/car-3.png" class="img-thumbnail" />
-                             <i class="rem_icon"> <img src="<?php echo base_url('public/assets/images/remove.svg'); ?>" /></i>
-                          </div>
-                       </div>
                     </div>
                     <div class="col-sm-12">
                        <div class="opt_btn btn-group">

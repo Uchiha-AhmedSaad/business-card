@@ -12,39 +12,36 @@
                </div>
                <div class="col-md-4 col-6">
                   <ul>
-                     <a href="#">
-                        <li>الرئيسية</li>
+                     <a href="<?php echo base_url('site'); ?>">
+                        <li><?php echo e_lang('Main'); ?></li>
+                     </a>
+                     <a href="<?php echo base_url('site/account'); ?>">
+                        <li><?php echo e_lang('My account'); ?></li>
+                     </a>
+                     <a href="<?php echo base_url('site/contact_us'); ?>">
+                        <li><?php echo e_lang('Contact us') ?></li>
+                     </a>
+                     <a href="<?php echo base_url('about_us'); ?>">
+                        <li><?php echo e_lang('About us'); ?></li>
                      </a>
                      <a href="#">
-                        <li>حسابى</li>
-                     </a>
-                     <a href="#">
-                        <li>تواصل معنا</li>
-                     </a>
-                     <a href="#">
-                        <li>نبذة عنا</li>
-                     </a>
-                     <a href="#">
-                        <li>الشروط والاحكام</li>
+                        <li><?php echo e_lang('Terms'); ?></li>
                      </a>
                   </ul>
                </div>
                <div class="col-md-4 col-6">
                   <ul>
                      <a href="#">
-                        <li>اضف إعلانك</li>
+                        <li><?php echo e_lang('Add job'); ?></li>
                      </a>
                      <a href="#">
-                        <li>الكروت</li>
+                        <li><?php echo e_lang('Add card'); ?></li>
                      </a>
                      <a href="#">
-                        <li>بحث عن عمالة</li>
+                        <li><?php echo e_lang('Search about workers'); ?></li>
                      </a>
                      <a href="#">
-                        <li>بحث عن وظائف</li>
-                     </a>
-                     <a href="#">
-                        <li>أضف وظيفة</li>
+                        <li><?php echo e_lang('search about job'); ?></li>
                      </a>
                   </ul>
                </div>
@@ -54,16 +51,16 @@
             <div class="footer_links row">
                <div class="col-md-6 col-12 copy_order ">
                   <div class="copy">
-                     <p>جميع الحقوق محفوظة - Online-Business Card 2021</p>
+                     <p><?php echo e_lang('Copyright'); ?> - Online-Business Card 2021</p>
                   </div>
                </div>
                <div class="footer_social col-md-6 col-12">
-                  <span><a href="#"><i class="fab fa-youtube"></i></a></span>
-                  <span><a href="#"><i class="fab fa-linkedin"></i></a></span>
-                  <span><a href="#"><i class="fab fa-instagram"></i></a></span>
-                  <span><a href="#"><i class="fab fa-snapchat"></i></a></span>
-                  <span><a href="#"><i class="fab fa-twitter"></i></a></span>
-                  <span><a href="#"><i class="fab fa-facebook"></i></a></span>
+                  <span><a href="<?php echo !empty(settings()->setting_you)?settings()->setting_you:''; ?>"><i class="fab fa-youtube"></i></a></span>
+                  <span><a href="<?php echo !empty(settings()->linkedin)?settings()->linkedin:''; ?>"><i class="fab fa-linkedin"></i></a></span>
+                  <span><a href="<?php echo !empty(settings()->instgram)?settings()->instgram:''; ?>"><i class="fab fa-instagram"></i></a></span>
+                  <span><a href="<?php echo !empty(settings()->snap)?settings()->snap :''; ?>"><i class="fab fa-snapchat"></i></a></span>
+                  <span><a href="<?php echo !empty(settings()->setting_twitt)?settings()->setting_twitt:''; ?>"><i class="fab fa-twitter"></i></a></span>
+                  <span><a href="<?php echo !empty(settings()->setting_face)?settings()->setting_face:''; ?>"><i class="fab fa-facebook"></i></a></span>
                </div>
             </div>
          </div>
