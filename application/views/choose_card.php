@@ -11,14 +11,15 @@
                         <?php 
 
                             $dir = __DIR__.'/../../uploads/cards/imgs';
-                            for ($i=1; $i <= count(glob($dir.'/*', GLOB_ONLYDIR)); $i++) { 
-                                $file_headers = @get_headers(base_url('uploads/cards/imgs/'.$i.'/'.$i.'-ar.png'));
-
+                            for ($i=1; $i <= count(glob($dir.'/*', GLOB_ONLYDIR)); $i++) 
+                            { 
+                                $file_headers = @get_headers(base_url('uploads/cards/imgs/card%20'.$i.'/c-'.$i.'-'.getCurrentLanguages().'.png'));
+                         
                                 if (strpos($file_headers[0], '200')) {
                                 ?> 
-                                    <div class="card_img_container" style="height: 264px; width: 462px;">
+                                    <div class="card_img_container" style="height: 264px; width: 462px; margin: 20px;">
                                         <div class="card_img_container">
-                                            <img data-number="<?php echo $i; ?>" class="cardClick" style="height: 264px; width: 462px;" src="<?php echo base_url('uploads/cards/imgs/'.$i.'/'.$i.'-ar.png'); ?>" />
+                                            <img data-number="<?php echo $i; ?>" class="cardClick" style="height: 264px; width: 462px;" src="<?php echo base_url('uploads/cards/imgs/card%20'.$i.'/c-'.$i.'-'.getCurrentLanguages().'.png'); ?>" />
                                         </div>
                                     </div>
                                 <?php

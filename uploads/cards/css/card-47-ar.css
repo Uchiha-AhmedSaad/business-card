@@ -1,0 +1,341 @@
+
+@font-face {
+    font-family: Tajawal;
+    src: url("../../assets/fonts/ArbFONTS-Tajawal-Medium.ttf");
+  }
+.card_47{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 15px;
+    border: 1px solid rgb(199, 196, 196);
+    font-family: 'Tajawal', sans-serif;
+}
+.card_47 img{
+    width: 100%;
+    height: 100%;
+}
+.card_47 .grid{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row-reverse;
+}
+.card_47 .grid .left_grid{
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+}
+.card_47 .grid .left_grid .g_inputs{
+    position: relative;
+    top: 5%;
+    right: 10%;
+    text-align: right;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+.card_47 .grid .left_grid .g_inputs ul{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.card_47 .grid .left_grid .g_inputs ul li:first-child{
+    font-size: 28px;
+    letter-spacing: .8px;
+    font-weight: bold;
+    color: #624B78;
+}
+.card_47 .grid .left_grid .g_inputs ul li:nth-child(2){
+    font-size: 18px;
+    color: #624B78;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.card_47 .grid .left_grid .g_inputs::after{
+    content: "";
+    position: absolute;
+    top: 80px;
+    right: 0%;
+    width: 75%;
+    height: 1.7px;
+    background-color: #ada5b5;
+
+}
+.card_47 .grid .left_grid .slogan{
+    position: absolute;
+    top: 38%;
+    right: 10%;
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    width: 100%;
+    text-align: right;
+    color: #fff;
+}
+.card_47 .grid .left_grid .social_icons{
+    position: absolute;
+    left: 0%;
+    bottom: 3%;
+    text-align: right;
+    width: 91%;
+}
+.card_47 .grid .left_grid .social_icons ul{
+    padding: 0px;
+    margin-bottom: 0px;
+    position: relative;
+}
+.card_47 .grid .left_grid .social_icons ul li{
+    display: inline-flex;
+}
+.card_47 .grid .left_grid .social_icons ul li a{
+    font-size: 22px;
+    margin-right: 20px;
+    color:#624B78;
+}
+.card_47 .grid .left_grid .social_icons::before{
+    content: "";
+    position: absolute;
+    top: -28%;
+    right: 0%;
+    width: 85%;
+    height: 1.7px;
+    background-color: #ada5b5;
+}
+
+.card_47 .grid .right_grid{
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+}
+.card_47 .grid .right_grid .logo{
+    position: absolute;
+    top: 2%;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+}
+.card_47 .grid .right_grid .logo img{
+    width: 85px;
+    height: 85px;
+}
+
+.card_47 .grid .right_grid .client_data{
+    position: absolute;
+    top: 37%;
+    right: 0%;
+    width: 97.5%;
+    direction: rtl;
+}
+.card_47 .grid .right_grid .client_data ul{
+    padding: 0px;
+    margin-bottom: 0px;
+    text-align: right;
+}
+.card_47 .grid .right_grid .client_data .client_list{
+    display: flex;
+    width: 100%;
+}
+.card_47 .grid .right_grid .client_data .icon_list{
+    flex: 0 0 15%;
+    text-align: center;
+    margin-left: 10px;
+}
+.card_47 .grid .right_grid .client_data .icon_list li a{
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+}
+.card_47 .grid .right_grid .client_data .icon_list li{
+    margin-bottom: 37px;
+}
+.card_47 .grid .right_grid .client_data .icon_list li a{
+    font-size: 16px;
+}
+.card_47 .grid .right_grid .client_data .data_list{
+    flex: 0 0 80%;
+    max-width: 80%;
+    margin-top: 1px;
+    overflow-wrap: break-word;
+}
+.card_47 .grid .right_grid .client_data .data_list li{
+    margin-bottom: 0px;
+    height: 58px;
+}
+.card_47 .grid .right_grid .client_data .data_list a{
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.929);
+}
+
+@media (min-width:290px) and (max-width:440px){
+    .card_47 .grid .right_grid .logo img {
+        width: 60px;
+        height: 60px;
+    }
+    .card_47 .grid .left_grid .g_inputs ul li:first-child{
+        font-size: 18px;
+    }
+    .card_47 .grid .left_grid .g_inputs ul li:nth-child(2){
+        font-size: 12px;
+    }
+    .card_47 .grid .left_grid .g_inputs::after{
+        top: 65px;
+        width: 80%;
+    }
+    .card_47 .grid .left_grid .slogan{
+        top: 32%;
+        font-size: 11px;
+    }
+    .card_47 .grid .left_grid .social_icons ul li a{
+        font-size: 17px;
+        margin-right: 8px;
+    }
+    .card_47 .grid .left_grid .social_icons::before{
+        width: 85%;
+    }
+    .card_47 .grid .right_grid .client_data .icon_list li a{
+        font-size: 13px;
+    }
+    .card_47 .grid .right_grid .client_data .data_list a{
+        font-size: 9px;
+    }
+}
+
+@media (min-width:440px) and (max-width:540px){
+   
+    .card_47 .grid .left_grid .g_inputs ul li:first-child{
+        font-size: 21px;
+    }
+    .card_47 .grid .left_grid .g_inputs ul li:nth-child(2){
+        font-size: 14px;
+    }
+    .card_47 .grid .left_grid .g_inputs::after{
+        top: 65px;
+        width: 70%;
+    }
+    .card_47 .grid .left_grid .slogan{
+        top: 32%;
+        font-size: 13px;
+    }
+    .card_47 .grid .left_grid .social_icons ul li a{
+        font-size: 20px;
+        margin-right: 14px;
+    }
+    .card_47 .grid .left_grid .social_icons::before{
+        width: 70%;
+    }
+    .card_47 .grid .right_grid .logo img {
+        width: 70px;
+        height: 70px;
+    }
+    .card_47 .grid .right_grid .client_data .icon_list li a{
+        font-size: 14px;
+    }
+    .card_47 .grid .right_grid .client_data .data_list a{
+        font-size: 11px;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px){
+   
+    .card_47 .grid .left_grid .g_inputs ul li:first-child{
+        font-size: 20px;
+    }
+    .card_47 .grid .left_grid .g_inputs ul li:nth-child(2){
+        font-size: 13px;
+    }
+    .card_47 .grid .left_grid .g_inputs::after{
+        top: 65px;
+        width: 70%;
+    }
+    .card_47 .grid .left_grid .slogan{
+        top: 32%;
+        font-size: 12px;
+    }
+    .card_47 .grid .left_grid .social_icons ul li a{
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    .card_47 .grid .left_grid .social_icons::before{
+        width: 70%;
+    }
+    .card_47 .grid .right_grid .logo img {
+        width: 70px;
+        height: 70px;
+    }
+    .card_47 .grid .right_grid .client_data .icon_list li a{
+        font-size: 13px;
+    }
+    .card_47 .grid .right_grid .client_data .data_list a{
+        font-size: 10px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px){
+    .card_47 .grid .right_grid .logo img {
+        width: 60px;
+        height: 60px;
+    }
+    .card_47 .grid .left_grid .g_inputs ul li:first-child{
+        font-size: 18px;
+    }
+    .card_47 .grid .left_grid .g_inputs ul li:nth-child(2){
+        font-size: 12px;
+    }
+    .card_47 .grid .left_grid .g_inputs::after{
+        top: 65px;
+        width: 80%;
+    }
+    .card_47 .grid .left_grid .slogan{
+        top: 32%;
+        font-size: 11px;
+    }
+    .card_47 .grid .left_grid .social_icons ul li a{
+        font-size: 17px;
+        margin-right: 8px;
+    }
+    .card_47 .grid .left_grid .social_icons::before{
+        width: 85%;
+    }
+    .card_47 .grid .right_grid .client_data .icon_list li a{
+        font-size: 13px;
+    }
+    .card_47 .grid .right_grid .client_data .data_list a{
+        font-size: 9px;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1450px){
+   
+    .card_47 .grid .left_grid .g_inputs ul li:first-child{
+        font-size: 21px;
+    }
+    .card_47 .grid .left_grid .g_inputs ul li:nth-child(2){
+        font-size: 14px;
+    }
+    .card_47 .grid .left_grid .g_inputs::after{
+        top: 65px;
+        width: 70%;
+    }
+    .card_47 .grid .left_grid .slogan{
+        top: 32%;
+        font-size: 13px;
+    }
+    .card_47 .grid .left_grid .social_icons ul li a{
+        font-size: 20px;
+        margin-right: 14px;
+    }
+    .card_47 .grid .left_grid .social_icons::before{
+        width: 70%;
+    }
+    .card_47 .grid .right_grid .logo img {
+        width: 70px;
+        height: 70px;
+    }
+    .card_47 .grid .right_grid .client_data .icon_list li a{
+        font-size: 14px;
+    }
+    .card_47 .grid .right_grid .client_data .data_list a{
+        font-size: 11px;
+    }
+}

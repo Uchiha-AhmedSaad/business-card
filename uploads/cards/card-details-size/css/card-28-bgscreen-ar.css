@@ -1,0 +1,254 @@
+@font-face {
+    font-family: Tajawal;
+    src: url("../../../assets/fonts/ArbFONTS-Tajawal-Medium.ttf");
+}
+.card_28{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    margin-bottom: 15px;
+    border: 1px solid rgb(199, 196, 196);
+    font-family: 'Tajawal', sans-serif;
+}
+.card_28 img{
+    width: 100%;
+    height: 100%;
+}
+.card_28 .grid{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row-reverse;
+}
+.card_28 .grid .left_part{
+    flex: 0 0 60%;
+    max-width: 60%;
+    overflow-wrap: break-word;
+}
+
+.card_28 .grid .left_part .g_inputs{
+    position: absolute;
+    top: 16.5%;
+    right: 5%;
+}
+.card_28 .grid .left_part .g_inputs ul{
+    padding: 0px;
+    text-align: right;
+}
+.card_28 .grid .left_part .g_inputs ul li:first-child{
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1.5px;
+}
+.card_28 .grid .left_part .g_inputs ul li:nth-child(2){
+    font-size: 22px;
+    color: #FBB11D;
+    letter-spacing: 2px;
+}
+.card_28 .client_details .client_list{
+    display: flex;
+    position: absolute;
+    width: 55%;
+    right: 2.5%;
+    top: 45%;
+    flex-direction: row-reverse;
+}
+.card_28 .client_details .client_list .icon_list{
+    flex: 0 0 8%;
+    padding: 0px;
+    text-align: right;
+}
+.card_28 .client_details .client_list .icon_list img{
+    width: 40px;
+    height: 40px;
+}
+.card_28 .client_details .client_list .icon_list li{
+    margin-bottom: 11px;
+    margin-left: 4px;
+}
+.card_28 .client_details .client_list .icon_list li:last-child{
+    margin-right: 7px;
+}
+.card_28 .client_details .client_list .icon_list i{
+    font-size: 25px;
+    color: #fff;
+    padding-left: 7px;
+}
+.card_28 .client_details .client_list .data_list{
+    flex: 0 0 82%;
+    padding: 0px;
+    text-align: right;
+    margin-top: 3px;
+}
+.card_28 .client_details .client_list .data_list a{
+    font-size: 18px;
+    overflow-wrap: break-word;
+    color: #FBB11D;;
+}
+.card_28 .client_details .client_list .data_list li{
+    margin-bottom: 0px;
+    height: 49px;
+}
+.card_28 .grid .right_part{
+    flex: 0 0 40%;
+    max-width: 40%;
+    position: relative;
+}
+.card_28 .grid .right_part .logo{
+    position: absolute;
+    top: 1%;
+    left: 0%;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+.card_28 .grid .right_part .logo img{
+    width: 190px;
+    height: 190px;
+}
+.card_28 .grid .right_part .slogan{
+    position: absolute;
+    top: 39%;
+    left: 5px;
+    width: 100%;
+    text-align: center;
+    color: #0D1F33;
+    font-size: 19px;
+    font-weight: bold;
+}
+.card_28 .grid .right_part .social_icons{
+    position: absolute;
+    bottom: 0%;
+    left: 3%;
+    width: 40%;
+    text-align: left;
+}
+.card_28 .grid .right_part .social_icons ul{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.card_28 .grid .right_part .social_icons ul li{
+    margin-bottom: 8px;
+}
+.card_28 .grid .right_part .social_icons ul li a {
+    color: #0D1F33;
+    font-size: 27px;
+}
+@media (min-width:250px) and (max-width:445px){
+    .card_28 .grid .left_part .g_inputs ul li:first-child{
+        font-size: 11px;
+    }
+    .card_28 .grid .left_part .g_inputs ul li:nth-child(2){
+        font-size: 8px;
+    }
+    .card_28 .client_details .client_list .icon_list img {
+        width: 26px;
+        height: 30px;
+    }
+    .card_28 .client_details .client_list .icon_list i{
+        font-size: 15px;
+    }
+    .card_28 .client_details .client_list .data_list{
+        margin-top: -2px;
+    }
+    .card_28 .client_details .client_list .data_list a{
+        font-size: 9px;
+        margin-top: 0px;
+    }
+    .card_28 .client_details .client_list .data_list li{
+        margin-bottom: 0px;
+        height: 41.5px;
+    }
+    .card_28 .grid .right_part .logo img{
+        width: 85px;
+        height: 110px;
+    }
+    .card_28 .grid .right_part .slogan{
+        font-size: 10px;
+        top: 30%;
+    }
+    .card_28 .grid .right_part .social_icons ul li a{
+        font-size: 14px;
+    }
+}
+
+@media (min-width:445px) and (max-width:560px){
+    .card_28 .grid .left_part .g_inputs ul li:first-child{
+        font-size: 14px;
+    }
+    .card_28 .grid .left_part .g_inputs ul li:nth-child(2){
+        font-size: 11px;
+    }
+    .card_28 .client_details .client_list .icon_list img {
+        width: 28px;
+        height: 32px;
+    }
+    .card_28 .client_details .client_list .icon_list i{
+        font-size: 16px;
+    }
+    .card_28 .client_details .client_list .data_list{
+        margin-top: -2px;
+    }
+    .card_28 .client_details .client_list .data_list a{
+        font-size: 11px;
+        margin-top: 0px;
+    }
+    .card_28 .client_details .client_list .data_list li{
+        margin-bottom: 0px;
+        height: 42.5px;
+    }
+    .card_28 .grid .right_part .logo img{
+        width: 110px;
+        height: 110px;
+    }
+    .card_28 .grid .right_part .slogan{
+        font-size: 12px;
+        top: 30%;
+    }
+    .card_28 .grid .right_part .social_icons ul li a{
+        font-size: 18px;
+    }
+}
+
+@media (min-width:560px) and (max-width:767.6px){
+    .card_28 .grid .left_part .g_inputs ul li:first-child{
+        font-size: 18px;
+    }
+    .card_28 .grid .left_part .g_inputs ul li:nth-child(2){
+        font-size: 14px;
+    }
+    .card_28 .client_details .client_list .icon_list img {
+        width: 33px;
+        height: 32px;
+    }
+    .card_28 .client_details .client_list .icon_list i{
+        font-size: 18px;
+    }
+    .card_28 .client_details .client_list .data_list{
+        margin-top: -2px;
+    }
+    .card_28 .client_details .client_list .data_list a{
+        font-size: 13px;
+        margin-top: 0px;
+    }
+    .card_28 .client_details .client_list .data_list li{
+        margin-bottom: 0px;
+        height: 42.5px;
+    }
+    .card_28 .grid .right_part .logo img{
+        width: 110px;
+        height: 110px;
+    }
+    .card_28 .grid .right_part .slogan{
+        font-size: 14px;
+        top: 30%;
+    }
+    .card_28 .grid .right_part .social_icons ul li a{
+        font-size: 20px;
+    }  
+}
+

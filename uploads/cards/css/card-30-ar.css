@@ -1,0 +1,341 @@
+.card_30{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 15px;
+    border: 1px solid rgb(199, 196, 196);
+    font-family: 'Tajawal', sans-serif;
+}
+.card_30 img{
+    width: 100%;
+    height: 100%;
+}
+.card_30 .grid{
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+}
+.card_30 .grid .g_inputs{
+    flex: 0 0 45%;
+    color: #fff;
+}
+.card_30 .grid .g_inputs ul{
+    position: absolute;
+    text-align: right;
+}
+.card_30 .grid .g_inputs ul li:first-child{
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+.card_30 .grid .g_inputs ul li:nth-child(2){
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.card_30 .grid .logo{
+    flex: 0 0 55%;
+    direction: rtl;
+    position: absolute;
+    left: 2%;
+}
+.card_30 .grid .logo img{
+    width: 70px;
+    height: 70px;
+}
+.card_30 .grid .logo .slogan{
+    font-size: 14px;
+    color: #26707a;
+    font-weight: 500;
+}
+
+.card_30 .list_grid{
+    position: absolute;
+    top: 56%;
+    width: 100%;
+    display: flex;
+}
+.card_30 .list_grid ul{
+    padding: 0px;
+}
+.card_30 .list_grid .left_list{
+    flex: 0 0 54%;
+    display: flex;
+    position: relative;
+}
+.card_30 .list_grid .left_list .icon_list1{
+    position: absolute;
+    right: 16.7%;
+}
+.card_30 .list_grid .left_list .icon_list1 li{
+    margin-bottom: 10px;
+}
+.card_30 .list_grid .left_list .icon_list1 li i{
+    font-size: 13px;
+    color: #fff;
+}
+.card_30 .list_grid .left_list .data_list1{
+    position: absolute;
+    right: 24.5%;
+    text-align: right;
+    margin-top: 5px;
+    width: 65%;
+    overflow-wrap: break-word;
+}
+.card_30 .list_grid .left_list .data_list1 li{
+    height: 34px;
+    line-height: .9;
+}
+.card_30 .list_grid .left_list .data_list1 li a{
+    font-size: 13px;
+    color: #000;
+    overflow-wrap: break-word;
+}
+
+.card_30 .list_grid .right_list{
+    flex: 0 0 46%;
+    display: flex;
+    text-align: right;
+    overflow-wrap: break-word;
+    position: relative;
+}
+.card_30 .list_grid .right_list .icon_list2{
+    position: absolute;
+    right: 40.3%;
+}
+.card_30 .list_grid .right_list .icon_list2 li{
+    margin-bottom: 10px;
+}
+.card_30 .list_grid .right_list .icon_list2 li i{
+    font-size: 13px;
+    color: #fff;
+}
+.card_30 .list_grid .right_list .data_list2{
+    position: absolute;
+    right: 49%;
+    text-align: right;
+    margin-top: 5px;
+    width: 70%;
+}
+.card_30 .list_grid .right_list .data_list2 li{
+    height: 34px;
+    line-height: .9;
+}
+.card_30 .list_grid .right_list .data_list2 li a{
+    font-size: 13px;
+    color: #000;
+}
+.card_30 .bt_grid{
+    display: flex;
+    position: absolute;
+    bottom: 2%;
+    width: 70%;
+    flex-direction: row;
+    left: 5%;
+}
+.card_30 .bt_grid .social_icons ul{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.card_30 .bt_grid .social_icons ul li{
+    display: inline-flex;
+    margin-right: 15px;
+}
+.card_30 .bt_grid .social_icons ul li a {
+    font-size: 22px;
+    color: #21707b;
+}
+
+@media (min-width:250px) and (max-width:375px){
+    .card_30 .grid .g_inputs ul li:first-child{
+        font-size: 12px;
+    }
+    .card_30 .grid .g_inputs ul li:nth-child(2){
+        font-size: 9px;
+    }
+    .card_30 .grid .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    .card_30 .grid .logo .slogan{
+        font-size: 9px;
+    }
+    .card_30 .list_grid .left_list .icon_list1 li a{
+        font-size: 8px;
+    }
+    .card_30 .list_grid .right_list .icon_list1 li a{
+        font-size: 8px;
+    }
+    .card_30 .bt_grid .social_icons ul li a{
+        font-size: 16px;
+    }
+
+}
+@media (min-width:375px) and (max-width:565px){
+    .card_30 .grid .g_inputs ul li:first-child{
+        font-size: 18px;
+    }
+    .card_30 .grid .g_inputs ul li:nth-child(2){
+        font-size: 13px;
+    }
+    .card_30 .grid .logo img {
+        width: 55px;
+        height: 55px;
+    }
+    .card_30 .grid .logo .slogan{
+        font-size: 11px;
+    }
+    .card_30 .list_grid .left_list .icon_list1 li a{
+        font-size: 10px;
+    }
+    .card_30 .list_grid .right_list .icon_list1 li a{
+        font-size: 10px;
+    }
+    .card_30 .bt_grid .social_icons ul li a{
+        font-size: 18px;
+    }
+
+}
+@media (min-width:565px) and (max-width:710px){
+    .card_30 .grid .g_inputs ul li:first-child{
+        font-size: 25px;
+    }
+    .card_30 .grid .g_inputs ul li:nth-child(2){
+        font-size: 17px;
+    }
+    .card_30 .grid .logo img {
+        width: 65px;
+        height: 65px;
+    }
+    .card_30 .grid .logo .slogan{
+        font-size: 17px;
+    }
+    .card_30 .list_grid .left_list .icon_list1 li a{
+        font-size: 14px;
+    }
+    .card_30 .list_grid .right_list .icon_list1 li a{
+        font-size: 14px;
+    }
+    .card_30 .bt_grid .social_icons ul li a{
+        font-size: 24px;
+    }
+    .card_30 .list_grid .left_list .icon_list1 li i{
+        margin-right: 5%;
+    }
+    .card_30 .list_grid .right_list .icon_list1 li i{
+        margin-right: 5%;
+    }
+
+}
+@media (min-width:710px) and (max-width:767.5px){
+    .card_30 .grid .g_inputs ul li:first-child{
+        font-size: 28px;
+    }
+    .card_30 .grid .g_inputs ul li:nth-child(2){
+        font-size: 19px;
+    }
+    .card_30 .grid .logo img {
+        width: 75px;
+        height: 75px;
+    }
+    .card_30 .grid .logo .slogan{
+        font-size: 19px;
+    }
+    .card_30 .list_grid .left_list .icon_list1 li a{
+        font-size: 17px;
+    }
+    .card_30 .list_grid .right_list .icon_list1 li a{
+        font-size: 17px;
+    }
+    .card_30 .bt_grid .social_icons ul li a{
+        font-size: 27px;
+    }
+    .card_30 .list_grid .left_list .icon_list1 li i{
+        margin-right: 5%;
+        font-size: 13px;
+    }
+    .card_30 .list_grid .right_list .icon_list1 li i{
+        margin-right: 5%;
+        font-size: 13px;
+    }
+
+}
+@media (min-width:768px) and (max-width:890px){
+    .card_30 .grid .g_inputs ul li:first-child{
+        font-size: 18px;
+    }
+    .card_30 .grid .g_inputs ul li:nth-child(2){
+        font-size: 13px;
+    }
+    .card_30 .grid .logo img {
+        width: 55px;
+        height: 55px;
+    }
+    .card_30 .grid .logo .slogan{
+        font-size: 11px;
+    }
+    .card_30 .list_grid .left_list .icon_list1 li a{
+        font-size: 10px;
+    }
+    .card_30 .list_grid .right_list .icon_list1 li a{
+        font-size: 10px;
+    }
+    .card_30 .bt_grid .social_icons ul li a{
+        font-size: 19px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1250px){
+    .card_30 .grid .g_inputs ul li:first-child{
+        font-size: 15px;
+    }
+    .card_30 .grid .g_inputs ul li:nth-child(2){
+        font-size: 11px;
+    }
+    .card_30 .grid .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    .card_30 .grid .logo .slogan{
+        font-size: 10px;
+    }
+    .card_30 .list_grid .left_list .icon_list1 li a{
+        font-size: 9px;
+    }
+    .card_30 .list_grid .right_list .icon_list1 li a{
+        font-size: 9px;
+    }
+    .card_30 .bt_grid .social_icons ul li a{
+        font-size: 17px;
+    }
+
+}
+@media (min-width:1250px) and (max-width:1450px){
+    .card_30 .grid .g_inputs ul li:first-child{
+        font-size: 22px;
+    }
+    .card_30 .grid .g_inputs ul li:nth-child(2){
+        font-size: 17px;
+    }
+    .card_30 .grid .logo img {
+        width: 60px;
+        height: 60px;
+    }
+    .card_30 .grid .logo .slogan{
+        font-size: 12px;
+    }
+    .card_30 .list_grid .left_list .icon_list1 li a{
+        font-size: 11px;
+    }
+    .card_30 .list_grid .right_list .icon_list1 li a{
+        font-size: 11px;
+    }
+    .card_30 .bt_grid .social_icons ul li a{
+        font-size: 22px;
+    }
+
+}
+

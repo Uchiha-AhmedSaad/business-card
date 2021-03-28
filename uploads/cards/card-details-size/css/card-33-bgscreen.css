@@ -1,0 +1,173 @@
+.card_33{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    margin-bottom: 15px;
+    border: 1px solid rgb(199, 196, 196);
+}
+.card_33 img{
+    width: 100%;
+    height: 100%;
+}
+.card_33 .grid{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.card_33 .grid .left_grid{
+    flex: 0 0 50%;
+    position: relative;
+    max-width: 50%;
+}
+.card_33 .grid .left_grid .g_inputs{
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+}
+.card_33 .grid .left_grid .g_inputs ul{
+    padding:0px;
+}
+.card_33 .grid .left_grid .g_inputs ul li:first-child{
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.card_33 .grid .left_grid .g_inputs ul li:nth-child(2){
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+.card_33 .grid .right_grid{
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+}
+.card_33 .grid .right_grid .logo{
+    position: absolute;
+    right: 0px;
+    top: 12px;
+    width: 100%;
+}
+.card_33 .grid .right_grid .logo img{
+    width: 130px;
+    height: 130px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.card_33 .grid .right_grid .slogan{
+    font-size: 23px;
+    font-weight: 500;
+    color: #27aae2;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    vertical-align: middle;
+    width: 52%;
+    overflow-wrap: break-word;
+}
+.card_33 .grid .right_grid .client_details{
+    position: absolute;
+    top: 48%;
+    right: 22%;
+}
+.card_33 .grid .right_grid .client_details ul{
+    padding: 0px;
+}
+.card_33 .grid .right_grid .client_details ul li{
+    margin-bottom: 0px;
+    height: 52px;
+    width: 100%;
+}
+.card_33 .grid .right_grid .client_details ul li i{
+    display: inline-flex;
+    font-size: 20px;
+    color: #fff;
+    margin-left: 15px;
+}
+.card_33 .grid .right_grid .client_details ul li a{
+    display: inline-flex;
+    flex-direction: row-reverse;
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: 10px;
+    color: #000;
+}
+
+.card_33 .grid .right_grid .client_details ul li:last-child i{
+    margin-right: 2px;
+}
+.card_33 .grid .right_grid .social_icons{
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    text-align: right;
+}
+.card_33 .grid .right_grid .social_icons ul{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.card_33 .grid .right_grid .social_icons ul li{
+    display: inline-flex;
+}
+.card_33 .grid .right_grid .social_icons ul li a{
+    font-size: 20px;
+    color: #27aae2;
+    margin-right: 15px;
+}
+
+@media (min-width:280px) and (max-width:440px){
+    .card_33 .grid .left_grid .g_inputs ul li:first-child{
+        font-size: 17px;
+    }
+    .card_33 .grid .left_grid .g_inputs ul li:nth-child(2){
+        font-size: 13px;
+    }
+    .card_33 .grid .right_grid .logo img{
+        width: 50px;
+        height: 50px;
+    }
+    .card_33 .grid .right_grid .slogan{
+        font-size: 10px;
+    }
+    .card_33 .grid .right_grid .client_details ul li a{
+        font-size: 9px;
+        margin-right: -11px;
+    }
+    .card_33 .grid .right_grid .client_details ul li i{
+        font-size: 9px;
+    }
+    .card_33 .grid .right_grid .social_icons ul li a{
+        font-size: 14px;
+        margin-right: 3px;
+    }
+}
+
+@media (min-width:440px) and (max-width:767.5px){
+    .card_33 .grid .left_grid .g_inputs ul li:first-child{
+        font-size: 22px;
+    }
+    .card_33 .grid .left_grid .g_inputs ul li:nth-child(2){
+        font-size: 15px;
+    }
+    .card_33 .grid .right_grid .logo img{
+        width: 70px;
+        height: 70px;
+    }
+    .card_33 .grid .right_grid .slogan{
+        font-size: 11px;
+    }
+    .card_33 .grid .right_grid .client_details ul li a{
+        font-size: 11px;
+        margin-right: -8px;
+    }
+    .card_33 .grid .right_grid .client_details ul li i{
+        font-size: 13px;
+    }
+    .card_33 .grid .right_grid .social_icons ul li a{
+        font-size: 18px;
+        margin-right: 7px;
+    }
+}

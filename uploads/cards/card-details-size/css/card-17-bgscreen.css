@@ -1,0 +1,203 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card_17{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    margin-bottom: 15px;
+    border: 1px solid rgb(199, 196, 196);
+}
+.card_17 img{
+    width: 100%;
+    height: 100%;
+}
+.card_17 .grid{
+    display: flex;
+    width: 100%;
+    height: 99%;
+    position: absolute;
+    top: 0%;
+}
+.card_17 .grid .left_column{
+    flex:0 0 55%;
+    max-width: 55%;
+}
+.card_17 .grid .logo{
+    width: 45%;
+    text-align: center;
+    position: absolute;
+    top: 9%;
+}
+.card_17 .grid .logo img{
+    width: 140px;
+    height: 140px;
+}
+.card_17 .grid .g_inputs{
+    width: 45%;
+    text-align: center;
+    position: absolute;
+    top: 47%;
+}
+.card_17 .grid .g_inputs span{
+    color:#fff;
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 3px;
+    border-bottom: 3px solid #fff;
+    letter-spacing: 2px;
+}
+.card_17 .grid .slogan{
+    position: absolute;
+    top: 66%;
+    width: 45%;
+}
+.card_17 .grid .slogan ul{
+    padding:0px;
+    text-align: center;
+}
+.card_17 .grid .slogan ul li span{
+    color: #a13063;
+}
+.card_17 .grid .slogan ul li:first-child{
+    font-size: 24px;
+    letter-spacing: 2.8px;
+}
+.card_17 .grid .slogan ul li:nth-child(2){
+    font-size: 18px;
+    letter-spacing: 1.2px;
+}
+.card_17 .grid .social_icons{
+    position: absolute;
+    bottom: 0%;
+    text-align: center;
+    width: 47%;
+}
+.card_17 .grid .social_icons ul{
+    padding: 0px;
+    margin: 0px;
+}
+.card_17 .grid .social_icons ul li{
+    display: inline-flex;
+}
+.card_17 .grid .social_icons ul li a{
+    margin-right: 20px;
+    color: #fff;
+    font-size: 29px;
+}
+.card_17 .grid .right_column{
+    flex: 0 0 45%;
+    height: 99%;
+    position: relative;
+}
+.card_17 .grid .right_column .client_data{
+    position: absolute;
+    top: 31.5%;
+    left: 2.6%;
+    width: 97.5%;
+}
+.card_17 .grid .right_column .client_data ul{
+    padding: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+.card_17 .grid .right_column .client_data .client_list{
+    display: flex;
+    width: 100%;
+}
+.card_17 .grid .right_column .client_data .icon_list{
+    flex: 0 0 10%;
+    text-align: left;
+    margin-right: 0px;
+}
+.card_17 .grid .right_column .client_data .icon_list li{
+    margin-bottom: 30px;
+}
+.card_17 .grid .right_column .client_data .icon_list li a{
+    color: #a13063;
+    font-size: 22px;
+}
+
+.card_17 .grid .right_column .client_data .data_list{
+    flex: 0 0 85%;
+    max-width: 85%;
+    margin-top: 1px;
+    overflow-wrap: break-word;
+}
+.card_17 .grid .right_column .client_data .data_list li{
+    margin-bottom: 0px;
+    height: 62px;
+}
+.card_17 .grid .right_column .client_data .data_list a{
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+@media (min-width:300px) and (max-width:545px){
+    .card_17 .grid .logo img {
+        width: 85px;
+        height: 85px;
+    }
+    .card_17 .grid .g_inputs span{
+        font-size: 14px;
+    }
+    .card_17 .grid .slogan ul li:first-child{
+        font-size: 15px;
+    }
+    .card_17 .grid .slogan ul li:nth-child(2){
+        font-size: 11.5px;
+        letter-spacing: .8px;
+    }
+    .card_17 .grid .social_icons ul li a{
+        font-size: 19px;
+        margin-right: 10px;
+    }
+    .card_17 .grid .right_column .client_data .icon_list{
+        margin-right: 5px;
+    }
+    .card_17 .grid .right_column .client_data .icon_list li a {
+        font-size: 16px;
+    }
+    .card_17 .grid .right_column .client_data .data_list li{
+        height: 52px;
+    }
+    .card_17 .grid .right_column .client_data .data_list a {
+        font-size: 11px;
+    }
+}
+
+@media (min-width:545px) and (max-width:767.5px){
+    .card_17 .grid .logo img {
+        width: 100px;
+        height: 100px;
+    }
+    .card_17 .grid .g_inputs span{
+        font-size: 24px;
+    }
+    .card_17 .grid .slogan ul li:first-child{
+        font-size: 20px;
+    }
+    .card_17 .grid .slogan ul li:nth-child(2){
+        font-size: 15.5px;
+        letter-spacing: .8px;
+    }
+    .card_17 .grid .social_icons ul li a{
+        font-size: 26px;
+        margin-right: 15px;
+    }
+    .card_17 .grid .right_column .client_data .icon_list{
+        margin-right: 5px;
+    }
+    .card_17 .grid .right_column .client_data .icon_list li a {
+        font-size: 19px;
+    }
+    .card_17 .grid .right_column .client_data .data_list li{
+        height: 58px;
+    }
+    .card_17 .grid .right_column .client_data .data_list a {
+        font-size: 13px;
+    }
+}
+
+

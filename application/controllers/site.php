@@ -149,8 +149,6 @@ class Site extends CI_Controller
             }
 		}
 		$data['cards'] = $this->db->where('b_cards_user_id',$this->session->userdata('user')['user_id'])->get('b_cards')->result();
-
-
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('account',$data);
 	    $this->load->view('layout/footer');
@@ -228,6 +226,7 @@ class Site extends CI_Controller
 			$data_insert['instegram'] 			= $this->input->post('instegram');
 			$data_insert['about_info'] 			= $this->input->post('about_info');
 			$data_insert['b_cards_card_id']		= $this->input->post('b_cards_card_id');
+			$data_insert['package_id']			= $this->input->post('package_id');
 			$this->form_validation->set_rules('b_cards_name',e_lang('b_cards_name'), 'required');
 			$this->form_validation->set_rules('b_cards_name_en',e_lang('b_cards_name_en'), 'required');
 			$this->form_validation->set_rules('b_cards_country_id',e_lang('b_cards_country_id'), 'required');
@@ -285,7 +284,7 @@ class Site extends CI_Controller
 
 	    $this->load->view('layout/header',$data);
 	    if (!empty($_GET['card_number'])) {
-	    	$data['card_url'] = base_url('uploads/cards/imgs/'.$_GET['card_number'].'/'.$_GET['card_number'].'-ar.png');
+	    	$data['card_url'] = base_url('uploads/cards/imgs/card%20'.$_GET['card_number'].'/c-'.$_GET['card_number'].'-ar.png');
 	    	$this->load->view('add_card',$data);
 	    }
 	    else{
@@ -423,6 +422,20 @@ class Site extends CI_Controller
 	public function cardDetails()
 	{
 		$data = [];
+		$id = $this->uri->segment(3);
+		if (empty($id)) {
+			return redirect(base_url('site'));
+		}
+		$data['details'] = $this->db->where('b_cards_id',$id)->get('b_cards')->row();
+
+		$data['logo'] = base_url('uploads/'.$data['details']->logo);
+
+		$user_photo  = explode('|',$data['details']->user_photo);
+		$extract = [];
+		foreach ($user_photo as $photo) {
+			$extract[] = base_url('uploads/'.$photo);
+		}
+		$data['photos'] = $extract;
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('card_details',$data);
 	    $this->load->view('layout/footer');
@@ -509,11 +522,8 @@ class Site extends CI_Controller
 	}
 	public function terms()
 	{
-
-
 		$data = [];
 		$data['settings'] = $this->db->get('setting')->row();
-
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('terms',$data);
 	    $this->load->view('layout/footer');
@@ -623,7 +633,6 @@ class Site extends CI_Controller
 		}
 		echo json_encode($extract);
 	}
-
 	public function getPackages()
 	{
 		$country 	= $this->input->post('country');
@@ -640,6 +649,32 @@ class Site extends CI_Controller
 			}
 		}
 		echo json_encode($extract);
+	}
+	public function addFavourite()
+	{
+		if (empty($this->session->userdata('user'))) {
+			redirect(base_url('site/login'));
+		}
+		$fav_type 		= $this->input->post('fav_type');
+		$fav_item_id 	= $this->input->post('fav_item_id');
+		$check = $this->db->where('fav_type',$fav_type)->where('fav_item_id',$fav_item_id)->get('favourite')->row();
+		if (!empty($check)) {
+			SweetFlash('error','this item is in favourite','error');
+			return redirect($_SERVER['HTTP_REFERER']);
+		}
+		$data_insert = [
+			'fav_type' => $fav_type,
+			'fav_item_id' => $fav_item_id,
+		];
+    	$insert = $this->db->insert('favourite',$data_insert);
+    	if (!empty($insert)) 
+    	{
+    		SweetFlash('Done','favourite');
+			return redirect(base_url('site'));
+    	}
+    	else{
+    		return redirect(base_url('site'));
+    	}
 	}
 }
 

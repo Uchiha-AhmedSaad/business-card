@@ -140,8 +140,8 @@
 
                                                             <div class="col-8">
                                                                 <div class="card_btn btn-group">
-                                                                    <button class="btn btn-info">طباعة الكارت</button>
-                                                                    <button class="btn btn-outline-warning">تمييز الكارت</button>
+                                                                    <button class="btn btn-info"><?php echo e_lang('Print card') ?></button>
+                                                                    <button class="btn btn-outline-warning"><?php echo e_lang('charage card'); ?></button>
                                                                 </div>
                                                             </div>
 
@@ -162,7 +162,7 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="add_new_card_btn text-center">
-                                                        <a href="choose_card.html" class="btn btn-info">إضافة كارت</a>
+                                                        <a href="<?php echo base_url('site/addCard'); ?>" class="btn btn-info"><?php echo e_lang('add card'); ?></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -178,7 +178,7 @@
                                     <div class="most-search-header">
 
                                         <div class="container">
-                                            <h5>وظائفى</h5>
+                                            <h5><?php echo e_lang('My Jobs'); ?></h5>
 
                                             <div class="card job_card">
                                             <div class="row no-gutters">

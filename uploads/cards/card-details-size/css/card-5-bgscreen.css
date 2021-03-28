@@ -1,0 +1,221 @@
+.card_5{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  .card_5 img{
+    width: 100%;
+    height: 100%;
+  }
+  .card_5 .grid{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .card_5 .grid .left_grid{
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+  }
+  .card_5 .grid .left_grid .g_inputs{
+    position: relative;
+    top: 10%;
+    left: 7%;
+    text-align: center;
+    width: 72%;
+    overflow-wrap: break-word;
+  }
+  .card_5 .grid .left_grid .g_inputs ul{
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+  .card_5 .grid .left_grid .g_inputs ul li:first-child{
+    font-size: 40px;
+    letter-spacing: .8px;
+    font-weight: 500;
+    color: #000000;
+    font-family: 'Oswald', sans-serif;
+  }
+  .card_5 .grid .left_grid .g_inputs ul li:nth-child(2){
+    font-size: 22px;
+    color: #000000;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .card_5 .grid .left_grid .g_inputs::after{
+    content: "";
+    position: absolute;
+    top: 115%;
+    left: 15%;
+    width: 70%;
+    height: 1.7px;
+    background-color: #f5979a;
+  
+  }
+  .card_5 .grid .left_grid .slogan{
+    position: absolute;
+    top: 39%;
+    left: 7%;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    width: 70%;
+    text-align: center;
+    color: #231f20;
+  }
+  
+  .card_5 .grid .left_grid .client_data{
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    width: 97.5%;
+  }
+  .card_5 .grid .left_grid .client_data ul{
+    padding: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+  }
+  .card_5 .grid .left_grid .client_data .client_list{
+    display: flex;
+    width: 100%;
+  }
+  .card_5 .grid .left_grid .client_data .icon_list{
+    flex: 0 0 10%;
+    text-align: center;
+    margin-right: 5px;
+  }
+  .card_5 .grid .left_grid .client_data .icon_list li a{
+    color: #ED1C24;
+    font-size: 22px;
+  }
+  .card_5 .grid .left_grid .client_data .icon_list li{
+    margin-bottom: 7px;
+  }
+  .card_5 .grid .left_grid .client_data .data_list{
+    flex: 0 0 84%;
+    max-width: 84%;
+    margin-top: 6px;
+    overflow-wrap: break-word;
+  }
+  .card_5 .grid .left_grid .client_data .data_list li{
+    margin-bottom: 0px;
+    height: 39px;
+  }
+  .card_5 .grid .left_grid .client_data .data_list a{
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .card_5 .grid .right_grid{
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+  }
+  .card_5 .grid .right_grid .logo{
+    position: absolute;
+    top: 10%;
+    right: 0px;
+    width: 56%;
+    text-align: center;
+  }
+  .card_5 .grid .right_grid .logo img{
+    width: 130px;
+    height: 130px;
+  }
+  
+  .card_5 .grid .right_grid .social_icons{
+    position: absolute;
+    right: 0%;
+    bottom: 11%;
+    text-align: right;
+    width: 70%;
+  }
+  .card_5 .grid .right_grid .social_icons ul{
+    padding: 0px;
+    margin-bottom: 0px;
+    position: relative;
+  }
+  .card_5 .grid .right_grid .social_icons ul li{
+      margin-bottom: 5px;
+  }
+  .card_5 .grid .right_grid .social_icons ul li a{
+    font-size: 28px;
+    margin-right: 10px;
+    color:#ED1C24;
+  }
+  
+  @media (min-width:290px) and (max-width:445px){
+    .card_5 .grid .left_grid .g_inputs ul li:first-child{
+      font-size: 17px;
+    }
+    .card_5 .grid .left_grid .g_inputs ul li:nth-child(2){
+      font-size: 13px;
+    }
+    .card_5 .grid .left_grid .slogan{
+      font-size: 10px;
+      top: 33%;
+    }
+    .card_5 .grid .left_grid .client_data .icon_list li a{
+      font-size: 14px;
+    }
+    .card_5 .grid .left_grid .client_data .data_list{
+      margin-top: 0px;
+    }
+    .card_5 .grid .left_grid .client_data .data_list li{
+      height: 30px;
+    }
+    .card_5 .grid .left_grid .client_data .data_list a{
+      font-size: 9px;
+    }
+    .card_5 .grid .right_grid .logo img {
+      width: 70px;
+      height: 70px;
+    }
+    .card_5 .grid .right_grid .social_icons ul li a {
+      font-size: 18px;
+      margin-right: 6px;
+    }
+  }
+  @media (min-width:445px) and (max-width:767.5px){
+    .card_5 .grid .left_grid .g_inputs ul li:first-child{
+      font-size: 23px;
+    }
+    .card_5 .grid .left_grid .g_inputs ul li:nth-child(2){
+      font-size: 15px;
+    }
+    .card_5 .grid .left_grid .slogan{
+      font-size: 13px;
+      top: 33%;
+    }
+    .card_5 .grid .left_grid .client_data .icon_list li a{
+      font-size: 18px;
+    }
+    .card_5 .grid .left_grid .client_data .data_list{
+      margin-top: 3px;
+    }
+    .card_5 .grid .left_grid .client_data .data_list li{
+      height: 30px;
+    }
+    .card_5 .grid .left_grid .client_data .data_list a{
+      font-size: 12px;
+    }
+    .card_5 .grid .right_grid .logo img {
+      width: 80px;
+      height: 80px;
+    }
+    .card_5 .grid .right_grid .social_icons ul li a {
+      font-size: 22px;
+      margin-right: 6px;
+    }
+  }
+ 
+
+
+  

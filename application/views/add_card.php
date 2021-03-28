@@ -211,6 +211,14 @@
                           </div>
                        </div>
                     </div>
+                    <div class="col-lg-12 col-sm-6">
+                       <div class="form-group">
+                          <label for="package_id"><?php echo e_lang('Package'); ?></label>
+                          <select name="package_id" id="package_id" class="form-control search_select">
+                             <option selected disabled><?php echo e_lang('choose Package'); ?></option>
+                          </select>
+                       </div>
+                    </div>
                     <div class="col-md-7 col-sm-12">
                        <label><?php echo e_lang('Add picture'); ?></label><br />
                        <div class="up_btn">
@@ -222,19 +230,10 @@
                     <div class="col-sm-12">
                        <div class="opt_btn btn-group">
                           <div class="add_card_btn">
-                             <a href="#" class="btn btn-outline-info"><i class="fas fa-angle-double-right"></i> <?php echo e_lang('Previous'); ?></a>
+                             <a href="<?php echo base_url('site/chooseCard'); ?>" class="btn btn-outline-info"><i class="fas fa-angle-double-right"></i> <?php echo e_lang('Previous'); ?></a>
                           </div>
                           <div class="add_card_btn">
                              <div class="dropdown show">
-                                <a class="btn btn-outline-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <?php echo e_lang('Choose Package'); ?>
-                                </a>
-                                <div class="dropdown-menu choose_bouq" aria-labelledby="dropdownMenuLink">
-                                   <a class="dropdown-item" href="bouquet.html"><input type="radio" /> شهر واحد &nbsp;&nbsp;<i class="f-1 fas fa-angle-double-left"></i></a>
-                                   <a class="dropdown-item" href="bouquet.html"><input type="radio" /> 3 شهور &nbsp;&nbsp;<i class="f-2 fas fa-angle-double-left"></i></a>
-                                   <a class="dropdown-item" href="bouquet.html"><input type="radio" /> 6 شهور &nbsp;&nbsp;<i class="f-3 fas fa-angle-double-left"></i></a>
-                                   <a class="dropdown-item" href="bouquet.html"><input type="radio" /> 12 شهور &nbsp;&nbsp;<i class="f-4 fas fa-angle-double-left"></i></a>
-                                </div>
                              </div>
                           </div>
                           <div class="add_card_btn">

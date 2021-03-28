@@ -142,3 +142,19 @@ function e_lang($word)
 
     }
   }
+  if (!function_exists('getCurrentLanguages')) 
+  {
+    function getCurrentLanguages()
+    {
+      $CI =& get_instance();
+
+      $session = $CI->session->userdata('language');
+
+      if (empty($session)) {
+        return 'ar';
+      }
+      else{
+        return $session;
+      }
+    }
+  }
