@@ -1,6 +1,18 @@
+/*
 
+// Usage
+FgEmojiPicker.init({
+    trigger: 'button',
+    position: ['bottom', 'right'],
+    dir: 'directory/to/json', (without json name)
+    preFetch: true, //load emoji json when function called 
+    emit(emoji) {
+        console.log(emoji);
+    }
+});
+*/
 
-var FgEmojiPicker = function (options) {
+const FgEmojiPicker = function (options) {
 
     this.options = options;
     this.emojiJson = null;

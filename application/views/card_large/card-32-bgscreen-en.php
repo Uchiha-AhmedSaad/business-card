@@ -1,0 +1,79 @@
+    <div class="cards">
+        <div class="container">
+            <div class="cards_container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card_32">
+                            <img src="../imgs/card 32/c-32-en.png" />
+                            <div class="grid">
+                                <div class="left_grid">
+                                    <div class="job_data">
+                                        <ul class="list-unstyled">
+                                            <li>job title</li>
+                                            <li><a href="tel:">0123456789</a></li>
+                                            <li><a href="mailto:">thisemail@example.com</a></li>
+                                            <li><a href="#">www.website.com</a></li>
+                                            <li><a href="#">lorem ipsium dolor sit</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="social_icons">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="mid_grid">
+                                    <div class="icon_list">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <img src="../imgs/card 32/Icon material-work.svg" />
+                                            </li>
+                                            <li>
+                                                <img src="../imgs/card 32/Icon material-phone-android.svg" />
+                                            </li>
+                                            <li>
+                                                <img src="../imgs/card 32/Icon simple-minutemailer.svg" />
+                                            </li>
+                                            <li>
+                                                <img src="../imgs/card 32/Icon material-web.svg" />
+                                            </li>
+                                            <li>
+                                                <img src="../imgs/card 32/Icon metro-location-city.svg" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="right_grid">
+                                    <div class="logo">
+                                        <img src="../imgs/card 32/logo.png" />
+                                    </div>
+
+                                    <div class="client_name">
+                                        <span>User Name</span>
+                                    </div>
+                                    <div class="slogan">
+                                        <span>Slogan goes here</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

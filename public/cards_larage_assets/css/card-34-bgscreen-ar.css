@@ -1,0 +1,196 @@
+@font-face {
+    font-family: Tajawal;
+    src: url("../../../assets/fonts/ArbFONTS-Tajawal-Medium.ttf");
+}
+.card_34{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    margin-bottom: 15px;
+    font-family: 'Tajawal', sans-serif;
+}
+.card_34 img{
+    width: 100%;
+    height: 100%;
+}
+.card_34 .grid{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row-reverse;
+}
+.card_34 .grid .left_part{
+    flex: 0 0 60%;
+    max-width: 60%;
+    overflow-wrap: break-word;
+}
+
+.card_34 .grid .left_part .g_inputs{
+    position: absolute;
+    top: 7.5%;
+    right: 5%;
+}
+.card_34 .grid .left_part .g_inputs ul{
+    padding: 0px;
+    text-align: right;
+}
+.card_34 .grid .left_part .g_inputs ul li:first-child{
+    font-size: 35px;
+    font-weight: bolder;
+    color: #0A2A61;
+    letter-spacing: 1.5px;
+}
+.card_34 .grid .left_part .g_inputs ul li:nth-child(2){
+    font-size: 22px;
+    color: #005AA9;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.card_34 .client_details .client_list{
+    display: flex;
+    position: absolute;
+    width: 60%;
+    right: 4%;
+    top: 41%;
+    direction: rtl;
+}
+.card_34 .client_details .client_list .icon_list{
+    flex: 0 0 10%;
+    padding-left: 0px;
+    text-align: right;
+}
+.card_34 .client_details .client_list .icon_list li{
+    margin-bottom: 35px;
+}
+
+.card_34 .client_details .client_list .icon_list img{
+    width: 30px;
+    height: 30px;
+}
+.card_34 .client_details .client_list .data_list{
+    flex: 0 0 80%;
+    padding: 0px;
+    text-align: right;
+}
+.card_34 .client_details .client_list .data_list a{
+    font-size: 20px;
+    overflow-wrap: break-word;
+    color: #0A2A61;
+    font-weight: 500;
+}
+.card_34 .client_details .client_list .data_list li{
+    margin-bottom: 0px;
+    height: 65px;
+}
+.card_34 .grid .right_part{
+    flex: 0 0 40%;
+    max-width: 40%;
+    position: relative;
+}
+.card_34 .grid .right_part .logo{
+    position: absolute;
+    top: 28%;
+    left: 0px;
+    width: 90%;
+    text-align: center;
+}
+.card_34 .grid .right_part .logo img{
+    width: 130px;
+    height: 130px;
+}
+.card_34 .grid .right_part .slogan{
+    position: absolute;
+    top: 61%;
+    left: 0%;
+    padding-bottom: 15px;
+    width: 90%;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+.card_34 .grid .social_icons{
+    position: absolute;
+    bottom: 2%;
+    right: 4%;
+    text-align: center;
+}
+.card_34 .grid .social_icons ul{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.card_34 .grid .social_icons ul li{
+    display: inline-flex;
+}
+.card_34 .grid .social_icons ul li a {
+    color: #0A2A61;
+    font-size: 28px;
+    margin-right: 25px;
+}
+@media (min-width:250px) and (max-width:445px){
+    .card_34 .grid .right_part .logo img{
+        width: 70px;
+        height: 70px;
+    }
+    .card_34 .grid .left_part .g_inputs ul li:first-child{
+        font-size: 14px;
+    }
+    .card_34 .grid .left_part .g_inputs ul li:nth-child(2){
+        font-size: 10px;
+    }
+    .card_34 .client_details .client_list .icon_list img{
+        width: 14px;
+        height: 14px;
+    }
+    .card_34 .client_details .client_list .data_list a{
+        font-size: 9px;
+        margin-top: 9px;
+    }
+    .card_34 .client_details .client_list .data_list li{
+        height: 58px;
+    }
+    .card_34 .grid .right_part .slogan{
+        font-size: 11px;
+    }
+    .card_34 .grid .social_icons ul li a{
+        font-size: 16px;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width:445px) and (max-width:767.8px){
+    .card_34 .grid .right_part .logo img{
+        width: 85px;
+        height: 85px;
+    }
+    .card_34 .grid .left_part .g_inputs ul li:first-child{
+        font-size: 25px;
+    }
+    .card_34 .grid .left_part .g_inputs ul li:nth-child(2){
+        font-size: 16px;
+    }
+    .card_34 .client_details .client_list .icon_list img{
+        width: 20px;
+        height: 20px;
+    }
+    .card_34 .client_details .client_list .data_list a{
+        font-size: 13px;
+        margin-top: 9px;
+    }
+    .card_34 .client_details .client_list .data_list li{
+        height: 58px;
+    }
+    .card_34 .grid .right_part .slogan{
+        font-size: 13px;
+    }
+    .card_34 .grid .social_icons ul li a{
+        font-size: 20px;
+        margin-right: 15px;
+    }
+}
+
+

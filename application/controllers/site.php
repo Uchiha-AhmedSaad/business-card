@@ -426,8 +426,21 @@ class Site extends CI_Controller
 		if (empty($id)) {
 			return redirect(base_url('site'));
 		}
+
+
+
 		$data['details'] = $this->db->where('b_cards_id',$id)->get('b_cards')->row();
 
+
+		$fav = $this->db->where('user_id',$this->session->userdata('user')['user_id'])->where('fav_item_id',$data['details']->b_cards_id)->where('fav_type','card')->get('favourite')->row();
+
+		if (!empty($fav)) {
+			$data['favourite'] = 'active';
+		}
+		else{
+			$data['favourite'] = 'inactive';
+		}
+		
 		$data['logo'] = base_url('uploads/'.$data['details']->logo);
 
 		$user_photo  = explode('|',$data['details']->user_photo);
@@ -436,6 +449,14 @@ class Site extends CI_Controller
 			$extract[] = base_url('uploads/'.$photo);
 		}
 		$data['photos'] = $extract;
+
+
+		$data['number'] = $data['details']->b_cards_card_id;
+		$data['language'] = 'ar';
+
+		if (!empty($this->session->userdata('language')) ) {
+			$data['language'] = $this->session->userdata('language');
+		}
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('card_details',$data);
 	    $this->load->view('layout/footer');
@@ -657,14 +678,18 @@ class Site extends CI_Controller
 		}
 		$fav_type 		= $this->input->post('fav_type');
 		$fav_item_id 	= $this->input->post('fav_item_id');
+		$user_id 		= $this->session->userdata('user')['user_id'];
 		$check = $this->db->where('fav_type',$fav_type)->where('fav_item_id',$fav_item_id)->get('favourite')->row();
 		if (!empty($check)) {
-			SweetFlash('error','this item is in favourite','error');
-			return redirect($_SERVER['HTTP_REFERER']);
+
+				$this->db->where('fav_type',$fav_type)->where('fav_item_id',$fav_item_id)->delete('favourite');
+					return redirect(base_url('site'));
+				SweetFlash('Done','favourite');
 		}
 		$data_insert = [
-			'fav_type' => $fav_type,
-			'fav_item_id' => $fav_item_id,
+			'fav_type' 		=> $fav_type,
+			'fav_item_id' 	=> $fav_item_id,
+			'user_id'   	=> $user_id
 		];
     	$insert = $this->db->insert('favourite',$data_insert);
     	if (!empty($insert)) 
@@ -675,6 +700,48 @@ class Site extends CI_Controller
     	else{
     		return redirect(base_url('site'));
     	}
+	}
+	public function report()
+	{
+		if (empty($this->session->userdata('user'))) {
+			redirect(base_url('site/login'));
+		}
+		$report_item_type 	= $this->input->post('report_item_type');
+		$report_item_id   	= $this->input->post('report_item_id');
+		$report_text 		= $this->input->post('report_text');
+		$report_user_id 	= $this->session->userdata('user')['user_id'];
+
+
+		$this->form_validation->set_rules('report_item_type',e_lang('report item type'), 'required');
+		$this->form_validation->set_rules('report_item_id',e_lang('report'), 'required');
+		$this->form_validation->set_rules('report_text',e_lang('report text'), 'required');
+
+
+
+		if ($this->form_validation->run() == FALSE) 
+		{
+			SweetFlash('error','wrong','error');
+			return redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			$data = [
+				'report_item_type' => $report_item_type,
+				'report_item_id'   => $report_item_id,
+				'report_text'	   => $report_text,
+				'report_user_id'   => $report_user_id
+			];
+			$insert 			= $this->db->insert('report',$data);
+
+	    	if (!empty($insert)) 
+	    	{
+	    		SweetFlash('Done','report');
+				return redirect(base_url('site'));
+	    	}
+	    	else{
+	    		return redirect(base_url('site'));
+	    	}
+		}
 	}
 }
 

@@ -3,6 +3,7 @@
    <head class="swap_lang">
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <link rel="stylesheet" href="<?php echo base_url('public/assets/css/fontawesome.min.css') ?>" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="<?php echo base_url('public/assets/css/tail.select-teal.min.css') ?>">
       <link rel="stylesheet" href="<?php echo base_url('public/assets/css/bootstrap-ar.min.css') ?>" />
@@ -12,18 +13,25 @@
       <link rel="stylesheet" href="<?php echo base_url('public/assets/css/slick-theme.css'); ?>" />
       <link rel="stylesheet" href="<?php echo base_url('public/assets/css/lightbox.css') ?>" />
       <link rel="stylesheet" href="<?php echo base_url('public/assets/css/main.css'); ?>" />
-     
 
-      <?php 
-         if(!empty($this->session->userdata('language')) && $this->session->userdata('language') == 'en')
-           {
-              ?> 
-      <link rel="stylesheet" href="<?php echo base_url('public/assets/css/enStyle.css') ?>" />
-      <?php
-         }
-         
-         
-         
+
+         <?php 
+               if(!empty($this->session->userdata('language')) && $this->session->userdata('language') == 'en')
+                 {
+                       ?> 
+                     <link rel="stylesheet" href="<?php echo base_url('public/assets/css/enStyle.css') ?>" />
+                     <?php 
+                     if (!empty($this->uri->segment(2)) && $this->uri->segment(2) == 'cardDetails') {
+                       ?> 
+                           <link rel="stylesheet" href="<?php echo base_url('public/cards_larage_assets/css/card-'.$details->b_cards_card_id.'-bgscreen-en.css'); ?>" />
+                       <?php
+                     }
+                 }
+                 else{
+                  ?> 
+                     <link rel="stylesheet" href="<?php echo base_url('public/cards_larage_assets/css/card-'.$details->b_cards_card_id.'-bgscreen-ar.css'); ?>" />
+                  <?php
+                 }
          ?>
           <link rel="stylesheet" href="<?php echo base_url('public/sweetalert/dist/sweetalert.css'); ?>" />
       <title>Home</title>
@@ -76,6 +84,15 @@
         .slick-slide:focus, .slick-current:focus, .slick-active:focus{
             outline: none !important;
         }
+         .card_details_fav{
+         font-family: 'Tajawal', sans-serif;
+         }
+         .fa-check{
+         color: #ffc107 !important;
+         }
+         .modal-footer a{
+         color: #fff;
+         }
       </style>
    </head>
    <body >

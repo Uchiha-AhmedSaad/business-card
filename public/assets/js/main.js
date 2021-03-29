@@ -213,9 +213,11 @@ $(document).ready(function () {
   });
 
 /* heighlight img */
+
   $('.add_card .cards img,.doctor_cards .all_cards img,.add_card .logo_container .logo_icon img').on('click',function(){
-    $('.selected').removeClass('selected')
-    $(this).addClass('selected')
+    $('.selected').removeClass('selected');
+    $(this).addClass('selected');
+
   })
 
   $('.bouquet .cardi').on('click',function(){
@@ -299,6 +301,8 @@ $('.show_pass').on('click',function(){
   }
   
 })
+
+
 
 
 }); // Document ready

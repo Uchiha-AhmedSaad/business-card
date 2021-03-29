@@ -158,3 +158,17 @@ function e_lang($word)
       }
     }
   }
+
+if (!function_exists('split_sentence')) 
+{
+   function split_sentence($sentence,$num = 10)
+  {
+    $explode = explode(' ', $sentence);
+    $slice = array_slice($explode,0,$num);
+
+    $implode = implode(' ', $slice);
+
+    return $implode;
+  
+  }
+}

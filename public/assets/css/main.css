@@ -667,7 +667,11 @@ footer .footer_social span a{
     font-size: 20px;
 }
 footer .footer_logo img{
-  width: 100%;
+  width: 80%;
+  height: 200px;
+}
+footer ul a li{
+  margin-bottom: 1.5%;
 }
 /* end footer */
 
@@ -802,6 +806,18 @@ footer .footer_logo img{
   position: absolute;
   top: 5px;
   right: 80px;
+  color: #FB2828;
+}
+.req_ad_det{
+  position: absolute;
+  top: 5px;
+  right: 77px;
+  color: #FB2828;
+}
+.req_city{
+  position: absolute;
+  top: 5px;
+  right: 68px;
   color: #FB2828;
 }
 
@@ -987,14 +1003,40 @@ footer .footer_logo img{
   height: 200px;
   margin-top: 15px;
 }
+.add_card .logo_container{
+  margin: auto;
+}
 .add_card .logo_container .logo_img img{
   width: 150px;
   height: 150px;
 }
+.add_card .modal-body .logo_container{
+  justify-content: space-between;
+}
 .add_card .modal-body .logo_container .logo_icon img{
-    width: 150px;
-    height: 150px;
-    margin: 0px 5px 5px 5px;
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    display: inline-flex;
+}
+.add_card .modal-body .logo_container .logo_icon .up_btn img{
+  width: 100px;
+  height: 100px;
+  opacity: 1 !important;
+}
+.add_card .modal-body .logo_container .logo_icon  .up_btn{
+  position: relative !important;
+  z-index: 0;
+  cursor: pointer;
+
+}
+.add_card .modal-body .logo_container .logo_icon .up_btn input{
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  height: 100px;
+  z-index: 999;
 }
 .add_card .modal-footer button{
   text-align: center;
@@ -1753,7 +1795,6 @@ footer .footer_logo img{
 }
 .payment .up_img_cont img{
   width: 100%;
-  height: 100%;
 }
 /* end payment */
 
@@ -2139,9 +2180,7 @@ color: #243C82;
     width: 100%;
   }
   
-  .card_details_content .card_img img{
-      height: 335px;
-  }
+
   .cards .cards_container .design_container .img_icons .cd_icon{
     width: 15px;
     height: 25px;
@@ -2182,6 +2221,9 @@ color: #243C82;
   }
   .upper_nav .upper_nav_row .login_welcome{
     font-size: 15px;
+  }
+    footer .footer_logo img {
+    width: 80%;
   }
 }
 
@@ -2348,12 +2390,6 @@ color: #243C82;
       text-align: center;
     }
    
-    footer .footer_logo img{
-        width: 200px;
-    }
-    footer ul li{
-        font-size: 12px;
-    }
     .upper_nav .nav_login_links{
         text-align: center !important;
     }
@@ -2407,20 +2443,20 @@ color: #243C82;
     position: relative;
   }
   .add_job .job_details_container .up_img .up_img_cont img{
-    width: auto;
+    width: 100%;
   }
   
 }
 @media (min-width:1140px) and (max-width:2060px){
   .add_job .job_details_container .up_img .up_img_cont .rem_icon{
-    right:14%
+    right:8%
   }
  
 }
 @media (min-width:1400px) and (max-width:1460px){
   .add_job .job_details_container .up_img .up_img_cont .rem_icon{
     position: absolute;
-    right:12%
+    right:9%
   }
 }
 
@@ -2649,6 +2685,9 @@ color: #243C82;
   .card_details_content .add_contact_btn button{
     font-size: 14px;
   }
+  footer .footer_logo img {
+    width: 70%;
+}
 }
 @media (min-width:484px) and (max-width:521px){
   .pn{
@@ -2769,8 +2808,11 @@ color: #243C82;
   .search input{
     width: 85%;
   }
+  footer .footer_logo img{
+    height: 220px;
+  }
 }
-@media (min-width:1700px) and (max-width:2185px){
+@media (min-width:1700px) and (max-width:2200px){
   .country button, .city button, .sections button{
     padding: 5px 25px 5px 85px
   }
@@ -2784,11 +2826,14 @@ color: #243C82;
   .search input{
     width: 85%;
   }
+  footer .footer_logo img{
+    height: 230px;
+  }
 }
 
 @media (min-width:1560px) and (max-width:2185px){
   .add_job .job_details_container .up_img .up_img_cont .rem_icon, .add_card .subscribe_row .up_img .up_img_cont .rem_icon,.payment .up_img .up_img_cont .rem_icon{
-    right: 11%;
+    right: 8%;
   }
  
 }
@@ -2858,6 +2903,14 @@ color: #243C82;
 .modal-body textarea:focus{
   background-color: #fff;
 }
+.modal-header,.modal-footer{
+  border: none;
+}
+
+.modal-title{
+  margin: 0px !important;
+  margin-right: auto !important;
+}
 
 /* End bootstrap modal */
 
@@ -2908,3 +2961,12 @@ color: #243C82;
 }
 
 /* end Animation */
+
+
+/* cards Style */
+.card_1 .grid, .card_2 .grid, .card_3 .grid,.card_5 .grid,.card_6 .grid .top_grid .top_hold,.card_6 .grid .bot_grid .bot_hold,.card_7 .grid,.card_8 .grid,.card_9 .grid,.card_10_cont .card_10 .grid_1,.card_11 .grid,.card_14 .grid,.card_15 .grid,.card_16 .grid,.card_17 .grid,.card_18 .grid,.card_19 .grid,.card_20 .grid,.card_21 .grid,.card_22 .grid,.card_23 .grid,.card_24 .bot_grid,.card_25 .grid,.card_26 .grid,.card_27 .grid,.card_28 .grid,.card_29 .grid,.card_30 .grid,.card_31 .grid,.card_32 .grid,.card_33 .grid,.card_34 .grid,.card_35 .grid,.card_36 .grid,.card_37 .grid .bot_grid .sub_bot_grid,.card_37 .grid .bot_grid .sub_bot_grid .client_data .client_list,.card_38 .grid,.card_39 .grid,.card_40 .grid,.card_41 .grid,.card_42 .grid,.card_43 .grid,.card_44 .grid,.card_45 .grid .top_grid .card_data,.card_46 .grid,.card_47 .grid,.card_48 .grid,.card_49 .grid,.card_50 .grid{
+  flex-direction: row !important;
+}
+.card_17 .grid .logo,.card_17 .grid .g_inputs,.card_17 .grid .slogan,.card_17 .grid .social_icons{
+  width: 50% !important;
+}

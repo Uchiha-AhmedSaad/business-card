@@ -123,27 +123,7 @@
                            </a>
                         </div>
                      </div>
-                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="dashboard-stat purple">
-                           <div class="visual">
-                              <i class="fa fa-user" aria-hidden="true"></i>
-                           </div>
-                           <div class="details">
-                              <div class="number">
-                                 <?php
-                                    $ci->load->model('report1_m');
-                                    echo $ci->report1_m->count_all();
-                                    ?>
-                              </div>
-                              <div class="desc">
-                                 تبليغات التعليقات
-                              </div>
-                           </div>
-                           <a class="more" href="<?php echo base_url(); ?>admin/report1">
-                           عرض الكل <i class="m-icon-swapright m-icon-white"></i>
-                           </a>
-                        </div>
-                     </div>
+
                      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="dashboard-stat yellow">
                            <div class="visual">
