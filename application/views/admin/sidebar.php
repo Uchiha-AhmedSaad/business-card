@@ -119,9 +119,118 @@
             </ul>
          </li>
 
+         <li>
+            <a href="javascript:;">
+            <i class="fa fa-cogs"></i>
+            <span class="title">
+            طلبات تمييز الوظائف
+            </span>
+            <span class="arrow ">
+            </span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_card_package_requests_accept">
+                  الطلبات المفعلة
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_card_package_requests_refuse">
+                  الطلبات المرفوضة
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_card_package_requests">
+                  الطلبات الجديدة
+                  </a>
+               </li>
+            </ul>
+         </li>
+
+         <li>
+            <a href="javascript:;">
+            <i class="fa fa-cogs"></i>
+            <span class="title">
+            الوظائف
+            </span>
+            <span class="arrow ">
+            </span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_jobs_unique">
+                     الوظائف المميزة
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_jobs_expire">
+                     الوظائف المنتهية
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_jobs_normal">
+                     الوظائف النشطة
+                  </a>
+               </li>
+            </ul>
+         </li>
+
+         <li>
+            <a href="javascript:;">
+            <i class="fa fa-cogs"></i>
+            <span class="title">
+            طلبات تمييز الوظائف
+            </span>
+            <span class="arrow ">
+            </span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_jobs_package_requests_accept">
+                  الطلبات المفعلة
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_jobs_package_requests_refuse">
+                  الطلبات المرفوضة
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_jobs_package_requests">
+                  الطلبات الجديدة
+                  </a>
+               </li>
+            </ul>
+         </li>
 
 
-
+         <li>
+            <a href="javascript:;">
+            <i class="fa fa-cogs"></i>
+            <span class="title">
+            الوظائف
+            </span>
+            <span class="arrow ">
+            </span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_cards_unique">
+                     الوظائف المميزة
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_cards_expire">
+                     الوظائف المنتهية
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_cards_normal">
+                     الوظائف النشطة
+                  </a>
+               </li>
+            </ul>
+         </li>
 
          <?php if($d->admin_c2==1){ ?>
          <li>
