@@ -10,8 +10,7 @@
 
                                     <div class="g_inputs">
                                         <ul class="list-unstyled">
-                                            <li> <span class="uName">اسم المستخدم</span></li>
-                                            <li><span class="jTitle">اسم الوظيفة</span></li>
+<?php  include __DIR__.'/details_ar.php'; ?>
                                         </ul>
                                     </div>
 
@@ -54,18 +53,7 @@
 
                                     <div class="social_icons">
                                         <ul class="list-unstyled">
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-                                            </li>
+                                                <?php  include __DIR__.'/social.php'; ?>
                                         </ul>
                                     </div>
 

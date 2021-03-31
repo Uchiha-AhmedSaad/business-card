@@ -5,18 +5,17 @@
 
                     <div class="col-12">
                         <div class="card_15">
-                            <img src="../imgs/card 15/bg.png" />
+                            <img src="<?php echo base_url('uploads/cards/imgs/card 15/c-15-en.png'); ?>" />
                             
                             <div class="grid">
                                 <div class="left_grid">
                                     <div class="logo">
-                                        <img src="../imgs/card 15/logo.png" />
+                                        <img src="<?php echo base_url('uploads/cards/imgs/card 15/logo.png'); ?>" />
                                     </div>
 
                                     <div class="g_inputs">
                                         <ul class="list-unstyled">
-                                            <li> <span class="uName">User Name</span></li>
-                                            <li><span class="jTitle">Job title</span></li>
+                                            <?php  include __DIR__.'/details_en.php'; ?>
                                         </ul>
                                     </div>
 
@@ -61,18 +60,7 @@
 
                                     <div class="social_icons">
                                         <ul class="list-unstyled">
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-                                            </li>
+                                            <?php  include __DIR__.'/social.php'; ?>
                                         </ul>
                                     </div>
 

@@ -28,9 +28,11 @@
                      }
                  }
                  else{
-                  ?> 
-                     <link rel="stylesheet" href="<?php echo base_url('public/cards_larage_assets/css/card-'.$details->b_cards_card_id.'-bgscreen-ar.css'); ?>" />
-                  <?php
+                  if (!empty($this->uri->segment(2)) && $this->uri->segment(2) == 'cardDetails') {
+                        ?> 
+                           <link rel="stylesheet" href="<?php echo base_url('public/cards_larage_assets/css/card-'.$details->b_cards_card_id.'-bgscreen-ar.css'); ?>" />
+                        <?php
+                    }
                  }
          ?>
           <link rel="stylesheet" href="<?php echo base_url('public/sweetalert/dist/sweetalert.css'); ?>" />

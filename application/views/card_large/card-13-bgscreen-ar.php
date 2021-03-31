@@ -5,23 +5,22 @@
 
                     <div class="col-12">
                         <div class="card_11">
-                            <img src="../imgs/card 13/c-13-ar.png" />
+                            <img src="<?php echo base_url('uploads/cards/imgs/card 13/c-13-ar.png'); ?>" />
                             
                             <div class="grid">
                                 <div class="left_grid">
                                     <div class="logo">
-                                        <img src="../imgs/card 13/logo.png" />
+                                        <img src="<?php echo base_url('uploads/cards/imgs/card 13/logo.png'); ?>" />
                                     </div>
 
                                     <div class="g_inputs">
                                         <ul class="list-unstyled">
-                                            <li> <span class="uName">اسم المستخدم</span></li>
-                                            <li><span class="jTitle">اسم الوظيفة</span></li>
+<?php  include __DIR__.'/details_ar.php'; ?>>
                                         </ul>
                                     </div>
 
                                     <div class="slogan">
-                                        <span>نشاط العمل</span>
+                                        <span><?php echo $details->b_cards_work; ?></span>
                                     </div>
                                 </div>
 
@@ -44,15 +43,15 @@
         
                                             <ul class="list-unstyled data_list">
                                                 <li>
-                                                    <a href="tel:">1234567889</a>
+                                                   <a href="tel:"><?php echo $details->b_cards_phone; ?></a>
                                                 </li>
             
                                                 <li>
-                                                    <a href="mailto:">Email@example.com</a>
+                                                   <a href="mailto:<?php echo $details->email; ?>"><?php echo $details->email; ?></a>
                                                 </li>
             
                                                 <li>
-                                                    <a href="#">your location here 1</a>
+                                                    <a href="#"><?php echo $details->b_cards_address; ?></a>
                                                 </li>
                                             </ul>
             
@@ -61,18 +60,7 @@
 
                                     <div class="social_icons">
                                         <ul class="list-unstyled">
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-                                            </li>
+                                            <?php  include __DIR__.'/social.php'; ?>
                                         </ul>
                                     </div>
 

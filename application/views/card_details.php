@@ -24,9 +24,6 @@
                             <p><?php echo split_sentence($details->b_cards_name,4); ?></p>
                           <?php
                         }
-
-
-
                        ?>
                        
                      </div>

@@ -295,6 +295,11 @@ public function add_qara(){
     $this->load->view('admin/add_qara');
     $this->load->view('admin/footer');
 }
+
+
+
+
+
 // ------------------- edit_qara page ------------------ //
 public function edit_qara(){
     $data['message']= '';
@@ -2036,7 +2041,9 @@ private function pagination($per_page = 10,$url,$count)
     $conditions['limit'] = $per_page;
     return $limit = array($offset,$per_page);
 }
-public function edit_ads(){
+
+public function edit_cards_unique()
+{
     $data['message']= '';
     $this->load->library('pagination');
 
@@ -2045,17 +2052,166 @@ public function edit_ads(){
 
 
     $paginate       = $this->pagination(10,$url,$total_rows);
-    $data['b_cards']= $this->db->get('b_cards',$paginate[1],$paginate[0])->result();
+    $data['b_cards']= $this->db
+                                ->where('b_cards_id IN (SELECT card_id FROM card_package_requests WHERE request_status ="accept")')
+                                ->where('DATE(expire_date) > "'.date('Y-m-d H:i:s').'" ')
+                                ->get('b_cards',$paginate[1],$paginate[0])->result();
 
 
     $data['cities'] = $this->db->get('city')->result_array();
     $data['cities'] = array_column($data['cities'],'city_name','city_id');
     $data['countries'] = $this->db->get('country')->result_array();
     $data['countries'] = array_column($data['countries'],'country_name','country_id');
+
     $this->load->view('admin/header',$data);
     $this->load->view('admin/sidebar');
     $this->load->view('admin/edit_b_card',$data);
     $this->load->view('admin/footer');
+}
+
+public function edit_cards_normal()
+{
+    $data['message']= '';
+    $this->load->library('pagination');
+
+    $url            = base_url("admin/edit_ads");
+    $total_rows     = $this->db->count_all_results('b_cards');
+
+
+    $paginate       = $this->pagination(10,$url,$total_rows);
+    $data['b_cards']= $this->db ->where('b_cards_id NOT IN (SELECT card_id FROM card_package_requests WHERE request_status ="accept")')
+                                ->where('DATE(expire_date) > "'.date('Y-m-d H:i:s').'" ')
+                                ->get('b_cards',$paginate[1],$paginate[0])->result();
+    $data['cities'] = $this->db->get('city')->result_array();
+    $data['cities'] = array_column($data['cities'],'city_name','city_id');
+    $data['countries'] = $this->db->get('country')->result_array();
+    $data['countries'] = array_column($data['countries'],'country_name','country_id');
+
+    $this->load->view('admin/header',$data);
+    $this->load->view('admin/sidebar');
+    $this->load->view('admin/edit_b_card',$data);
+    $this->load->view('admin/footer');
+}
+public function edit_cards_expire()
+{
+    $data['message']= '';
+    $this->load->library('pagination');
+
+    $url            = base_url("admin/edit_ads");
+    $total_rows     = $this->db->count_all_results('b_cards');
+
+
+    $paginate       = $this->pagination(10,$url,$total_rows);
+    $data['b_cards']= $this->db
+                                ->where('DATE(expire_date) < "'.date('Y-m-d H:i:s').'" ')
+                                ->get('b_cards',$paginate[1],$paginate[0])->result();
+
+
+    $data['cities'] = $this->db->get('city')->result_array();
+    $data['cities'] = array_column($data['cities'],'city_name','city_id');
+    $data['countries'] = $this->db->get('country')->result_array();
+    $data['countries'] = array_column($data['countries'],'country_name','country_id');
+
+    $this->load->view('admin/header',$data);
+    $this->load->view('admin/sidebar');
+    $this->load->view('admin/edit_b_card',$data);
+    $this->load->view('admin/footer');
+}
+
+
+public function edit_card_package_requests(){
+    $data['message']= '';
+    $this->load->library('pagination');
+
+    $url            = base_url("admin/edit_card_package_requests");
+    $total_rows     = $this->db->count_all_results('card_package_requests');
+
+
+    $paginate       = $this->pagination(10,$url,$total_rows);
+    $data['card_package_requests']= $this->db->where('request_status','pending')->get('card_package_requests',$paginate[1],$paginate[0])->result();
+    $users = $this->db->get('users')->result_array();
+    $data['users'] = array_column($users, 'user_name','user_id');
+    $package = $this->db->get('package')->result_array();
+
+    $data['package'] = array_column($package,'package_name','package_id' );
+
+
+    $this->load->view('admin/header',$data);
+    $this->load->view('admin/sidebar');
+    $this->load->view('admin/edit_card_package_requests',$data);
+    $this->load->view('admin/footer');
+}
+public function edit_card_package_requests_accept(){
+    $data['message']= '';
+    $this->load->library('pagination');
+
+    $url            = base_url("admin/edit_card_package_requests");
+    $total_rows     = $this->db->count_all_results('card_package_requests');
+
+
+    $paginate       = $this->pagination(10,$url,$total_rows);
+    $data['card_package_requests']= $this->db->where('request_status','accept')->get('card_package_requests',$paginate[1],$paginate[0])->result();
+    $users = $this->db->get('users')->result_array();
+    $data['users'] = array_column($users, 'user_name','user_id');
+    $package = $this->db->get('package')->result_array();
+
+    $data['package'] = array_column($package,'package_name','package_id' );
+
+
+    $this->load->view('admin/header',$data);
+    $this->load->view('admin/sidebar');
+    $this->load->view('admin/edit_card_package_requests_accept',$data);
+    $this->load->view('admin/footer');
+}
+
+
+public function edit_card_package_requests_refuse(){
+    $data['message']= '';
+    $this->load->library('pagination');
+
+    $url            = base_url("admin/edit_card_package_requests");
+    $total_rows     = $this->db->count_all_results('card_package_requests');
+
+
+    $paginate       = $this->pagination(10,$url,$total_rows);
+    $data['card_package_requests']= $this->db->where('request_status','refuse')->get('card_package_requests',$paginate[1],$paginate[0])->result();
+    $users = $this->db->get('users')->result_array();
+    $data['users'] = array_column($users, 'user_name','user_id');
+    $package = $this->db->get('package')->result_array();
+
+    $data['package'] = array_column($package,'package_name','package_id' );
+
+
+    $this->load->view('admin/header',$data);
+    $this->load->view('admin/sidebar');
+    $this->load->view('admin/edit_card_package_requests_refuse',$data);
+    $this->load->view('admin/footer');
+}
+public function packageRequest()
+{
+    $id = $this->uri->segment(3);
+    $status = $this->uri->segment(4);
+
+    $change_status = $this->db->where('request_id',$id)->update('card_package_requests',[
+        'request_status' => $status
+    ]);
+    if ($status == 'accept') {
+
+        $request = $this->db->where('request_id',$id)->get('card_package_requests')->row();
+        $package = $this->db->where('package_id',$request->request_package_id)->get('package')->row();
+
+        $card = $this->db->where('b_cards_id',$request->card_id)->update('b_cards',[
+            'expire_date' => date('Y-m-d H-i-s',strtotime('+'.$package->package_number.' days')),'expire_date_unix' => strtotime('+'.$package->package_number.' days')]);
+    }
+
+    if($change_status){
+         $this->session->set_userdata('message','تم تغير الحالة بنجاح');
+               
+                return redirect($_SERVER['HTTP_REFERER']);
+    }else{
+        $this->session->set_userdata('message','لم يتم تغير الحالة');
+        return redirect(base_url('admin/edit_card_package_requests'));
+    }
 }
 
 public function edit_jobs(){ 

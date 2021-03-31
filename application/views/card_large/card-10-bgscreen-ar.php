@@ -7,17 +7,16 @@
                         <div class="card_10">
                             <img src="<?php echo base_url('uploads/cards/imgs/card 10/c-10-ar.png'); ?>">
                             <div class="logo">
-                                        <img src="<?php echo base_url('uploads/cards/imgs/card 10/Subtraction 1.svg'); ?>" />
+                                        <img src="<?php echo base_url('uploads/cards/imgs/card 10/logo.png'); ?>" />
                             </div>
 
                             <div class="grid_1">
                                 <div class="g_inputs">
                                     <ul class="list-unstyled">
-                                        <li><span><?php echo $details->b_cards_name; ?></span></li>
-                                        <li><span class="jTitle">اسم الوظيفة</span></li>
+                                        <?php  include __DIR__.'/details_ar.php'; ?>
                                     </ul>
                                     <div class="slogan">
-                                        <span>نشاط العمل</span>
+                                        <span><?php echo $details->b_cards_work; ?></span>
                                     </div>
                                 </div>
 
@@ -56,18 +55,7 @@
 
                             <div class="social_icons">
                                 <ul class="list-unstyled">
-                                    <li>
-                                        <a href="<?php echo $details->facebook; ?>" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo $details->twitter; ?>" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo $details->linkedin; ?>" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo $details->website; ?>" target="_blank"><i class="fas fa-globe"></i></a>
-                                    </li>
+                                    <?php  include __DIR__.'/social.php'; ?>
                                 </ul>
                             </div>
 

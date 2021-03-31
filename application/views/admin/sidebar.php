@@ -19,7 +19,7 @@
             <form class="sidebar-search" action="extra_search.html" method="POST">
                <div class="form-container">
                   <div class="input-box">
-                  </div>
+                  </div> 
                </div>
             </form>
             <!-- END RESPONSIVE QUICK SEARCH FORM -->
@@ -63,12 +63,72 @@
             </ul>
          </li>
          <?php } ?>
+         <li>
+            <a href="javascript:;">
+            <i class="fa fa-cogs"></i>
+            <span class="title">
+            طلبات تمييز الكروت
+            </span>
+            <span class="arrow ">
+            </span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_card_package_requests_accept">
+                  الطلبات المفعلة
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_card_package_requests_refuse">
+                  الطلبات المرفوضة
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_card_package_requests">
+                  الطلبات الجديدة
+                  </a>
+               </li>
+            </ul>
+         </li>
+
+         <li>
+            <a href="javascript:;">
+            <i class="fa fa-cogs"></i>
+            <span class="title">
+            الكروت
+            </span>
+            <span class="arrow ">
+            </span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_cards_unique">
+                     الكروت المميزة
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_cards_expire">
+                     الكروت المنتهية
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>admin/edit_cards_normal">
+                     الكروت النشطة
+                  </a>
+               </li>
+            </ul>
+         </li>
+
+
+
+
+
          <?php if($d->admin_c2==1){ ?>
          <li>
             <a href="javascript:;">
             <i class="fa fa-cogs"></i>
             <span class="title">
-            صندوق الرسائل
+            إتصل بنا
             </span>
             <span class="arrow ">
             </span>
@@ -213,23 +273,7 @@
             </ul>
          </li>
          <?php } ?>
-         <li>
-            <a href="javascript:;">
-            <i class="fa fa-cogs"></i>
-            <span class="title">
-            طلبات تمييز الاعلان
-            </span>
-            <span class="arrow ">
-            </span>
-            </a>
-            <ul class="sub-menu">
-               <li>
-                  <a href="<?php echo base_url(); ?>admin/edit_ads_package">
-                  طلبات تمييز الاعلان
-                  </a>
-               </li>
-            </ul>
-         </li>
+
          <?php if($d->admin_c11==1){ ?>
          <li>
             <a href="javascript:;">

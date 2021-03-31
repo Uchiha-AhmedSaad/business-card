@@ -47,20 +47,7 @@
                                     <div class="client_data">
                                         <div class="client_list">
                                             <ul class="list-unstyled icon_list">
-                                                <li>
-                                                    <a href="#"><img src="../imgs/card 50/case.svg" /></a>
-                                                </li>
-                                                <li>
-                                                    <a href="tel:"><img src="../imgs/card 50/phone.svg" /></a>
-                                                </li>
-        
-                                                <li>
-                                                    <a href="mailto:"><img src="../imgs/card 50/mail.svg" /></a>
-                                                </li>
-        
-                                                <li>
-                                                    <a href="#"><img src="../imgs/card 50/location.svg" /></a>
-                                                </li>
+<?php  include __DIR__.'/social.php'; ?>
                                             </ul>
         
                                             <ul class="list-unstyled data_list">

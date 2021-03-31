@@ -9,8 +9,7 @@
                             <div class="left_grid">
                                 <div class="g_inputs">
                                     <ul class="list-unstyled">
-                                            <li><span><?php echo $details->b_cards_name; ?></span></li>
-                                            <li><span><?php echo $details->job ; ?></span></li>
+<?php  include __DIR__.'/details_ar.php'; ?>
                                     </ul>
                                 </div>
 
@@ -60,18 +59,7 @@
 
                                 <div class="social_icons">
                                     <ul class="list-unstyled">
-                                        <li>
-                                             <a href="<?php echo $details->facebook; ?>" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php echo $details->twitter; ?>" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php echo $details->linkedin; ?>" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                        </li>
-                                        <li>
-                                           <a href="<?php echo $details->website; ?>" target="_blank"><i class="fas fa-globe"></i></a>
-                                        </li>
+<?php  include __DIR__.'/social.php'; ?>
                                     </ul>
                                 </div>
 

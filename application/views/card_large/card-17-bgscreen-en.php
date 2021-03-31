@@ -4,12 +4,12 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card_17">
-                            <img src="../imgs/card 17/bg.png"/>
+                            <img src="<?php echo base_url('uploads/cards/imgs/card 17/bg.png'); ?>"/>
                             <div class="grid">
                                 <div class="left_column">
                                         
                                     <div class="logo">
-                                        <img src="../imgs/card 17/logo.png" />
+                                        <img src="<?php echo base_url('uploads/cards/imgs/card 17/logo.png'); ?>" />
                                     </div>
 
                                     <div class="g_inputs">
@@ -25,18 +25,7 @@
 
                                     <div class="social_icons">
                                         <ul class="list-unstyled">
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-                                            </li>
+                                            <?php  include __DIR__.'/social.php'; ?>
                                         </ul>
                                     </div>
                                 </div>
