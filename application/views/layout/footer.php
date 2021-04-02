@@ -9,7 +9,7 @@
                   <div class="footer_logo">
                      <img src="<?php echo base_url('public/assets/images/logo.png'); ?>" />
                   </div>
-               </div>
+               </div> 
                <div class="col-md-4 col-6">
                   <ul>
                      <a href="<?php echo base_url('site'); ?>">
@@ -159,5 +159,200 @@
             $('#card_number').val(card_number);
           });
       </script>
+
+
+    <script>
+        
+        $(document).ready(function(){
+            var gadgetCarousel = $(".slick-carousel");
+  
+            gadgetCarousel.each(function() {
+                if ($(this).is(".type-one-carousel")) {
+                    $(this).slick({
+                    dots: true,
+                    infinite: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    responsive: [
+                    {
+                        breakpoint: 3200,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                        },
+                        {
+                        breakpoint: 1700,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                        },
+                        {
+                        breakpoint: 1224,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            infinite: true,
+                            dots: true
+                        }
+                        },
+                        {
+                        breakpoint: 820,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                        }
+                    ]
+
+            });
+            } 
+                else if ($(this).is(".type-two-carousel")){
+                $(this).slick({
+                    dots: false,
+                    infinite: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    responsive: [
+                    {
+                        breakpoint: 3200,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                        },
+                        {
+                        breakpoint: 1600,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                        },
+                        {
+                        breakpoint: 1224,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            infinite: true,
+                            dots: false
+                        }
+                        },
+                        {
+                        breakpoint: 820,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                        }
+                    ]
+                });
+                }
+                else if ($(this).is(".type-three-carousel")){
+                $(this).slick({
+                    dots: false,
+                    infinite: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    responsive: [
+                    {
+                        breakpoint: 3200,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                        },
+                        {
+                        breakpoint: 1600,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                        },
+                        {
+                        breakpoint: 1224,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            infinite: false,
+                            dots: false
+                        }
+                        },
+                        {
+                        breakpoint: 820,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                        }
+                    ]
+                });
+                }
+                else if ($(this).is(".type-columns-carousel")){
+                  $(this).slick({
+                    dots: false,
+                    infinite: false,
+                    //slidesToShow: 3,
+                    //slidesToScroll: 3,
+                    rtl: true,
+                    slidesPerRow: 3,
+                    rows: 3,
+                    responsive: [
+                        {
+                        breakpoint: 3200,
+                        settings: {
+                            //slidesToShow: 4,
+                            //slidesToScroll: 4,
+                            slidesPerRow: 3,
+                            rows: 3
+                          }
+                        },
+                        {
+                        breakpoint: 1600,
+                        settings: {
+                            //slidesToShow: 3,
+                            //slidesToScroll: 3,
+                            slidesPerRow: 3,
+                            rows: 3
+                        }
+                        },
+                        {
+                        breakpoint: 1224,
+                        settings: {
+                            //slidesToShow: 2,
+                            //slidesToScroll: 2,
+                            slidesPerRow: 3,
+                            rows: 3
+                        }
+                        },
+                        {
+                        breakpoint: 820,
+                        settings: {
+                            //slidesToShow: 1,
+                            //slidesToScroll: 1,
+                            slidesPerRow: 2,
+                            rows: 2
+                        }
+                        },
+                        {
+                        breakpoint: 480,
+                        settings: {
+                            //slidesToShow: 1,
+                            //slidesToScroll: 1,
+                            slidesPerRow: 2,
+                            rows: 2
+                        }
+                        }
+                    ]
+                });
+                }
+                else {
+                $(this).slick();
+                }
+            })
+            
+        });
+    </script>
+      
    </body>
 </html>

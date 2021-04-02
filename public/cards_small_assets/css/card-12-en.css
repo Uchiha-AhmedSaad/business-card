@@ -1,0 +1,190 @@
+*{
+    font-family: sans-serif;
+}
+.card_12{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.card_12 img{
+    width: 100%;
+    height: 100%;
+}
+.card_12 .logo{
+    position: absolute;
+    top:8%;
+    right: 0%;
+    width: 36%;
+    text-align: center;
+}
+.card_12 .logo img{
+    width: 85px !important;
+    height: 85px !important;
+    margin: auto;
+}
+.card_12 .slogan{
+    position: absolute;
+    top: 40%;
+    width: 36%;
+    font-size: 17px;
+    right: 0%;
+    text-align: center;
+}
+.card_12 .social_icons{
+    position: absolute;
+    bottom: 0%;
+    right: 4%;
+}
+.card_12 .social_icons ul{
+    padding:0px;
+    margin-bottom:0px;
+}
+.card_12 .social_icons ul li {
+    margin-bottom: 2px;
+}
+.card_12 .social_icons ul li a{
+    font-size: 22px;
+    color: #ACACAC;
+}
+.card_12 .g_inputs{
+    position: absolute;
+    left: 15%;
+    top: 8%;
+    text-align: left;
+    color: #fff;
+}
+.card_12 .g_inputs ul{
+    padding: 0px;
+}
+.card_12 .g_inputs ul li:first-child{
+    font-size: 22px;
+    font-weight: 700;
+}
+.card_12 .g_inputs ul li:nth-child(2){
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card_12 .client_data{
+    position: absolute;
+    top: 33%;
+    left: 8%;
+    width: 88%;
+}
+.card_12 .client_data ul{
+    padding: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+.card_12 .client_data .client_list{
+    display: flex;
+    width: 100%;
+}
+.card_12 .client_data .icon_list{
+    flex: 0 0 8%;
+    text-align: center;
+    margin-right: 4px;
+}
+.card_12 .client_data .icon_list li img{
+    width: 22px !important;
+    height: 22px !important;
+}
+.card_12 .client_data .icon_list li{
+    margin-bottom: 27px;
+}
+.card_12 .client_data .icon_list li a{
+    font-size: 16px;
+}
+.card_12 .client_data .data_list{
+    flex: 0 0 42%;
+    max-width: 42%;
+    margin-top: 0px;
+    overflow-wrap: break-word;
+}
+.card_12 .client_data .data_list li{
+    margin-bottom: 0px;
+    height: 47px;
+}
+.card_12 .client_data .data_list a{
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width:300px) and (max-width:400px){
+    .card_12 .client_data .icon_list li img {
+        width: 15px !important;
+        height: 15px !important;
+    }
+    .card_12 .client_data .data_list a {
+        font-size: 9px;
+    }
+    .card_12 .g_inputs{
+        top: 10%;
+    }
+    .card_12 .g_inputs ul li:first-child{
+        font-size: 19px;
+    }
+    .card_12 .g_inputs ul li:nth-child(2){
+        font-size: 14px;
+    }
+    .card_12 .logo img {
+        width: 65px !important;
+        height: 65px !important;
+    }
+    .card_12 .slogan {
+        top: 35%;
+        font-size: 14px;
+        right: 3%;
+    }
+}
+@media (min-width:401px) and (max-width:480px){
+    .card_12 .client_data .icon_list li img {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    .card_12 .client_data .data_list a {
+        font-size: 10.5px;
+    }
+}
+@media (min-width:615px) and (max-width:767.5px){
+    .card_12 .client_data .icon_list li img {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .card_12 .client_data .data_list a {
+        font-size: 13px;
+    }
+    .card_12 .slogan{
+        font-size: 18px;
+    }
+}
+@media (min-width:768px) and (max-width:1392px){
+    .card_12 .client_data .icon_list li img {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    .card_12 .client_data .data_list a {
+        font-size: 10px;
+    }
+    .card_12 .g_inputs{
+        top: 10%;
+    }
+    .card_12 .g_inputs ul li:first-child{
+        font-size: 19px;
+    }
+    .card_12 .g_inputs ul li:nth-child(2){
+        font-size: 14px;
+    }
+    .card_12 .logo img {
+        width: 65px !important;
+        height: 65px !important;
+    }
+    .card_12 .slogan {
+        top: 35%;
+        font-size: 14px;
+        right: 3%;
+    }
+}

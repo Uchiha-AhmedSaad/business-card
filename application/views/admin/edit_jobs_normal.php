@@ -101,7 +101,7 @@
 										<td><?php echo $job->job_email ; ?></td>
 										<td><?php echo $job->job_telephone; ?></td>
 										
-										<td><?php echo $job->job_expire_date; ?></td>
+										<td><?php echo $job->expire_date; ?></td>
 									</tr>
 									<tr>
 										<td colspan="8"><?php echo $job->job_info; ?></td>

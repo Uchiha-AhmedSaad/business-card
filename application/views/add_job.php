@@ -105,11 +105,6 @@
                     <div class="col-12 add_job_btn">
                         <div class="btn-group">
                             <button type="submit" class="btn btn-info add_job_button"><?php echo e_lang('Add Job') ?></button>
-                            <div class="dropdown btn-group">
-                                <a class="btn btn-outline-info dropdown-toggle choose_bouquet_btn" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    أختر الباقة
-                                </a>
-                            </div>
                         </div>
                     </div>
 

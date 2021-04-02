@@ -1,0 +1,162 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+.card_16{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.card_16 img{
+    width: 100%;
+    height: 100%;
+}
+.card_16 .grid{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.card_16 .grid .left_grid{
+    flex: 0 0 65%;
+    max-width: 65%;
+    position: relative;
+}
+.card_16 .grid .left_grid .card_data{
+    position: absolute;
+    top: 2%;
+    left: 4%;
+    vertical-align: middle;
+    align-items: center;
+    display: inline-flex;
+}
+.card_16 .grid .left_grid .card_data .logo{
+    vertical-align: middle;
+}
+.card_16 .grid .left_grid .card_data .logo img{
+    width: 70px !important;
+    height: 80px !important;
+}
+.card_16 .grid .left_grid .card_data .g_inputs{
+    vertical-align: middle;
+    text-align: left;
+}
+.card_16 .grid .left_grid .card_data .g_inputs ul{
+    padding: 0px;
+}
+.card_16 .grid .left_grid .g_inputs ul li:first-child{
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+    letter-spacing: 1.5px;
+}
+.card_16 .grid .left_grid .g_inputs ul li:nth-child(2){
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    letter-spacing: 1.7px;
+}
+
+.card_16 .grid .left_grid .client_data{
+    position: absolute;
+    top: 33.5%;
+    left: 22%;
+    width: 88.5%;
+}
+.card_16 .grid .left_grid  .client_data ul{
+    padding: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+.card_16 .grid .left_grid  .client_data .client_list{
+    display: flex;
+    width: 100%;
+}
+.card_16 .grid .left_grid  .client_data .data_list{
+    flex: 0 0 95%;
+    max-width: 95%;
+    margin-top: 1px;
+    overflow-wrap: break-word;
+}
+.card_16 .grid .left_grid  .client_data .data_list li{
+    margin-bottom: 0px;
+    height: 38px;
+}
+.card_16 .grid .left_grid  .client_data .data_list a{
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: rgba(26, 25, 25, 0.929);
+    font-family: 'Roboto', sans-serif;
+}
+.card_16 .grid .left_grid .slogan{
+    position: absolute;
+    top: 76%;
+    left:15% ;
+    font-size: 18px;
+}
+
+.card_16 .grid .left_grid .social_icons{
+    position: absolute;
+    left: 14%;
+    bottom: 1%;
+}
+.card_16 .grid .left_grid .social_icons ul{
+    padding:0px;
+    margin-bottom: 0px;
+}
+.card_16 .grid .left_grid .social_icons ul li{
+    display: inline-flex;
+}
+.card_16 .grid .left_grid .social_icons ul li a{
+    font-size: 24px;
+    color: #A12226;
+    margin-right: 13px;
+}
+
+@media (min-width:290px) and (max-width:440px){
+    .card_16 .grid .left_grid .card_data .logo img {
+        width: 65px !important;
+        height: 70px !important;
+    }
+    .card_16 .grid .left_grid .g_inputs ul li:first-child {
+        font-size: 15px;
+    }
+    .card_16 .grid .left_grid .g_inputs ul li:nth-child(2) {
+        font-size: 11px;
+    }
+    .card_16 .grid .left_grid .client_data .data_list a {
+        font-size: 11px;
+    }
+    .card_16 .grid .left_grid .slogan {   
+        font-size: 15px;
+    }
+    .card_16 .grid .left_grid .social_icons ul li a {
+    font-size: 20px;
+    margin-right: 8px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px){
+    .card_16 .grid .left_grid .card_data .logo img {
+        width: 65px !important;
+        height: 70px !important;
+    }
+    .card_16 .grid .left_grid .g_inputs ul li:first-child {
+        font-size: 15px;
+    }
+    .card_16 .grid .left_grid .g_inputs ul li:nth-child(2) {
+        font-size: 11px;
+    }
+    .card_16 .grid .left_grid .client_data .data_list a {
+        font-size: 11px;
+    }
+    .card_16 .grid .left_grid .slogan {   
+        font-size: 15px;
+    }
+    .card_16 .grid .left_grid .social_icons ul li a {
+    font-size: 20px;
+    margin-right: 8px;
+    }
+}

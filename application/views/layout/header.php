@@ -1,5 +1,6 @@
+<?php $current_lang = getCurrentLanguages();?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $current_lang?>">
    <head class="swap_lang">
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,6 +37,23 @@
                  }
          ?>
           <link rel="stylesheet" href="<?php echo base_url('public/sweetalert/dist/sweetalert.css'); ?>" />
+            <?php 
+              if ((!empty(empty($this->uri->segment(2)) || $this->uri->segment(2) == 'index')) && !empty($b_cards)) 
+              {
+                for ($i=1; $i <= 50; $i++) { 
+                  ?> 
+                          <link rel="stylesheet" href="<?php echo base_url('public/cards_small_assets/css/card-'.$i.'-'.getCurrentLanguages().'.css'); ?>" />
+
+                  <?php
+                }
+              }
+
+
+
+
+             ?>
+
+          
       <title>Home</title>
       <style>
          .fa-check{
@@ -97,7 +115,7 @@
          }
       </style>
    </head>
-   <body >
+   <body class="<?php echo ($current_lang == "ar")?"rtl":"ltr";?>">
 
       <!-- top header -->
       <div class="top_header">
@@ -331,7 +349,7 @@
                         <div class="type_s">
                            <div class="dropdown btn-group">
                               <button class="btn btn-light dropdown-toggle type_btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              النوع
+                              <?php echo e_lang('Type'); ?>
                               </button>
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                  <a class="dropdown-item" href="#">كروت</a>

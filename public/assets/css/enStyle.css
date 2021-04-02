@@ -1,9 +1,9 @@
 body{
     direction: ltr;
 }
-.top_header .header_links,.upper_nav .upper_nav_row .company_logo .nav_logo,.home_content .doc_card_title,.home_content .home_special_ads .special_ads_title h4,.home_content .card_holder .job_ad,footer .footer_links .copy,.path .path_row,.about_us p,.my-account .my-account-navs .navs-header,.my-account .my-account-navs a,.my-account .new-ads-most-search .most-search-header h5,.my-account .account-info-form,.my-account .most-search-header #job_date_span,.my-account .most-search-header .job_details,.my-account .most-search-header .job_location,.my-account .favorite_card .card_cont .exp_date,.my-account .fav_jobcard_dropdown .click_btn,.search_jobs .job_cards .job_card,.search_jobs .job_describtion p,.my-account .most-search-header .notify_container,.add_card .subscribe_row,.add_job .job_details_container,.card_details_content .client_title,.card_details_content .client_details,.add_card .card_cont .card_title,.login .login-form .code_label,.contact_us .contact_us_row,.doctor_jobs .job_card,.forget_password .login-form .forget_text,.forget_label,.job_details_container .job_describtion,.job_details_container .client_title,.job_details_container .client_details,.job_details_container .employee_details,.payment .payment_collapse,.payment .bank-account,.search
+.top_header .header_links,.upper_nav .upper_nav_row .company_logo .nav_logo,.home_content .doc_card_title,.home_content .home_special_ads .special_ads_title h4,.home_content .card_holder .job_ad,footer .footer_links .copy,.path .path_row,.about_us p,.my-account .my-account-navs .navs-header,.my-account .my-account-navs a,.my-account .new-ads-most-search .most-search-header h5,.my-account .account-info-form,.my-account .most-search-header #job_date_span,.my-account .most-search-header .job_details,.my-account .most-search-header .job_location,.my-account .favorite_card .card_cont .exp_date,.my-account .fav_jobcard_dropdown .click_btn,.search_jobs .job_cards .job_card,.search_jobs .job_describtion p,.my-account .most-search-header .notify_container,.add_card .subscribe_row,.add_job .job_details_container,.card_details_content .client_title,.card_details_content .client_details,.add_card .card_cont .card_title,.login .login-form .code_label,.contact_us .contact_us_row,.doctor_jobs .job_card,.forget_password .login-form .forget_text,.forget_label,.job_details_container .job_describtion,.job_details_container .client_title,.job_details_container .client_details,.job_details_container .employee_details,.payment .payment_collapse,.payment .bank-account,.search,.card_details_content .pn
 {
-   text-align: left;    
+   text-align: left !important;    
 }
 .top_header .header_social,.upper_nav .upper_nav_row .nav_links,.home_content .more_cards,.home_content .card_holder .job_ad .contact,footer .footer_social,.upper_nav .upper_nav_row .login_welcome,.my-account .most-search-header .my_cards .card_edit_btn,.my-account .most-search-header .edit_btn,.my-account .most-search-header .remove_btn,.my-account .card_cont .remove_icon,.contact,.card_details_content .add_contact_btn,.card_details_content .report_btn,.login .login-form .forget_link,.job_details_container .rep_text
 {
@@ -313,7 +313,7 @@ footer ul
 
 @media (min-width:295px) and (max-width:768px){
     .upper_nav .upper_nav_row .company_logo .nav_logo,.upper_nav .upper_nav_row .nav_links,.top_header .header_links,.top_header .header_social{
-        text-align: center;
+        text-align: center !important;
     }
     .card_details_content .add_contact_btn{
         text-align: right;
@@ -348,44 +348,12 @@ footer ul
     }
   }
 
-  @media (min-width:1200px) and (max-width:2180px){
-    .pn{
-      margin-right: 15px;
-      margin-left: -18px;
-    }
-  }
   @media (min-width:767.8px) and (max-width:992px){
-    .pn{
-      margin-right: -51px;
-      margin-left: 15px;
-    }
+  
     .card_details_content .add_contact_btn{
-      margin-top: 6%;
+      margin-top: 0%;
     }
   }
-  @media (min-width: 521px) and (max-width: 767px){
-    .pn {
-        margin-right: -51px;
-        margin-left: 45px;
-    }
-}
 
-@media (min-width: 484px) and (max-width: 521px){
-    .pn {
-        margin-right: -51px;
-        margin-left: 45px;
-    }
-}
-@media (min-width: 409px) and (max-width: 484px){
-    .pn {
-        margin-right: -41px;
-        margin-left: 45px;
-    }
-}
-@media (min-width: 309px) and (max-width: 409px){
-    .pn {
-        margin-right: -55px;
-        margin-left: 45px;
-    }
-}
+
 

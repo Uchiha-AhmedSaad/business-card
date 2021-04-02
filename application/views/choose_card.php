@@ -7,11 +7,11 @@
                 </div>
                 <form method="GET" action="<?php echo base_url('site/addCard') ?>">
                     <input type="hidden" id="card_number" name="card_number" value="">
-                    <div class="row slick-carousel type-one-carousel cards">
+                    <div class="row slick-carousel type-columns-carousel cards">
                         <?php 
 
                             $dir = __DIR__.'/../../uploads/cards/imgs';
-                            for ($i=1; $i <= count(glob($dir.'/*', GLOB_ONLYDIR)); $i++) 
+                            for ($i=1; $i <= 45; $i++) 
                             { 
                                 $file_headers = @get_headers(base_url('uploads/cards/imgs/card%20'.$i.'/c-'.$i.'-'.getCurrentLanguages().'.png'));
                          

@@ -9,10 +9,97 @@ class Site extends CI_Controller
 	public function __construct(){
 		parent::__construct();
 		$this->load->library('session');
+		$this->load->library('pagination');
+		
+	}
+
+	private function pagination($per_page = 10,$url,$count)
+	{
+	    $conditions['returnType']   = 'count';
+	    $config['base_url']         = $url;
+	    $config['use_page_numbers'] =FALSE;
+	    $config['uri_segment']      = 3;
+	    $config['per_page']         = $per_page;
+	    $config['total_rows']       = $count;
+	    $config['num_tag_open']     = '<li>';
+	    $config['num_tag_close']    = '</li>';
+	    $config['cur_tag_open']     = '<li class="active"><a href="javascript:void(0);">';
+	    $config['cur_tag_close']    = '</li>';
+	    $config['next_link']        = 'التالي';
+	    $config['prev_link']        = 'السابق';
+	    $config['last_link']        = 'الأخيرة';
+	    $config['next_tag_open']    = '<li class="pg-next">';
+	    $config['next_tag_close']   = '</li>';
+	    $config['prev_tag_open']    = '<li class="pg-prev">';
+	    $config['prev_tag_close']   = '</li>';
+	    $config['first_tag_open']   = '<li>';
+	    $config['first_tag_close']  = '</li>';
+	    $config['last_tag_open']    = '<li>';
+	    $config['last_tag_close']   = '</li>';
+	    $this->pagination->initialize($config);
+	    $page = $this->uri->segment(3);
+	    $offset = !$page?0:$page;
+	    $data['total_rows'] = $config['total_rows'];
+	    $data['_per_page'] = $per_page;
+	    $data['_page'] = intval($page/$per_page)+1;
+	    $conditions['returnType'] = '';
+	    $conditions['start'] = $offset;
+	    $conditions['limit'] = $per_page;
+	    return $limit = array($offset,$per_page);
 	}
 	public function index()
 	{
 		$data = [];
+
+			$url            = base_url("site");
+			$total_rows     = $this->db->where('b_cards_id IN (SELECT card_id FROM card_package_requests WHERE request_status ="accept")')->where('DATE(expire_date) > "'.date('Y-m-d H:i:s').'" ')->count_all_results('b_cards');
+			$paginate       = $this->pagination(10,$url,$total_rows);
+			$data['b_cards']= $this->db
+			->where('b_cards_id IN (SELECT card_id FROM card_package_requests WHERE request_status ="accept")')
+			->where('DATE(expire_date) > "'.date('Y-m-d H:i:s').'" ')
+			->get('b_cards',$paginate[1],$paginate[0])->result();
+
+
+			$paginate       = $this->pagination(10,$url,$total_rows);
+			$data['b_cards_By_category']= $this->db
+			->where('b_cards_id NOT IN (SELECT card_id FROM card_package_requests WHERE request_status ="accept")')
+			->where('DATE(expire_date) > "'.date('Y-m-d H:i:s').'" ')
+			->get('b_cards',$paginate[1],$paginate[0])->result();
+
+
+			$extract = [];
+			foreach ($data['b_cards_By_category'] as $b_cards_By_category) 
+			{
+				$extract[$b_cards_By_category->b_cards_cat_id][] = $b_cards_By_category;
+			}
+
+			$data['b_cards_By_category'] = $extract;
+
+			$categories = $this->db->get('cat')->result_array();
+			if (getCurrentLanguages() == 'ar') {
+				$data['categories'] = array_column($categories,'cat_name' ,'cat_id');
+			}
+			else{
+				$data['categories'] = array_column($categories,'cat_name_en' ,'cat_id');
+			}
+			
+
+			$date = date("Y-m-d H:i:s");
+
+			$jobs = $this->db->where('job_id IN (SELECT job_id FROM job_package_requests WHERE request_status = "accept")')->where('DATE(expire_date) > "'.$date.'" ')->get('jobs')->result();
+			$data['jobs'] = $jobs;
+
+			$users = $this->db->get('users')->result();
+
+			$extract_users = [];
+			foreach ($users as $user ) {
+				$extract_users[$user->user_id] = $user;
+			}
+
+
+			$data['users'] = $extract_users;
+
+
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('index',$data);
 	    $this->load->view('layout/footer');
@@ -297,6 +384,9 @@ class Site extends CI_Controller
 	// ------------------ addJob page  --------------------------
 	public function addJob()
 	{
+		if (empty($this->session->userdata('user'))) {
+			redirect(base_url('site/login'));
+		}
 		$data = [];
 
 		$categories = $this->db->get('cat')->result_array();
@@ -324,6 +414,7 @@ class Site extends CI_Controller
 			$data_insert['details'] 		= $this->input->post('details');
 			$data_insert['job_name'] 		= $this->input->post('job_name');
 			$data_insert['job_type'] 		= $this->input->post('job_type');
+			$data_insert['user_id'] 		= $this->session->userdata('user')['user_id'];
 			$data_insert['job_country_id'] 	= $this->input->post('job_country_id');
 			$data_insert['job_city_id'] 	= $this->input->post('job_city_id');
 			$data_insert['job_cat_id'] 		= $this->input->post('job_cat_id');

@@ -1,0 +1,281 @@
+.card_36{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.card_36 img{
+    width: 100%;
+    height: 100%;
+}
+.card_36 .grid{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.card_36 .grid .left_grid{
+    flex: 0 0 44%;
+    max-width: 44%;
+    position: relative;
+}
+.card_36 .grid .left_grid .client_details{
+    position: absolute;
+    width: 100%;
+    top: 76px;
+    left: 15px;
+}
+.card_36 .grid .left_grid .client_details .slogan{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.858);
+    padding-bottom: 10px;
+    text-align: left;
+    width: 75%;
+    overflow-wrap: break-word;
+    border-bottom: 2px solid #60283a;
+    margin-bottom: 15px;
+}
+.card_36 .grid .left_grid .client_details .client_data{
+    text-align: left;
+}
+.card_36 .grid .left_grid .client_details .client_data .client_list{
+    display: flex;
+    width: 100%;
+    vertical-align: middle;
+}
+.card_36 .grid .left_grid .client_details .client_data .client_list .icon_list{
+    flex: 0 0 15.5%;
+    padding-left:8px;
+}
+.card_36 .grid .left_grid .client_details .client_data .client_list .icon_list li{
+    margin-bottom: 7px;
+}
+.card_36 .grid .left_grid .client_details .client_data .client_list .icon_list li i{
+    color: rgba(255, 255, 255, 0.953);
+    font-size: 15px;
+}
+.card_36 .grid .left_grid .client_details .client_data .client_list .data_list{
+    padding:0px;
+    flex: 0 0 70%;
+    max-width: 70%;
+    overflow-wrap: break-word;
+    font-weight: 200;
+}
+.card_36 .grid .left_grid .client_details .client_data .client_list .data_list li{
+    margin-bottom: 0px;
+    line-height: .9;
+    height: 34px;
+}
+.card_36 .grid .left_grid .client_details .client_data .client_list .data_list a{
+    color: #fff;
+    font-size: 13px;
+}
+.card_36 .grid .left_grid .social_icons{
+    width: 68%;
+    position: absolute;
+    bottom: 2%;
+    left: 15px;
+    text-align: left;
+    
+}
+.card_36 .grid .left_grid .social_icons ul{
+    padding:0px;
+    margin-bottom: 0px;
+}
+.card_36 .grid .left_grid .social_icons ul li{
+    display: inline-flex;
+}
+.card_36 .grid .left_grid .social_icons ul li a{
+    font-size: 20px;
+    color: #e0183b;
+    margin-right: 10px;
+}
+
+.card_36 .grid .right_grid{
+    flex: 0 0 56%;
+    position: relative;
+}
+.card_36 .grid .right_grid .card_data{
+    position: absolute;
+    width: 84%;
+    top: 35%;
+    right: 0px;
+    text-align: center;
+}
+.card_36 .grid .right_grid .card_data .logo{
+    margin-left: 20px;
+}
+.card_36 .grid .right_grid .card_data .logo img{
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+}
+.card_36 .grid .right_grid .card_data .g_inputs{
+    margin-left: 54px;
+}
+.card_36 .grid .right_grid .card_data .g_inputs ul{
+    padding: 0px;
+}
+.card_36 .grid .right_grid .card_data .g_inputs ul li:first-child{
+    font-size: 22px;
+    font-weight: bold;
+    color: #31384c;
+}
+.card_36 .grid .right_grid .card_data .g_inputs ul li:nth-child(2){
+    font-size: 16px;
+    color: #31384c;
+    letter-spacing: 2px;
+}
+
+@media (min-width:250px) and (max-width:450px){
+    .card_36 .grid .left_grid .client_details .slogan{
+        font-size: 13px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .icon_list{
+        padding-left: 2px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .icon_list li{
+        margin-bottom: 5px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .icon_list li i{
+        font-size: 12px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .data_list li{
+        margin-bottom: 0px;
+        height: 30px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .data_list a{
+        font-size: 12px;
+    }
+    .card_36 .grid .left_grid .social_icons ul li a{
+        margin-right: 1px;
+        font-size: 14px;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs{
+        margin-left:30px ;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs ul li:first-child{
+        font-size: 17px;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs ul li:nth-child(2){
+        font-size: 13px;
+    }
+    .card_36 .grid .right_grid .card_data .logo img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
+
+@media (min-width:767.5px) and (max-width:910px){
+    .card_36 .grid .left_grid .client_details .slogan{
+        font-size: 13px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .icon_list{
+        padding-left: 2px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .icon_list li{
+        margin-bottom: 5px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .icon_list li i{
+        font-size: 12px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .data_list li{
+        margin-bottom: 0px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .data_list a{
+        font-size: 12px;
+    }
+    .card_36 .grid .left_grid .social_icons ul li a{
+        margin-right: 1px;
+        font-size: 14px;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs{
+        margin-left:30px ;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs ul li:first-child{
+        font-size: 17px;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs ul li:nth-child(2){
+        font-size: 13px;
+    }
+    .card_36 .grid .right_grid .card_data .logo img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
+
+@media (min-width:992px) and (max-width:1260px){
+    .card_36 .grid .left_grid .client_details .slogan{
+        font-size: 13px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .icon_list{
+        padding-left: 2px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .icon_list li{
+        margin-bottom: 5px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .icon_list li i{
+        font-size: 12px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .data_list li{
+        margin-bottom: 0px;
+        height: 32px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .data_list a{
+        font-size: 12px;
+    }
+    .card_36 .grid .left_grid .social_icons ul li a{
+        margin-right: 1px;
+        font-size: 14px;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs{
+        margin-left:30px ;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs ul li:first-child{
+        font-size: 17px;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs ul li:nth-child(2){
+        font-size: 13px;
+    }
+    .card_36 .grid .right_grid .card_data .logo img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
+@media (min-width:1260px) and (max-width:1400px){
+    .card_36 .grid .left_grid .client_details .slogan{
+        font-size: 14px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .icon_list{
+        padding-left: 2px;
+    }
+   
+    .card_36 .grid .left_grid .client_details .client_data .client_list .icon_list li i{
+        font-size: 14px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .data_list li{
+        margin-bottom: 0px;
+    }
+    .card_36 .grid .left_grid .client_details .client_data .client_list .data_list a{
+        font-size: 13px;
+    }
+    .card_36 .grid .left_grid .social_icons ul li a{
+        margin-right: 5px;
+        font-size: 20px;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs{
+        margin-left:30px ;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs ul li:first-child{
+        font-size: 20px;
+    }
+    .card_36 .grid .right_grid .card_data .g_inputs ul li:nth-child(2){
+        font-size: 15px;
+    }
+    .card_36 .grid .right_grid .card_data .logo img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+}

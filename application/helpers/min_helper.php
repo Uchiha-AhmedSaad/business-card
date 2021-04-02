@@ -81,11 +81,21 @@ function Countries()
 
 function e_lang($word)
 {
+    $CI =& get_instance();
     if (empty(lang($word))) {
         return $word;
     }
     else{
-        return lang($word);
+        if (empty($CI->session->userdata('language'))) {
+          return lang($word);
+        }
+        else if ($CI->session->userdata('language') == 'ar') {
+          return lang($word);
+        }
+        else{
+          return $word;
+        }
+        
     }
 }
 

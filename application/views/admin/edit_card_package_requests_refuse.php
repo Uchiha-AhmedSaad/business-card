@@ -43,7 +43,7 @@
 						</li>
 						<li>
 							<a href="<?php echo base_url()."admin/edit_ads"; ?>" >
-							  بطاقات العمل
+							   طلبات تميز الكروت المرفوضة
 							</a>
 						</li>
 					</ul>
@@ -61,7 +61,7 @@
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>   بطاقات العمل
+								<i class="fa fa-edit"></i>    طلبات تميز الكروت المرفوضة
 							</div>
 							
 						</div>
@@ -88,7 +88,9 @@
 								?> 
 									<tr>
 										<td><?php echo $users[$card->request_user_id];  ?></td>
-										<td><?php echo $card->card_id;  ?></td>
+										<td>
+											<center>												<img width="100" height="100" src="<?php echo base_url('uploads/cards/imgs/'.'card '.$card->card_id.'/'.'c-'.$card->card_id.'-ar.png'); ?>"></center>
+										</td>
 										<td> <?php echo $package[$card->request_package_id];  ?>	</td>
 
 

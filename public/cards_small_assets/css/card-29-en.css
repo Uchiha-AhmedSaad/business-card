@@ -1,0 +1,247 @@
+
+.card_29{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.card_29 img{
+    width: 100%;
+    height: 100%;
+}
+.card_29 .grid{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.card_29 .grid .left_part{
+    flex: 0 0 60%;
+    max-width: 60%;
+    overflow-wrap: break-word;
+}
+
+.card_29 .grid .left_part .g_inputs{
+    position: absolute;
+    top: 16.5%;
+    left: 10%;
+}
+.card_29 .grid .left_part .g_inputs ul{
+    padding: 0px;
+    text-align: left;
+}
+.card_29 .grid .left_part .g_inputs ul li:first-child{
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1.5px;
+}
+.card_29 .grid .left_part .g_inputs ul li:nth-child(2){
+    font-size: 18px;
+    color: #02a6e4;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+.card_29 .client_details .client_list{
+    display: flex;
+    position: absolute;
+    width: 56%;
+    left: 4%;
+    top: 53%;
+}
+.card_29 .client_details .client_list .icon_list{
+    flex: 0 0 14%;
+    padding: 0px;
+    text-align: left;
+}
+.card_29 .client_details .client_list .icon_list img{
+    width: 35px !important;
+    height: 35px !important;
+}
+.card_29 .client_details .client_list .icon_list li{
+    margin-bottom: 15px;
+   
+}
+
+.card_29 .client_details .client_list .icon_list i{
+    font-size: 20px;
+    color: #02a6e4;
+    padding-left: 7px;
+}
+.card_29 .client_details .client_list .data_list{
+    flex: 0 0 86%;
+    padding: 0px;
+    text-align: left;
+    margin-top: -2px;
+}
+.card_29 .client_details .client_list .data_list a{
+    font-size: 16px;
+    overflow-wrap: break-word;
+    color: #02a6e4;;
+}
+.card_29 .client_details .client_list .data_list li{
+    margin-bottom: 0px;
+    height: 39px;
+}
+.card_29 .grid .right_part{
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.card_29 .grid .right_part .logo{
+    position: absolute;
+    top: 5%;
+    right: 0%;
+    width: 40%;
+    text-align: center;
+}
+.card_29 .grid .right_part .logo img{
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+}
+.card_29 .grid .right_part .slogan{
+    position: absolute;
+    top: 40%;
+    right: 2%;
+    padding-bottom: 15px;
+    width: 40%;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #fff;
+}
+.card_29 .grid .right_part .social_icons{
+    position: absolute;
+    bottom: 22%;
+    right: 0%;
+    width: 35%;
+    text-align: center;
+}
+.card_29 .grid .right_part .social_icons ul{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.card_29 .grid .right_part .social_icons ul li{
+    display: inline-flex;
+    margin-right: 10px;
+}
+.card_29 .grid .right_part .social_icons ul li a {
+    color: #fff;
+    font-size: 22px;
+}
+@media (min-width:250px) and (max-width:445px){
+    .card_29 .grid .right_part .logo img{
+        width: 80px;
+        height: 80px;
+    }
+    .card_29 .grid .left_part .g_inputs ul li:first-child{
+        font-size: 14px;
+    }
+    .card_29 .grid .left_part .g_inputs ul li:nth-child(2){
+        font-size: 10px;
+    }
+    .card_29 .client_details .client_list .icon_list img {
+        width: 26px !important;
+        height: 30px !important;
+    }
+    .card_29 .client_details .client_list .icon_list{
+        margin-right: 5px;
+    }
+    .card_29 .client_details .client_list .icon_list i{
+        font-size: 15px;
+    }
+    .card_29 .client_details .client_list .data_list a{
+        font-size: 9px;
+        margin-top: 9px;
+    }
+    .card_29 .client_details .client_list .data_list li{
+        margin-bottom: 0px;
+        height: 38px;
+    }
+    .card_29 .grid .right_part .slogan{
+        font-size: 11px;
+    }
+    .card_29 .grid .right_part .social_icons ul li {
+        margin-right: 5px;
+    }
+    .card_29 .grid .right_part .social_icons ul li a{
+        font-size: 14px;
+    }
+}
+
+@media (min-width:767px) and (max-width:890px){
+   
+    .card_29 .grid .left_part .g_inputs ul li:first-child{
+        font-size: 18px;
+    }
+    .card_29 .grid .left_part .g_inputs ul li:nth-child(2){
+        font-size: 15px;
+    }
+    .card_29 .client_details .client_list .icon_list i{
+        font-size: 15px;
+    }
+    .card_29 .client_details .client_list .data_list a{
+        font-size: 12px;
+        margin-top: 8px;
+
+    }
+    .card_29 .client_details .client_list .data_list li{
+        margin-bottom: 0px;
+    }
+    .card_29 .grid .right_part .slogan{
+        font-size: 11px;
+    }
+    .card_29 .grid .right_part .social_icons ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1250px){
+    .card_29 .grid .left_part .g_inputs ul li:first-child{
+        font-size: 16px;
+    }
+    .card_29 .grid .left_part .g_inputs ul li:nth-child(2){
+        font-size: 12px;
+    }
+    .card_29 .client_details .client_list .icon_list i{
+        font-size: 15px;
+    }
+    .card_29 .client_details .client_list .icon_list img{
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .card_29 .client_details .client_list .data_list a{
+        font-size: 12px;
+    }
+    .card_29 .client_details .client_list .data_list li{
+        margin-bottom: 0px;
+    }
+    .card_29 .grid .right_part .slogan{
+        font-size: 11px;
+    }
+    .card_29 .grid .right_part .social_icons ul li a{
+        font-size: 14px;
+    }
+}
+@media (min-width:1705px) and (max-width:2100px){
+    .card_29 .grid .right_part .logo img{
+        width: 37% !important;
+        height: 37% !important;
+    }
+    .card_29 .grid .right_part .slogan{
+        top: 40%;
+    }
+}
+@media (min-width:2100px) and (max-width:2700px){
+    .card_29 .grid .right_part .logo img{
+        width: 34% !important;
+        height: 34% !important;
+    }
+    .card_29 .grid .right_part .slogan{
+        top: 40%;
+    }
+}

@@ -1,0 +1,1 @@
+<span><?php echo $cards->b_cards_work; ?></span>

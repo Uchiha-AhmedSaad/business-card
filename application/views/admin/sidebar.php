@@ -130,17 +130,17 @@
             </a>
             <ul class="sub-menu">
                <li>
-                  <a href="<?php echo base_url(); ?>admin/edit_card_package_requests_accept">
+                  <a href="<?php echo base_url(); ?>admin/edit_jobs_package_requests_accept">
                   الطلبات المفعلة
                   </a>
                </li>
                <li>
-                  <a href="<?php echo base_url(); ?>admin/edit_card_package_requests_refuse">
+                  <a href="<?php echo base_url(); ?>admin/edit_jobs_package_requests_refuse">
                   الطلبات المرفوضة
                   </a>
                </li>
                <li>
-                  <a href="<?php echo base_url(); ?>admin/edit_card_package_requests">
+                  <a href="<?php echo base_url(); ?>admin/edit_jobs_package_requests">
                   الطلبات الجديدة
                   </a>
                </li>

@@ -1,0 +1,340 @@
+.card_32{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.card_32 img{
+    width: 100%;
+    height: 100%;
+}
+.card_32 .grid{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.card_32 .grid .left_grid{
+    flex: 0 0 43%;
+    position: relative;
+}
+.card_32 .grid .left_grid .job_data{
+    position: absolute;
+    top: 17%;
+    right:0px;
+    width: 99%;
+    overflow-wrap: break-word;
+}
+.card_32 .grid .left_grid .job_data ul{
+    padding:0px;
+    text-align: right;
+}
+.card_32 .grid .left_grid .job_data ul li{
+    margin-bottom: 0px;
+    height: 41px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .8px;
+}
+.card_32 .grid .left_grid .job_data ul li a{
+    color: #000;
+}
+.card_32 .grid .left_grid .job_data ul li:first-child{
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+.card_32 .grid .left_grid .social_icons{
+    position: absolute;
+    bottom: 0%;
+    left: 7%;
+    padding-top: 2px;
+    border-top: 2px solid #252524;
+}
+.card_32 .grid .left_grid .social_icons ul{
+    padding:0px;
+    margin-bottom:5px
+}
+.card_32 .grid .left_grid .social_icons ul li{
+    display: inline-flex;
+}
+.card_32 .grid .left_grid .social_icons ul li a{
+    font-size: 20px;
+    margin-right: 15px;
+    color: #252524;
+}
+.card_32 .grid .mid_grid{
+    flex: 0 0 15%;
+    position: relative;
+    max-width: 20%;
+}
+.card_32 .grid .mid_grid .icon_list{
+    position: absolute;
+    top: 18.5%;
+    right: 0%;
+    width: 100%;
+}
+.card_32 .grid .mid_grid .icon_list ul{
+    padding:0px;
+}
+.card_32 .grid .mid_grid .icon_list ul li{
+    margin-bottom: 28px;
+    display: block;
+}
+.card_32 .grid .mid_grid .icon_list ul li:nth-child(1){
+    margin-left: 20.8%;
+}
+.card_32 .grid .mid_grid .icon_list ul li:nth-child(2){
+    margin-left: 48%;
+}
+.card_32 .grid .mid_grid .icon_list ul li:nth-child(3){
+    margin-left: 52%;
+}
+.card_32 .grid .mid_grid .icon_list ul li:nth-child(4){
+    margin-left: 49%;
+}
+.card_32 .grid .mid_grid .icon_list ul li:nth-child(5){
+    margin-left: 20.8%;
+}
+.card_32 .grid .mid_grid .icon_list ul li img{
+    width: 16px !important;
+    right: 16px !important;
+}
+.card_32 .grid .mid_grid .icon_list ul li:nth-child(2) img{
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.card_32 .grid .right_grid{
+    flex: 0 0 38%;
+    position: relative;
+}
+.card_32 .grid .right_grid .logo{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.card_32 .grid .right_grid .logo img{
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+}
+.card_32 .grid .right_grid .client_name{
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    width: 85%;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.card_32 .grid .right_grid .slogan{
+    color:#fff;
+    font-size: 15px;
+    width: 80%;
+    text-align: center;
+    margin-left: 10px;
+}
+@media (min-width:280px) and (max-width:390px){
+    .card_32 .grid .right_grid .logo img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    .card_32 .grid .right_grid .client_name{
+        width: 95%;
+        font-size: 18px;
+    }
+    .card_32 .grid .right_grid .slogan{
+        font-size: 12px;
+    }
+    .card_32 .grid .left_grid .job_data ul li{
+        margin-bottom: 0px;
+        font-size: 12px;
+        height: 42px;
+    }
+    .card_32 .grid .mid_grid .icon_list ul li img{
+        width: 11px !important;
+        height: 11px !important;
+    }
+    .card_32 .grid .left_grid .social_icons ul li a {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+}
+@media (min-width:390px) and (max-width:490px){
+    .card_32 .grid .right_grid .logo img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    .card_32 .grid .right_grid .client_name{
+        width: 88%;
+        font-size: 22px;
+    }
+    .card_32 .grid .right_grid .slogan{
+        font-size: 14px;
+    }
+    .card_32 .grid .left_grid .job_data ul li{
+        margin-bottom: 0px;
+        font-size: 13px;
+    }
+    .card_32 .grid .mid_grid .icon_list ul li img{
+        width: 13px !important;
+        height: 13px !important;
+    }
+    .card_32 .grid .left_grid .social_icons ul li a {
+        font-size: 22px;
+        margin-right: 5px;
+    }
+}
+
+@media (min-width:569px) and (max-width:620px){
+    .card_32 .grid .right_grid .logo img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    .card_32 .grid .right_grid .client_name{
+        width: 88%;
+        font-size: 28px;
+    }
+    .card_32 .grid .right_grid .slogan{
+        font-size: 16px;
+    }
+    .card_32 .grid .left_grid .job_data ul li{
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+    .card_32 .grid .mid_grid .icon_list ul li img{
+        width: 13px !important;
+        height: 13px !important;
+    }
+    .card_32 .grid .left_grid .social_icons ul li a {
+        font-size: 22px;
+        margin-right:15px;
+    }
+}
+
+@media (min-width:620px) and (max-width:767.5px){
+    .card_32 .grid .right_grid .logo img {
+        width: 130px !important;
+        height: 130px !important;
+    }
+    .card_32 .grid .right_grid .client_name{
+        width: 88%;
+        font-size: 28px;
+        margin-left: 20px;
+    }
+    .card_32 .grid .right_grid .slogan{
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .card_32 .grid .left_grid .job_data ul li{
+        margin-bottom: 0px;
+        font-size: 15px;
+    }
+    .card_32 .grid .mid_grid .icon_list ul li img{
+        width: 13px !important;
+        height: 13px !important;
+    }
+    .card_32 .grid .left_grid .social_icons ul li a {
+        font-size: 24px;
+        margin-right:15px;
+    }
+}
+@media (min-width:768px) and (max-width:850px){
+    .card_32 .grid .right_grid .logo img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    .card_32 .grid .right_grid .client_name{
+        width: 95%;
+        font-size: 18px;
+    }
+    .card_32 .grid .right_grid .slogan{
+        font-size: 12px;
+    }
+    .card_32 .grid .left_grid .job_data ul li{
+        margin-bottom: 0px;
+        font-size: 12px;
+    }
+    .card_32 .grid .mid_grid .icon_list ul li{
+        margin-bottom: 30px;
+    }
+    .card_32 .grid .mid_grid .icon_list ul li img{
+        width: 11px !important;
+        height: 11px !important;
+    }
+    .card_32 .grid .left_grid .social_icons ul li a {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+}
+
+@media (min-width:850px) and (max-width:992px){
+    .card_32 .grid .right_grid .logo img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    .card_32 .grid .right_grid .client_name{
+        width: 75%;
+        font-size: 20px;
+    }
+    .card_32 .grid .right_grid .slogan{
+        font-size: 13px;
+    }
+    .card_32 .grid .left_grid .job_data ul li{
+        margin-bottom: 0px;
+        font-size: 13px;
+    }
+    .card_32 .grid .mid_grid .icon_list ul li{
+        margin-bottom: 30px;
+    }
+    .card_32 .grid .mid_grid .icon_list ul li img{
+        width: 11px !important;
+        height: 11px !important;
+    }
+    .card_32 .grid .left_grid .social_icons ul li a {
+        font-size: 20px;
+        margin-right: 9px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1275px){
+    .card_32 .grid .right_grid .logo img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    .card_32 .grid .right_grid .client_name{
+        width: 95%;
+        font-size: 18px;
+    }
+    .card_32 .grid .right_grid .slogan{
+        font-size: 12px;
+    }
+    .card_32 .grid .left_grid .job_data ul li{
+        margin-bottom: 0px;
+        font-size: 12px;
+        height: 42px;
+    }
+    .card_32 .grid .mid_grid .icon_list ul li{
+        margin-bottom: 28px;
+    }
+    .card_32 .grid .mid_grid .icon_list ul li img{
+        width: 13px !important;
+        height: 13px !important;
+    }
+    .card_32 .grid .left_grid .social_icons ul li a {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+}
+@media (min-width:1650px) and (max-width:1850px){
+    .card_32 .grid .mid_grid .icon_list ul li img{
+        width: 19px !important;
+        height: 19px !important;
+    }
+}

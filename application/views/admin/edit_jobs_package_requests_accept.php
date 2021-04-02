@@ -43,7 +43,7 @@
 						</li>
 						<li>
 							<a href="<?php echo base_url()."admin/edit_ads"; ?>" >
-							  بطاقات العمل
+							  طلبات تميز الوظائف المفعلة
 							</a>
 						</li>
 					</ul>
@@ -61,7 +61,7 @@
 					<div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>   بطاقات العمل
+								<i class="fa fa-edit"></i>    طلبات تميز الوظائف المفعلة
 							</div>
 							
 						</div>

@@ -1,0 +1,255 @@
+
+@font-face {
+    font-family: Tajawal;
+    src: url("../../assets/fonts/ArbFONTS-Tajawal-Medium.ttf");
+  }
+.card_42{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 15px;
+    font-family: 'Tajawal', sans-serif;
+
+}
+.card_42 img{
+    width: 100%;
+    height: 100%;
+}
+.card_42 .grid{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row-reverse;
+}
+.card_42 .grid .left_grid{
+    flex: 0 0 52%;
+    max-width: 52%;
+    position: relative;
+    margin-top: 25px;
+    margin-right: 17%;
+}
+.card_42 .grid .left_grid .g_inputs{
+    position: absolute;
+    width: 76%;
+    top: 0px;
+    right: 0px;
+    text-align: right;
+}
+.card_42 .grid .left_grid .g_inputs ul{
+    padding-left: 0px;
+}
+.card_42 .grid .left_grid .g_inputs ul li:first-child{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+
+}
+.card_42 .grid .left_grid .g_inputs ul li:nth-child(2){
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.card_42 .grid .left_grid .slogan{
+    position: relative;
+    top: 30%;
+    right: 0px;
+    text-align: right;
+    width: 100%;
+    color: rgba(228, 224, 224, 0.856);
+}
+.card_42 .grid .left_grid .slogan::after{
+    content:"";
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 70%;
+    height: 1px;
+    background-color: #54a5c6;
+}
+
+.card_42 .grid .left_grid .client_data{
+    position: absolute;
+    top: 48%;
+    right: 15px;
+    width: 92%;
+    direction: rtl;
+}
+.card_42 .grid .left_grid .client_data ul{
+    padding: 0px;
+    margin-bottom: 0px;
+    text-align: right;
+}
+.card_42 .grid .left_grid .client_data .client_list{
+    display: flex;
+    width: 100%;
+}
+.card_42 .grid .left_grid .client_data .icon_list{
+    flex: 0 0 10%;
+    text-align: center;
+    margin-right: 7px;
+}
+.card_42 .grid .left_grid .client_data .icon_list li a{
+    color: rgba(255, 255, 255, 0.788);
+}
+.card_42 .grid .left_grid .client_data .icon_list li{
+    margin-bottom: 5px;
+}
+.card_42 .grid .left_grid .client_data .data_list{
+    flex: 0 0 86.5%;
+    max-width: 88%;
+    margin-top: 2px;
+    overflow-wrap: break-word;
+}
+.card_42 .grid .left_grid .client_data .data_list li{
+    margin-bottom: 0px;
+    line-height: .9;
+    height: 30px;
+}
+.card_42 .grid .left_grid .client_data .data_list a{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.929);
+}
+
+.card_42 .grid .social_icons{
+    position: absolute;
+    right: 0px;
+    width: 94.5%;
+    bottom: 2%;
+    text-align: right;
+}
+.card_42 .grid .left_grid .social_icons ul{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.card_42 .grid .left_grid .social_icons ul li{
+    display: inline-flex;
+}
+.card_42 .grid .left_grid .social_icons ul li a{
+    font-size: 16px;
+    margin-right: 13px;
+    color:#fff;
+}
+.card_42 .grid .right_grid{
+    flex: 0 0 31%;
+    max-width: 31%;
+    position: relative;
+}
+.card_42 .grid .right_grid .logo{
+    position: absolute;
+    top: 30%;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+}
+.card_42 .grid .right_grid .logo img{
+    width: 90px !important;
+    height: 90px !important;
+    margin: auto;
+}
+
+
+@media (min-width:290px) and (max-width:440px){
+    
+    .card_42 .grid .left_grid .g_inputs ul li:first-child{
+        font-size: 16px;
+    }
+    .card_42 .grid .left_grid .g_inputs ul li:nth-child(2){
+        font-size: 14px;
+        letter-spacing: 1.7px;
+    }
+    .card_42 .grid .left_grid .slogan{
+        top: 25%;
+        font-size: 15px;
+    }
+    .card_42 .grid .left_grid .client_data{
+        top: 41%;
+        left: 8px;
+        width: 100%;
+    }
+    .card_42 .grid .left_grid .client_data .icon_list li i{
+        font-size: 12px;
+    }
+    .card_42 .grid .left_grid .client_data .data_list a{
+        font-size: 11px;
+    }
+    .card_42 .grid .left_grid .social_icons ul li a{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .card_42 .grid .right_grid .logo img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+}
+
+@media (min-width:767.5px) and (max-width:852px){
+    
+    .card_42 .grid .left_grid .g_inputs ul li:first-child{
+        font-size: 16px;
+    }
+    .card_42 .grid .left_grid .g_inputs ul li:nth-child(2){
+        font-size: 14px;
+        letter-spacing: 1.7px;
+    }
+    .card_42 .grid .left_grid .slogan{
+        top: 25%;
+        font-size: 15px;
+    }
+    .card_42 .grid .left_grid .client_data{
+        top: 41%;
+        left: 8px;
+        width: 100%;
+    }
+    .card_42 .grid .left_grid .client_data .icon_list li i{
+        font-size: 12px;
+    }
+    .card_42 .grid .left_grid .client_data .data_list a{
+        font-size: 11px;
+    }
+    .card_42 .grid .left_grid .social_icons ul li a{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .card_42 .grid .right_grid .logo img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+}
+
+@media (min-width:992px) and (max-width:1270px){
+    
+    .card_42 .grid .left_grid .g_inputs ul li:first-child{
+        font-size: 16px;
+    }
+    .card_42 .grid .left_grid .g_inputs ul li:nth-child(2){
+        font-size: 14px;
+        letter-spacing: 1.7px;
+    }
+    .card_42 .grid .left_grid .slogan{
+        top: 25%;
+        font-size: 15px;
+    }
+    .card_42 .grid .left_grid .client_data{
+        top: 41%;
+        left: 8px;
+        width: 100%;
+    }
+    .card_42 .grid .left_grid .client_data .icon_list li i{
+        font-size: 12px;
+    }
+    .card_42 .grid .left_grid .client_data .data_list a{
+        font-size: 11px;
+    }
+    .card_42 .grid .left_grid .social_icons ul li a{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .card_42 .grid .right_grid .logo img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+}
