@@ -2,25 +2,36 @@
 <!-- Home Content -->
 <div class="home_content">
    <div class="container-fluid">
-      <div class="row card_container">
-         <div class="doc_card_title col-6">
-            <h3><?php echo e_lang('Payed Card'); ?></h3>
-         </div>
-         <div class="more_cards col-6">
-            <a href="#"><?php e_lang(''); ?></a>
-         </div>
-         <!-- End doctors cards-->
-      </div>
-      <!-- row -->
+    <?php 
+      if (!empty($b_cards)) 
+      {
+        ?> 
+            <div class="row card_container">
+               <div class="doc_card_title col-6">
+                  <h3><?php echo e_lang('Payed Card'); ?></h3>
+               </div>
+               <div class="more_cards col-6">
+                  <a href="#"><?php e_lang('More'); ?></a>
+               </div>
+               <!-- End doctors cards-->
+            </div>
+            <!-- row -->
+            <div class="slick-carousel type-one-carousel row">
+              <?php 
+                foreach ($b_cards as $cards) {
+                  include __DIR__.'/card_small/'.'card-'.$cards->b_cards_card_id.'-'.getCurrentLanguages().'.php';
+                }
+               ?>
+            </div>
+            <hr> 
+        <?php      
+      }
 
-      <div class="slick-carousel type-one-carousel row">
-        <?php 
-          foreach ($b_cards as $cards) {
-            include __DIR__.'/card_small/'.'card-'.$cards->b_cards_card_id.'-'.getCurrentLanguages().'.php';
-          }
-         ?>
-      </div>
-      <hr> 
+
+
+
+     ?>
+
 
 
       <?php 

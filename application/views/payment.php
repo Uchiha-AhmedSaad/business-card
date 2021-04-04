@@ -35,7 +35,7 @@
 
                                         <div class="client_data">
                                             <span class="client_data_title">
-                                                المبلغ: <span><?php echo $package->package_price; ?></span>
+                                                <?php echo e_lang('Price'); ?>: <span><?php echo $package->package_price; ?></span>
                                                 <?php 
                                                     if (!empty($this->session->userdata('language')) && $this->session->userdata('language') == 'en') {
                                                        ?><span><?php echo $country->currency_en; ?></span> <?php
@@ -62,7 +62,7 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                       <label for="name-add"><?php echo e_lang('bank name'); ?></label>
-                                                      <input value="<?php echo set_value('bank_name'); ?>" class="form-control" type="text" name="bank_name" id="name-add" placeholder="أسم البنك">
+                                                      <input value="<?php echo set_value('bank_name'); ?>" class="form-control" type="text" name="bank_name" id="name-add" placeholder="<?php echo e_lang('Bank name'); ?>">
                                                     </div>
                                                 </div>
                                                 <div class="col-12">

@@ -208,3 +208,17 @@ function current_urlz()
     $url = $CI->config->site_url($CI->uri->uri_string());
     return $_SERVER['QUERY_STRING'] ? $url.'?'.$_SERVER['QUERY_STRING'] : $url;
 }
+
+
+function cities()
+{
+  $CI =& get_instance();
+  $city = $CI->db->get('city')->result_array();
+  if (getCurrentLanguages() == 'en') {
+    $cities = array_column($city,'city_name_en','city_id');
+  }
+  else{
+    $cities = array_column($city,'city_name','city_id');
+  }
+  return $cities;
+}

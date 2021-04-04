@@ -236,6 +236,10 @@ class Site extends CI_Controller
             }
 		}
 		$data['b_cards'] = $this->db->where('b_cards_user_id',$this->session->userdata('user')['user_id'])->get('b_cards')->result();
+
+		$data['jobs'] = $this->db->where('user_id',$this->session->userdata('user')['user_id'])->get('jobs')->result();
+		$data['notifications'] = $this->db->where('notification_user_id',$this->session->userdata('user')['user_id'])->get('notification')->result();
+		$data['favourites'] = $this->db->where('user_id',$this->session->userdata('user')['user_id'])->get('favourite')->result();
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('account',$data);
 	    $this->load->view('layout/footer');
@@ -850,9 +854,14 @@ class Site extends CI_Controller
 		}
 	}
 
-	public function chargeCards()
+	public function deleteJobs()
 	{
+		$jobId = $this->input->post('job_id');
 
+
+		$delete = $this->db->where('job_id',$jobId)->where('user_id',$this->session->userdata('user')['user_id'])->delete('jobs');
+		return redirect(base_url('site/account'));
+		SweetFlash('Done','favourite');
 	}
 }
 

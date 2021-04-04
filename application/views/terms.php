@@ -6,7 +6,7 @@
                     <p>
 
                         <?php 
-                            if ($this->session->userdata('language') == 'en') {
+                            if (getCurrentLanguages() == 'en') {
                                ?> <p class="card-text"><?php echo $settings->setting_rules_en; ?></p> <?php
                             }
                             else{
