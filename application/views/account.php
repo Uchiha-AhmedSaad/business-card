@@ -267,110 +267,286 @@
                            </div>
                            <div class="tab-content">
                               <!-- fav card tab -->
-                              <?php 
-                                foreach ($favourites as $favourite) {
-                                    ?> 
-                                          <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                             <div class="favorite_card">
-                                                <div class="container">
-                                                   <div class="row">
-                                                      <div class="col-12 card_cont">
-                                                         <div class="row exp_delete">
-                                                            <div class="exp_date col-6">
-                                                               <span>تنتهى صلاحيته فى 12/12/2020</span>
-                                                            </div>
-                                                            <div class="remove_icon col-6">
-                                                               <!-- modal button-->
-                                                               <!-- Button trigger modal -->
-                                                               <a class="text-danger" data-toggle="modal" data-target="#exampleModal">
-                                                               <i><img src="assets/images/close (2).svg" /></i>
-                                                               </a>
-                                                               <!-- Modal -->
-                                                               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                                  <div class="modal-dialog">
-                                                                     <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                           <h5 class="modal-title" id="exampleModalLabel">هل تريد الحذف</h5>
-                                                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                           <span aria-hidden="true">&times;</span>
-                                                                           </button>
-                                                                        </div>
-                                                                        <div class="modal-body text-center">
-                                                                           <button type="button" class="btn btn-outline-info btn-lg">نعم</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                           <button type="button" class="btn btn-outline-info btn-lg">لا</button>
-                                                                        </div>
-                                                                     </div>
-                                                                  </div>
-                                                               </div>
-                                                               <!-- modal button-->
-                                                            </div>
-                                                         </div>
-                                                         <div class="col-12">
-                                                            <div class="cards">
-                                                               <img src="assets/images/card-3.png" />
-                                                            </div>
-                                                         </div>
-                                                      </div>
-                                                      <!-- row -->
-                                                      <!-- repeated div-->
-                                                      <div class="col-12 card_cont">
-                                                         <div class="row exp_delete">
-                                                            <div class="exp_date col-6">
-                                                               <span>تنتهى صلاحيته فى 12/12/2020</span>
-                                                            </div>
-                                                            <div class="remove_icon col-6">
-                                                               <!-- modal button-->
-                                                               <!-- Button trigger modal -->
-                                                               <a class="text-danger" data-toggle="modal" data-target="#exampleModal">
-                                                               <i><img src="assets/images/close (2).svg" /></i>
-                                                               </a>
-                                                               <!-- Modal -->
-                                                               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                                  <div class="modal-dialog">
-                                                                     <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                           <h5 class="modal-title" id="exampleModalLabel">هل تريد الحذف</h5>
-                                                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                           <span aria-hidden="true">&times;</span>
-                                                                           </button>
-                                                                        </div>
-                                                                        <div class="modal-body text-center">
-                                                                           <button type="button" class="btn btn-outline-info btn-lg">نعم</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                           <button type="button" class="btn btn-outline-info btn-lg">لا</button>
-                                                                        </div>
-                                                                     </div>
-                                                                  </div>
-                                                               </div>
-                                                               <!-- modal button-->
-                                                            </div>
-                                                         </div>
-                                                         <div class="col-12">
-                                                            <div class="cards">
-                                                               <img src="assets/images/card-3.png" />
-                                                            </div>
-                                                         </div>
-                                                      </div>
-                                                      <!-- row -->
-                                                      <!-- repeated div-->
-                                                   </div>
-                                                   <!-- row -->
+                              <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                 <div class="favorite_card">
+                                    <div class="container">
+                                       <div class="row">
+                                          <div class="col-12 card_cont">
+                                             <div class="row exp_delete">
+                                                <div class="exp_date col-6">
+                                                   <span>تنتهى صلاحيته فى 12/12/2020</span>
                                                 </div>
-                                                <!-- container -->
+                                                <div class="remove_icon col-6">
+                                                   <!-- modal button-->
+                                                   <!-- Button trigger modal -->
+                                                   <a class="text-danger" data-toggle="modal" data-target="#exampleModal">
+                                                   <i><img src="assets/images/close (2).svg" /></i>
+                                                   </a>
+                                                   <!-- Modal -->
+                                                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                      <div class="modal-dialog">
+                                                         <div class="modal-content">
+                                                            <div class="modal-header">
+                                                               <h5 class="modal-title" id="exampleModalLabel">هل تريد الحذف</h5>
+                                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                               <span aria-hidden="true">&times;</span>
+                                                               </button>
+                                                            </div>
+                                                            <div class="modal-body text-center">
+                                                               <button type="button" class="btn btn-outline-info btn-lg">نعم</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                               <button type="button" class="btn btn-outline-info btn-lg">لا</button>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <!-- modal button-->
+                                                </div>
                                              </div>
-                                             <!-- favorite_card-->
-                                             <!-- end fav card tab-->
+                                             <div class="col-12">
+                                                <div class="cards">
+                                                   <img src="assets/images/card-3.png" />
+                                                </div>
+                                             </div>
                                           </div>
-                                    <?php
-
-
-                                }
-
-
-
-
-                               ?>
-
-
+                                          <!-- row -->
+                                          <!-- repeated div-->
+                                          <div class="col-12 card_cont">
+                                             <div class="row exp_delete">
+                                                <div class="exp_date col-6">
+                                                   <span>تنتهى صلاحيته فى 12/12/2020</span>
+                                                </div>
+                                                <div class="remove_icon col-6">
+                                                   <!-- modal button-->
+                                                   <!-- Button trigger modal -->
+                                                   <a class="text-danger" data-toggle="modal" data-target="#exampleModal">
+                                                   <i><img src="assets/images/close (2).svg" /></i>
+                                                   </a>
+                                                   <!-- Modal -->
+                                                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                      <div class="modal-dialog">
+                                                         <div class="modal-content">
+                                                            <div class="modal-header">
+                                                               <h5 class="modal-title" id="exampleModalLabel">هل تريد الحذف</h5>
+                                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                               <span aria-hidden="true">&times;</span>
+                                                               </button>
+                                                            </div>
+                                                            <div class="modal-body text-center">
+                                                               <button type="button" class="btn btn-outline-info btn-lg">نعم</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                               <button type="button" class="btn btn-outline-info btn-lg">لا</button>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <!-- modal button-->
+                                                </div>
+                                             </div>
+                                             <div class="col-12">
+                                                <div class="cards">
+                                                   <img src="assets/images/card-3.png" />
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <!-- row -->
+                                          <!-- repeated div-->
+                                       </div>
+                                       <!-- row -->
+                                    </div>
+                                    <!-- container -->
+                                 </div>
+                                 <!-- favorite_card-->
+                                 <!-- end fav card tab-->
+                              </div>
+                              <!-- favs jobs tab -->
+                              <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                 <div class="search_jobs">
+                                    <div class="container-fluid">
+                                       <div class="row job_cards">
+                                          <!-- repeated div card -->
+                                          <div class="col-md-12 card_container">
+                                             <div class="job_card">
+                                                <div class="row">
+                                                   <div class="col-md-3 col-sm-12 hr_img d-md-block d-none">
+                                                      <img src="assets/images/cons1.webp" />
+                                                   </div>
+                                                   <div class="col-md-3 col-sm-12 hr_img d-sm-block d-md-none text-center">
+                                                      <img src="assets/images/cons1.webp" />
+                                                   </div>
+                                                   <!--appears lg md screens-->
+                                                   <div class="col-md-9 col-sm-12 job_describtion d-md-block d-none">
+                                                      <span> محمد على</span>
+                                                      <p>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
+                                                         أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
+                                                      </p>
+                                                   </div>
+                                                   <!-- appears sm screens-->
+                                                   <div class="col-md-9 col-sm-12 job_describtion d-sm-block d-md-none text-center">
+                                                      <span> محمد على</span>
+                                                      <p>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
+                                                         أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
+                                                      </p>
+                                                   </div>
+                                                   <div class="col-md-12">
+                                                      <div class="row">
+                                                         <div class="fav_report_btn en_fav_report col-7">
+                                                            <a type="button" class="text-center" data-toggle="modal" data-target="#fav">
+                                                            <span class="fav_btn text-warning" ><i><img src="assets/images/close (2).svg" /></i> &nbsp;</i>حذف من المفضلة</span>
+                                                            </a>
+                                                            <!-- Modal -->
+                                                            <div class="modal fade text-center" id="fav" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                               <div class="modal-dialog" role="document">
+                                                                  <div class="modal-content">
+                                                                     <div class="modal-header">
+                                                                        <i class="fa fa-check text-warning" aria-hidden="true"></i>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                     </div>
+                                                                     <div class="modal-body">
+                                                                        <h5 class="modal-title text-warning" id="exampleModalLabel">تم الحذف من المفضلة</h5>
+                                                                     </div>
+                                                                     <div class="modal-footer">
+                                                                        <a href="#" class="btn btn-warning">حساناً</a>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <!-- popup button-->     
+                                                            <span> | </span>
+                                                            <!-- report btn -->
+                                                            <span>
+                                                               <a type="button" class="text-secondary" data-toggle="modal" data-target="#exampleModal"> إبلاغ</a>
+                                                               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                  <div class="modal-dialog">
+                                                                     <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                           <h5 class="modal-title" id="exampleModalLabel">إبلاغ</h5>
+                                                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                           <span aria-hidden="true">&times;</span>
+                                                                           </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                           <textarea class="report_message form-control" placeholder="عن ماذا تريد الإبلاغ؟"></textarea>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                           <button type="button" class="btn btn-primary">إرسال</button>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </span>
+                                                            <!-- report btn -->
+                                                         </div>
+                                                         <!-- fav report btns -->
+                                                         <div class="col-5 contact ">
+                                                            <a href="#">تواصل مع المعلن</a>
+                                                         </div>
+                                                      </div>
+                                                      <!-- sub row -->
+                                                   </div>
+                                                   <!-- sub col-12 -->
+                                                </div>
+                                                <!-- sub row -->
+                                             </div>
+                                             <!-- job card -->
+                                          </div>
+                                          <!-- repeated div-->
+                                          <!-- repeated div card -->
+                                          <div class="col-md-12 card_container">
+                                             <div class="job_card">
+                                                <div class="row">
+                                                   <div class="col-md-3 col-sm-12 hr_img d-md-block d-none">
+                                                      <img src="assets/images/cons1.webp" />
+                                                   </div>
+                                                   <div class="col-md-3 col-sm-12 hr_img d-sm-block d-md-none text-center">
+                                                      <img src="assets/images/cons1.webp" />
+                                                   </div>
+                                                   <!--appears lg md screens-->
+                                                   <div class="col-md-9 col-sm-12 job_describtion d-md-block d-none">
+                                                      <span> محمد على</span>
+                                                      <p>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
+                                                         أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
+                                                      </p>
+                                                   </div>
+                                                   <!-- appears sm screens-->
+                                                   <div class="col-md-9 col-sm-12 job_describtion d-sm-block d-md-none text-center">
+                                                      <span> محمد على</span>
+                                                      <p>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
+                                                         أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
+                                                      </p>
+                                                   </div>
+                                                   <div class="col-md-12">
+                                                      <div class="row">
+                                                         <div class="fav_report_btn en_fav_report col-7">
+                                                            <a type="button" class="text-center" data-toggle="modal" data-target="#fav">
+                                                            <span class="fav_btn text-warning" ><i><img src="assets/images/close (2).svg" /></i>حذف من المفضلة</span>
+                                                            </a>
+                                                            <!-- Modal -->
+                                                            <div class="modal fade text-center" id="fav" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                               <div class="modal-dialog" role="document">
+                                                                  <div class="modal-content">
+                                                                     <div class="modal-header">
+                                                                        <i class="fa fa-check text-warning" aria-hidden="true"></i>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                     </div>
+                                                                     <div class="modal-body">
+                                                                        <h5 class="modal-title text-warning" id="exampleModalLabel">تم الحذف من المفضلة</h5>
+                                                                     </div>
+                                                                     <div class="modal-footer">
+                                                                        <a href="#" class="btn btn-warning">حساناً</a>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <!-- popup button-->     
+                                                            <span> | </span>
+                                                            <!-- report btn -->
+                                                            <span>
+                                                               <a type="button" class="text-secondary" data-toggle="modal" data-target="#exampleModal"> إبلاغ</a>
+                                                               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                  <div class="modal-dialog">
+                                                                     <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                           <h5 class="modal-title" id="exampleModalLabel">إبلاغ</h5>
+                                                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                           <span aria-hidden="true">&times;</span>
+                                                                           </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                           <textarea class="report_message form-control" placeholder="عن ماذا تريد الإبلاغ؟"></textarea>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                           <button type="button" class="btn btn-primary">إرسال</button>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </span>
+                                                            <!-- report btn -->
+                                                         </div>
+                                                         <!-- fav report btns -->
+                                                         <div class="col-5 contact ">
+                                                            <a href="#">تواصل مع المعلن</a>
+                                                         </div>
+                                                      </div>
+                                                      <!-- sub row -->
+                                                   </div>
+                                                   <!-- sub col-12 -->
+                                                </div>
+                                                <!-- sub row -->
+                                             </div>
+                                             <!-- job card -->
+                                          </div>
+                                          <!-- repeated div-->
+                                       </div>
+                                       <!-- job cards-->
+                                    </div>
+                                    <!-- container fluid -->
+                                 </div>
+                                 <!-- search jobs -->
+                              </div>
                               <!-- tab pane-->
                            </div>
                            <!-- tab content -->

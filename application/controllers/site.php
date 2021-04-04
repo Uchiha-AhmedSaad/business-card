@@ -239,7 +239,19 @@ class Site extends CI_Controller
 
 		$data['jobs'] = $this->db->where('user_id',$this->session->userdata('user')['user_id'])->get('jobs')->result();
 		$data['notifications'] = $this->db->where('notification_user_id',$this->session->userdata('user')['user_id'])->get('notification')->result();
-		$data['favourites'] = $this->db->where('user_id',$this->session->userdata('user')['user_id'])->get('favourite')->result();
+		$data['favourites'] = $this->db->where('fav_type','card')->where('user_id',$this->session->userdata('user')['user_id'])->get('favourite')->result();
+
+		if (!empty($data['favourites'])) 
+		{
+			$favourites_cards_id = $this->db->where('fav_type','card')->where('user_id',$this->session->userdata('user')['user_id'])->get('favourite')->result_array();
+			$idsCard = array_column($favourites_cards_id, 'fav_item_id');
+			$cardsCool = $this->db->where_in('b_cards_id',$idsCard)->get('b_cards')->result();
+			$extract = [];
+			foreach ($cardsCool as $cardsCooler) {
+				$extract[$cardsCooler->b_cards_id] = $cardsCooler;
+			}
+			$data['cardsCool'] = $cardsCool;
+		}
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('account',$data);
 	    $this->load->view('layout/footer');
