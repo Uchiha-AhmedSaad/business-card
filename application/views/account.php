@@ -1,8 +1,16 @@
+      <style>
+          .card_1 .grid, .card_2 .grid, .card_3 .grid,.card_4 .grid .sub_grid,.card_5 .grid,.card_6 .grid .top_grid .top_hold,.card_6 .grid .bot_grid .bot_hold,.card_7 .grid,.card_8 .grid,.card_9 .grid,.card_10_cont .card_10 .grid_1,.card_11 .grid,.card_14 .grid,.card_15 .grid,.card_16 .grid,.card_17 .grid,.card_18 .grid,.card_19 .grid,.card_20 .grid,.card_21 .grid,.card_22 .grid,.card_23 .grid,.card_24 .bot_grid,.card_25 .grid,.card_26 .grid,.card_27 .grid,.card_28 .grid,.card_29 .grid,.card_30 .grid,.card_31 .grid,.card_32 .grid,.card_33 .grid,.card_34 .grid,.card_35 .grid,.card_36 .grid,.card_37 .grid .bot_grid .sub_bot_grid,.card_37 .grid .bot_grid .sub_bot_grid .client_data .client_list,.card_38 .grid,.card_39 .grid,.card_40 .grid,.card_41 .grid,.card_42 .grid,.card_43 .grid,.card_44 .grid,.card_45 .grid .top_grid .card_data,.card_46 .grid,.card_47 .grid,.card_48 .grid,.card_49 .grid,.card_50 .grid{
+             flex-direction: row !important;
+        }
+        .card-body{
+            width: 2200px;
+        }
+    </style>
+
+
     <!-- account -->
     <div class="my-account" style="margin-top: 20px;">
         <div class="container">
-            
-               
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-3">
                             <div class="nav v-tabs-right-choses my-account-navs flex-column nav-pills" id="v-pills-tab" role="tablist"
@@ -121,7 +129,7 @@
 
                                         <div class="my_cards">
                                             <?php 
-                                                foreach ($cards as $card) 
+                                                foreach ($b_cards as $cards) 
                                                 {
                                                     ?> 
                                                         <div class="row my_card_row">
@@ -129,10 +137,12 @@
                                                                 <div class="card">
 
                                                                     <div class="card-body">
-                                                                    <h5 class="card-title"><?php echo e_lang('expire at'); ?> <?php echo  $card->expire_date;?></h5>
-                                                                        <div class="my_cards_container">
-                                                                            <img src="<?php echo base_url('public/assets/images/card-2.png'); ?>" />
-                                                                        </div>
+                                                                        <?php 
+                                                                        include __DIR__.'/card_small/'.'card-'.$cards->b_cards_card_id.'-'.getCurrentLanguages().'.php';
+
+
+
+                                                                        ?>
                                                                     </div>
                                                                     
                                                                 </div> <!-- card -->

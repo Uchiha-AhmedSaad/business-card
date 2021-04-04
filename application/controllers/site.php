@@ -235,7 +235,7 @@ class Site extends CI_Controller
 				return redirect(base_url('site/account'));
             }
 		}
-		$data['cards'] = $this->db->where('b_cards_user_id',$this->session->userdata('user')['user_id'])->get('b_cards')->result();
+		$data['b_cards'] = $this->db->where('b_cards_user_id',$this->session->userdata('user')['user_id'])->get('b_cards')->result();
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('account',$data);
 	    $this->load->view('layout/footer');

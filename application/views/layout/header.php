@@ -38,7 +38,7 @@
          ?>
           <link rel="stylesheet" href="<?php echo base_url('public/sweetalert/dist/sweetalert.css'); ?>" />
             <?php 
-              if ((!empty(empty($this->uri->segment(2)) || $this->uri->segment(2) == 'index') ||$this->uri->segment(2) ==  'docCard') && !empty($b_cards)) 
+              if ((!empty(empty($this->uri->segment(2)) || $this->uri->segment(2) == 'index') ||$this->uri->segment(2) ==  'docCard' || $this->uri->segment(2) ==  'account') && !empty($b_cards)) 
               {
                 for ($i=1; $i <= 50; $i++) { 
                   ?> 
@@ -113,6 +113,7 @@
          .modal-footer a{
          color: #fff;
          }
+         
       </style>
    </head>
    <body class="<?php echo ($current_lang == "ar")?"rtl":"ltr";?>">
@@ -178,6 +179,10 @@
                   <?php 
                      if (!empty($this->session->userdata('user'))) {
                          ?> 
+
+                  <div class="header_card_btn btn-group">
+                     <a href="<?php echo base_url('site/account'); ?>" class="btn btn-outline-info"><?php echo e_lang('My account'); ?></a>
+                  </div>
                   <div class="header_card_btn btn-group">
                      <a href="<?php echo base_url('site/logout'); ?>" class="btn btn-outline-info"><?php echo e_lang('Logout'); ?></a>
                   </div>
