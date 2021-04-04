@@ -622,6 +622,9 @@ class Site extends CI_Controller
 	public function docJob()
 	{
 		$data = [];
+
+		$data['jobs'] = $this->db->get('jobs')->result();
+
 	    $this->load->view('layout/header',$data);
 	    $this->load->view('doc_jobs',$data);
 	    $this->load->view('layout/footer');

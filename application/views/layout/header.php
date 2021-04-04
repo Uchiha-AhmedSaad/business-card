@@ -168,12 +168,12 @@
                      <?php echo e_lang('Jobs') ?>
                      </a>
                      <div class="dropdown-menu job_radio" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#"><input type="radio" name="find_job"> <?php echo e_lang('Search about job'); ?></a>
-                        <a class="dropdown-item" href="#"><input type="radio" name="find_job"> <?php echo e_lang('Search about workers'); ?></a>
+                        <a class="dropdown-item" href="<?php echo base_url('site/docJob') ?>"><input type="radio" name="find_job"> <?php echo e_lang('Search about job'); ?></a>
+                        <a class="dropdown-item" href="<?php echo base_url('site/docJob') ?>"><input type="radio" name="find_job"> <?php echo e_lang('Search about workers'); ?></a>
                      </div>
                   </div>
                   <div class="header_card_btn btn-group">
-                     <a href="#" class="btn btn-outline-info"><?php echo e_lang('Cards'); ?></a>
+                     <a href="<?php echo base_url('site/docCard') ?>" class="btn btn-outline-info"><?php echo e_lang('Cards'); ?></a>
                   </div>
                   <?php 
                      if (!empty($this->session->userdata('user'))) {

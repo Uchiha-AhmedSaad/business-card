@@ -12,27 +12,24 @@
       </div>
       <!-- row -->
         <?php 
-            $count = count($b_cards) / 3;
-            $count = ceil($count);
-            for ($i=0; $i < $count; $i++) { 
-               $offset = $i*3;
-               $slice = array_splice($b_cards, 0,3);
-
-
-                    ?> 
-                            <div class="slick-carousel type-one-carousel row">
-                              <?php 
-
-                                foreach ($slice as $cards) {
-                                  include __DIR__.'/card_small/'.'card-'.$cards->b_cards_card_id.'-'.getCurrentLanguages().'.php';
-                                }
-                               ?>
-                            </div>
-
-                    <?php
+            if (count($b_cards) > 0) 
+            {
+                $count = count($b_cards) / 3;
+                $count = ceil($count);
+                for ($i=0; $i < $count; $i++) { 
+                   $offset = $i*3;
+                   $slice = array_splice($b_cards, 0,4);
+                        ?> 
+                                <div class="slick-carousel type-one-carousel row">
+                                  <?php 
+                                    foreach ($slice as $cards) {
+                                      include __DIR__.'/card_small/'.'card-'.$cards->b_cards_card_id.'-'.getCurrentLanguages().'.php';
+                                    }
+                                   ?>
+                                </div>
+                        <?php
+                }
             }
-
-
          ?>
 
    </div>
