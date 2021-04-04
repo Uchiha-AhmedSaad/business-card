@@ -49,7 +49,10 @@
                                         </div>
                                         <form action="<?php echo base_url('site/payment/'); ?>" method="POST" enctype="multipart/form-data">
                                             <div class="row client_data_inputs">
-                                                <input type="hidden" name="payment_package_id" value="<?php echo $this->uri->segment(3); ?>">
+                                                <input type="hidden" name="payment_package_id" value="<?php  
+                                                if(!empty($this->uri->segment(3))){echo $this->uri->segment(3);}
+                                                else{echo $_GET['package_id'];}
+                                                ?>">
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                       <label for="name-add"><?php echo e_lang('transfer username'); ?></label>

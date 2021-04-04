@@ -25,9 +25,9 @@
                                 foreach ($packages as $package) {
                                     if ($key == $package->country_id) {
                                         ?> 
-                                        <div class="col-6 col-md-3">
+                                        <div class="col-6 col-md-3 img_package"  data-val="<?php echo $package->package_id; ?>">
                                         <div class="cardi selected text-center" >
-                                            <i><img style="height: 100; width: 100px; "  src="<?php echo base_url('uploads/'.$package->picture); ?>" /></i>
+                                            <i><img   style="height: 100; width: 100px; "  src="<?php echo base_url('uploads/'.$package->picture); ?>" /></i>
                                             <div class="card-body">
                                                 <?php 
                                                     if ($this->session->userdata('language') == 'en') {
@@ -66,7 +66,14 @@
 
 
 
-
+                                <form method="GET" action="<?php echo base_url('site/payment'); ?>">
+                                    <input type="hidden" name="package_id" id="package_get" value="">
+                                <div class="col-sm-12 text-center">
+                                    <div class="sub_btn">
+                                        <button type="submit" class="btn btn-info" ><?php echo e_lang('Join'); ?></button>
+                                    </div>
+                                </div>
+                                </form>
          
 
     </div> 

@@ -478,8 +478,11 @@ class Site extends CI_Controller
 	// ------------------ addJob page  --------------------------
 	public function package()
 	{
+		if (empty($this->session->userdata('country'))) {
+			$this->session->set_userdata('country',9);
+		}		
 		$data = [];
-		$countries = $this->db->get('country')->result_array();
+		$countries = $this->db->where('country_id',$this->session->userdata('country'))->get('country')->result_array();
 		if (!empty($_SESSION['language'])) 
 		{
 			if ($_SESSION['language'] == 'ar') {
@@ -665,7 +668,14 @@ class Site extends CI_Controller
 			redirect(base_url('site/login'));
 		}
 
-		$package = $this->db->where('package_id',$this->uri->segment(3))->get('package')->row();
+		$package_id =  $this->uri->segment(3);
+		if (empty($package_id)) {
+			$package_id = $this->input->get('package_id');
+		}
+		if (empty($package_id)) {
+			redirect(base_url('site'));
+		}
+		$package = $this->db->where('package_id',$package_id)->get('package')->row();
 
 
 		$data = [];
@@ -719,6 +729,7 @@ class Site extends CI_Controller
 						return redirect(base_url('site'));
                 	}
                 	else{
+
                 		return redirect(base_url('site'));
                 	}
                 }
@@ -838,5 +849,11 @@ class Site extends CI_Controller
 	    	}
 		}
 	}
+
+	public function chargeCards()
+	{
+
+	}
 }
+
 

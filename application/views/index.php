@@ -83,7 +83,7 @@
                               <div class="fav_report_btn">
                                  <a type="button" class="text-center" data-toggle="modal" data-target="#fav">
                                  <span class="star">
-                                 <i class="far fa-star"> &nbsp; <span>أضف إلى المفضلة</span></i>
+                                 <i class="far fa-star"> &nbsp; <span><?php echo e_lang('add to favourite'); ?></span></i>
                                  </span>
                                  </a>
                                  <!-- Modal -->

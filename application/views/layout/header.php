@@ -38,7 +38,12 @@
          ?>
           <link rel="stylesheet" href="<?php echo base_url('public/sweetalert/dist/sweetalert.css'); ?>" />
             <?php 
-              if ((!empty(empty($this->uri->segment(2)) || $this->uri->segment(2) == 'index') ||$this->uri->segment(2) ==  'docCard' || $this->uri->segment(2) ==  'account') && !empty($b_cards)) 
+
+              if ((empty($this->uri->segment(2))  || 
+                $this->uri->segment(2) == 'index' ||
+                $this->uri->segment(2) ==  'docCard' || 
+                $this->uri->segment(2) ==  'account') && 
+                !is_null($b_cards)) 
               {
                 for ($i=1; $i <= 50; $i++) { 
                   ?> 
