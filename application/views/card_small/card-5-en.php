@@ -5,12 +5,12 @@
             <div class="left_grid">
                 <div class="g_inputs">
                     <ul class="list-unstyled">
-                        <?php include __DIR__.'/card_details_ar.php'; ?>
+                        <?php include __DIR__.'/card_details_en.php'; ?>
                     </ul>
                 </div>
 
                 <div class="slogan">
-                    <?php include __DIR__.'/card_work_ar.php'; ?>
+                    <?php include __DIR__.'/card_work_en.php'; ?>
                 </div>
 
                 <div class="client_data">
@@ -30,7 +30,7 @@
                         </ul>
 
                         <ul class="list-unstyled data_list">
-                        <?php include __DIR__.'/contact_ar.php'; ?>
+                        <?php include __DIR__.'/contact_en.php'; ?>
                         </ul>
 
                     </div>
@@ -45,7 +45,7 @@
 
                 <div class="social_icons">
                     <ul class="list-unstyled">
-                        <?php include __DIR__.'/card_social_ar.php'; ?>
+                        <?php include __DIR__.'/card_social_en.php'; ?>
                     </ul>
                 </div>
 

@@ -154,7 +154,9 @@
             $('#logo_qqq').trigger("click");
 
           });
+
           $('.cardClick').on('click',function(){
+               console.log('ssss');
             var card_number = $(this).attr('data-number');
             $('#card_number').val(card_number);
           });
@@ -352,6 +354,27 @@
             })
             
         });
+
+
+      
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var orma = new FileReader();
+            
+            orma.onload = function (e) {
+                $('#images').attr('src', e.target.result);
+            }
+            
+            orma.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#logo_qqq").change(function(){
+        readURL(this);
+    });
+
+
+
     </script>
       
    </body>

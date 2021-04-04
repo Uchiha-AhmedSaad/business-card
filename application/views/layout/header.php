@@ -38,7 +38,7 @@
          ?>
           <link rel="stylesheet" href="<?php echo base_url('public/sweetalert/dist/sweetalert.css'); ?>" />
             <?php 
-              if ((!empty(empty($this->uri->segment(2)) || $this->uri->segment(2) == 'index')) && !empty($b_cards)) 
+              if ((!empty(empty($this->uri->segment(2)) || $this->uri->segment(2) == 'index') ||$this->uri->segment(2) ==  'docCard') && !empty($b_cards)) 
               {
                 for ($i=1; $i <= 50; $i++) { 
                   ?> 
@@ -275,147 +275,214 @@
          <!-- container -->
       </div>
       <!-- End upper navbar -->
-      <div class="filter_search">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="filter_container col-12">
-                  <div class="bms">
-                     <div class="country">
-                        <div class="dropdown btn-group">
-                           <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <i><img src="<?php echo base_url('public/assets/images/location.svg') ?>" /></i> الدولة 
-                           </button>
-                           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#">مصر</a>
-                              <a class="dropdown-item" href="#">الاردن</a>
-                              <a class="dropdown-item" href="#">عمان</a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="city">
-                        <div class="dropdown btn-group">
-                           <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <i><img src="<?php echo base_url('public/assets/images/city.svg'); ?>" /></i> المدينة
-                           </button>
-                           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#">القاهرة</a>
-                              <a class="dropdown-item" href="#">الاسكندرية</a>
-                              <a class="dropdown-item" href="#">المنصورة</a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="sections">
-                        <div class="dropdown btn-group">
-                           <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <i><img src="<?php echo base_url('public/assets/images/options.svg') ?>" /></i> الاقسام
-                           </button>
-                           <div class="dropdown-menu division" aria-labelledby="dropdownMenuLink">
+      <form action="<?php base_url(); ?>" method="GET">
+
+        <div class="filter_search">
+           <div class="container-fluid">
+              <div class="row">
+                 <div class="filter_container col-12">
+                    <div class="bms">
+                       <div class="country">
+                          <div class="dropdown btn-group">
+                             <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             <i><img src="<?php echo base_url('public/assets/images/location.svg') ?>" /></i> 
                               <?php 
-                                 foreach (Categories() as $key => $category) 
-                                 {
-                                   ?> 
-                              <a class="dropdown-item" href="#"><?php echo $category; ?></a>
-                              <?php
-                                 }
-                                 
-                                 
-                                 
-                                 ?>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="type">
-                        <div class="dropdown btn-group">
-                           <button class="btn btn-light dropdown-toggle type_btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <?php echo e_lang('Type') ?>
-                           </button>
-                           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#"><?php echo e_lang('card'); ?></a>
-                              <a class="dropdown-item" href="#"><?php echo e_lang('Jobs'); ?></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="search">
-                        <input type="search" class="search_input" class="form-control" placeholder="<?php echo e_lang('What are you searching for') ?>" /> &nbsp;&nbsp;&nbsp;&nbsp;
-                        <button type="button" class="btn btn-warning search_icon"><i><img src="<?php echo base_url('public/assets/images/search.svg') ?>" /></i></button>
-                     </div>
-                  </div>
-                  <!--big medium screen only -->
-                  <div class="sm">
-                     <div class="small_screen">
-                        <div class="search_in_sm">
-                           <input type="search" class="search_input" placeholder="<?php echo e_lang('What are you searching for'); ?>" />
-                        </div>
-                        <div class="type_s">
-                           <div class="dropdown btn-group">
-                              <button class="btn btn-light dropdown-toggle type_btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <?php echo e_lang('Type'); ?>
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                 <a class="dropdown-item" href="#">كروت</a>
-                                 <a class="dropdown-item" href="#">وظائف</a>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="search_icon">
-                           <a type="button" class="btn btn-warning"><i><img src="<?php echo base_url('public/assets/images/search.svg') ?>" /></i></a>
-                        </div>
-                        <!--small screen -->
-                     </div>
-                     <div class=" text-center more_filter_btn col-12">
-                        <span class="more_span" style="cursor: pointer;"><?php echo e_lang('Advanced search'); ?> <i class="aro fas fa-angle-double-up"></i></span>
-                     </div>
-                     <!-- container hold buttons appear on small screen-->
-                     <div class="slide_down">
-                        <div class="country_s">
-                           <div class="dropdown btn-group">
-                              <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="fas fa-map-marker-alt"></i> الدولة 
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                 <a class="dropdown-item" href="#">مصر</a>
-                                 <a class="dropdown-item" href="#">الاردن</a>
-                                 <a class="dropdown-item" href="#">عمان</a>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="city_s">
-                           <div class="dropdown btn-group">
-                              <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="far fa-building"></i> المدينة
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                 <a class="dropdown-item" href="#">القاهرة</a>
-                                 <a class="dropdown-item" href="#">الاسكندرية</a>
-                                 <a class="dropdown-item" href="#">المنصورة</a>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="section_s">
-                           <div class="dropdown btn-group">
-                              <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="fas fa-sliders-h"></i> الاقسام
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                 <a class="dropdown-item" href="#">أطباء</a>
-                                 <a class="dropdown-item" href="#">مهندسين</a>
-                                 <a class="dropdown-item" href="#">محامين</a>
-                                 <a class="dropdown-item" href="#">تجار</a>
-                                 <a class="dropdown-item" href="#">مدرسين</a>
-                                 <a class="dropdown-item" href="#">صيادلة</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- end container hold buttons appear on small screen-->
-                  </div>
-               </div>
-               <!-- filter container-->
-            </div>
-            <!-- row -->
-         </div>
-         <!-- container fluid -->
-      </div>
+                                  if (!empty($_GET['search']['country'])) {
+                                    foreach (Countries() as $key_country_key => $value_country_value) {
+                                      if ($key_country_key == $_GET['search']['country']) {
+                                        echo $value_country_value;
+                                      }
+                                    }
+                                  }
+                                  else{
+                                    echo e_lang('Country');
+                                  }
+
+
+
+                               ?>
+
+                             </button>
+                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                                <?php 
+                                    foreach (Countries() as $key_Countries => $value_Countries) 
+                                    {
+                                      ?> 
+                                           <a class="dropdown-item" href="<?php echo findInSearchString(current_urlz(),'search[country]='.$key_Countries); ?>"><?php echo $value_Countries; ?></a>
+                                      <?php
+                                    }
+                                 ?>                             
+                             </div>
+                          </div>
+                       </div>
+                       <div class="city">
+                          <div class="dropdown btn-group">
+                             <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             <i><img src="<?php echo base_url('public/assets/images/city.svg'); ?>" /></i> <?php echo e_lang('City'); ?>
+                             </button>
+                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">القاهرة</a>
+                                <a class="dropdown-item" href="#">الاسكندرية</a>
+                                <a class="dropdown-item" href="#">المنصورة</a>
+                             </div>
+                          </div>
+                       </div>
+
+                       <div class="sections">
+                          <div class="dropdown btn-group">
+                             <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             <i><img src="<?php echo base_url('public/assets/images/options.svg') ?>" /></i> 
+                             <?php
+                                  if (!empty($_GET['search']['category'])) 
+                                  {
+                                    foreach (Categories() as $key_category_key => $value_category_value) 
+                                    {
+                                      if ($_GET['search']['category'] == $key_category_key) {
+                                        echo $value_category_value;
+                                      }
+                                      
+                                    }
+                                  }
+                                  else{
+                                    echo e_lang('Category');
+                                  }
+                               ?>
+                             </button>
+                             <div class="dropdown-menu division" aria-labelledby="dropdownMenuLink">
+                                <?php 
+
+                                   foreach (Categories() as $key => $category) 
+                                   {
+                                     ?> 
+
+                                           <a class="dropdown-item" href="<?php echo findInSearchString(current_urlz(),'search[category]='.$key); ?>"><?php echo $category; ?></a>
+                                       
+                                    <?php
+                                   }
+                                   
+                                   
+                                   
+                                   ?>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="type">
+                          <div class="dropdown btn-group">
+                             <button class="btn btn-light dropdown-toggle type_btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <?php 
+                                if (!empty($_GET['search']['type'])) 
+                                {
+                                    if ($_GET['search']['type'] == 'card') {
+                                      echo e_lang('Card');
+                                    }
+                                    else{
+                                      echo e_lang('Job');
+                                    }
+                                }
+                                else{
+                                  echo e_lang('Type');
+                                }
+                               ?>
+                             </button>
+                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="<?php echo findInSearchString(current_urlz(),'search[type]=card'); ?>"><?php echo e_lang('card'); ?></a>
+                                <a class="dropdown-item" href="<?php echo findInSearchString(current_urlz(),'search[type]=job'); ?>"><?php echo e_lang('Jobs'); ?></a>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="search">
+
+                          <input type="hidden" name="country" value="<?php echo !empty($_GET['search']['country'])?$_GET['search']['country']:''; ?>">
+                          <input type="hidden" name="category" value="<?php echo !empty($_GET['search']['category'])?$_GET['search']['category']:''; ?>">
+                          <input type="hidden" name="city" value="<?php echo !empty($_GET['search']['city'])?$_GET['search']['city']:''; ?>">
+                          <input type="hidden" name="type" value="<?php echo !empty($_GET['search']['type'])?$_GET['search']['type']:''; ?>">
+
+
+
+
+                          <input type="search" class="search_input" name="search[item]" value="<?php echo !empty($_GET['search']['item'])?$_GET['search']['item']:'' ?>"class="form-control" placeholder="<?php echo e_lang('What are you searching for') ?>" /> &nbsp;&nbsp;&nbsp;&nbsp;
+                          <button type="submit" class="btn btn-warning search_icon"><i><img src="<?php echo base_url('public/assets/images/search.svg') ?>" /></i></button>
+                       </div>
+                    </div>
+                    <!--big medium screen only -->
+                    <div class="sm">
+                       <div class="small_screen">
+                          <div class="search_in_sm">
+                             <input type="search" class="search_input" placeholder="<?php echo e_lang('What are you searching for'); ?>" />
+                          </div>
+                          <div class="type_s">
+                             <div class="dropdown btn-group">
+                                <button class="btn btn-light dropdown-toggle type_btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <?php echo e_lang('Type'); ?>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                   <a class="dropdown-item" href="#"><?php echo e_lang('Cards'); ?></a>
+                                   <a class="dropdown-item" href="#"><?php echo e_lang('Jobs'); ?></a>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="search_icon">
+                             <a type="button" class="btn btn-warning"><i><img src="<?php echo base_url('public/assets/images/search.svg') ?>" /></i></a>
+                          </div>
+                          <!--small screen -->
+                       </div>
+                       <div class=" text-center more_filter_btn col-12">
+                          <span class="more_span" style="cursor: pointer;"><?php echo e_lang('Advanced search'); ?> <i class="aro fas fa-angle-double-up"></i></span>
+                       </div>
+                       <!-- container hold buttons appear on small screen-->
+                       <div class="slide_down">
+                          <div class="country_s">
+                             <div class="dropdown btn-group">
+                                <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-map-marker-alt"></i> الدولة 
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                   <a class="dropdown-item" href="#">مصر</a>
+                                   <a class="dropdown-item" href="#">الاردن</a>
+                                   <a class="dropdown-item" href="#">عمان</a>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="city_s">
+                             <div class="dropdown btn-group">
+                                <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-building"></i> المدينة
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                   <a class="dropdown-item" href="#">القاهرة</a>
+                                   <a class="dropdown-item" href="#">الاسكندرية</a>
+                                   <a class="dropdown-item" href="#">المنصورة</a>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="section_s">
+                             <div class="dropdown btn-group">
+                                <button class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-sliders-h"></i> الاقسام
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                   <a class="dropdown-item" href="#">أطباء</a>
+                                   <a class="dropdown-item" href="#">مهندسين</a>
+                                   <a class="dropdown-item" href="#">محامين</a>
+                                   <a class="dropdown-item" href="#">تجار</a>
+                                   <a class="dropdown-item" href="#">مدرسين</a>
+                                   <a class="dropdown-item" href="#">صيادلة</a>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <!-- end container hold buttons appear on small screen-->
+                    </div>
+                 </div>
+                 <!-- filter container-->
+              </div>
+              <!-- row -->
+           </div>
+           <!-- container fluid -->
+        </div>
+      </form>
+
       <!-- filter search -->
       <!-- header slider -->
       <div class="header_slider">

@@ -23,7 +23,7 @@
 
                                     <div class="social_icons">
                                         <ul class="list-unstyled">
-<?php  include __DIR__.'/social.php'; ?>
+                                            <?php  include __DIR__.'/social.php'; ?>
                                         </ul>
                                     </div>
 

@@ -182,3 +182,29 @@ if (!function_exists('split_sentence'))
   
   }
 }
+
+
+if (!function_exists('findInSearchString')) {
+  function findInSearchString($url,$get)
+  {
+  
+    $string = parse_url($url, PHP_URL_QUERY);
+
+
+    if ($string) {
+        return $url .= '&'.$get;
+    } else {
+        return $url .= '?'.$get;
+    }
+
+  }
+}
+
+
+function current_urlz()
+{
+    $CI =& get_instance();
+
+    $url = $CI->config->site_url($CI->uri->uri_string());
+    return $_SERVER['QUERY_STRING'] ? $url.'?'.$_SERVER['QUERY_STRING'] : $url;
+}

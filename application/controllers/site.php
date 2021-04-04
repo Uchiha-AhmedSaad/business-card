@@ -614,8 +614,9 @@ class Site extends CI_Controller
 	public function docCard()
 	{
 		$data = [];
+		$data['b_cards'] = $this->db->where('DATE(expire_date) > "'.date('Y-m-d H:i:s').'"')->get('b_cards')->result();
 	    $this->load->view('layout/header',$data);
-	    $this->load->view('contact_us',$data);
+	    $this->load->view('doc_card',$data);
 	    $this->load->view('layout/footer');
 	}
 	public function docJob()

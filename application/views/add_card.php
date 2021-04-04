@@ -34,7 +34,7 @@
                        </div>
                        <div class="logo_container ">
                           <div class="logo_img text-center">
-                             <img src="<?php echo base_url('public/assets/images/logo.png'); ?>">
+                             <img id="images" style="border-radius: 20px; " src="<?php echo base_url('public/assets/images/logo.png'); ?>">
                           </div>
                        </div>
                     </div>
@@ -230,90 +230,14 @@
                     <div class="col-sm-12">
                        <div class="opt_btn btn-group">
                           <div class="add_card_btn">
-                             <a href="<?php echo base_url('site/chooseCard'); ?>" class="btn btn-outline-info"><i class="fas fa-angle-double-right"></i> <?php echo e_lang('Previous'); ?></a>
-                          </div>
-                          <div class="add_card_btn">
-                             <div class="dropdown show">
-                             </div>
-                          </div>
-                          <div class="add_card_btn">
-                             <button type="submit" class="btn btn-info"> <?php echo e_lang('Add Card'); ?></button>
+                            <center> <button type="submit" class="btn btn-info"> <?php echo e_lang('Add Card'); ?></button></center>
                           </div>
                        </div>
                     </div>
                  </div>
               </div>
            </div>
-           <!-- appears on medium and small screens only -->
-           <div class="s_sc d-lg-none d-block">
-              <div class="hold_card row">
-                 <div class="col-6">
-                    <div class="card_img">
-                       <img src="<?php echo base_url('public/assets/images/card-1.png'); ?>" />
-                    </div>
-                 </div>
-                 <div class="col-6">
-                    <div class="card_data">
-                       <h5><?php echo e_lang('choose or upload logo'); ?></h5>
-                    </div>
-                    <div class="modal_cont">
-                       <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modal_div">
-                       <?php echo e_lang('choose logo'); ?>
-                       </button>
-                       <!-- Modal -->
-                       <div class="modal fade" id="modal_div" tabindex="-1" aria-labelledby="modal_lable" aria-hidden="true">
-                          <div class="modal-dialog">
-                             <div class="modal-content subscribe_modal">
-                                <div class="modal-header">
-                                   <h5 class="modal-title" id="modal_lable"><?php echo e_lang('Choose or upload logo'); ?></h5>
-                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                   <span aria-hidden="true">&times;</span>
-                                   </button>
-                                </div>
-                                <div class="modal-body">
-                                   <div class="logo_container row">
-                                      <div class="logo_icon">
-                                         <img src="<?php echo base_url('public/assets/images/car-1.png'); ?>" class="selected" />
-                                      </div>
-                                      <div class="logo_icon">
-                                         <img src="<?php echo base_url('public/assets/images/car-2.png'); ?>" />
-                                      </div>
-                                      <div class="logo_icon">
-                                         <img src="<?php echo base_url('public/assets/images/car-3.png'); ?>" />
-                                      </div>
-                                      <div class="logo_icon">
-                                         <img src="<?php echo base_url('public/assets/images/car-4.png'); ?>" />
-                                      </div>
-                                      <div class="logo_icon">
-                                         <img src="<?php echo base_url('public/assets/images/car-2.png'); ?>" />
-                                      </div>
-                                      <div class="logo_icon">
-                                         <img src="<?php echo base_url('public/assets/images/car-1.png'); ?>" />
-                                      </div>
-                                   </div>
-                                </div>
-                                <div class="modal-footer">
-                                   <button type="button" class="btn btn-info"  data-dismiss="modal">تم</button>
-                                </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                    <div class="cd_size">
-                       <h6><?php echo e_lang('upload image 200*200'); ?> </h6>
-                    </div>
-                    <div class="card_logo ">
-                       <div class="logo_img text-center">
-                          <img src="<?php echo base_url('public/assets/images/logo.png'); ?>">
-                          <div class="close_ic">
-                             <img src="<?php echo base_url('public/assets/images/close.svg'); ?>" />
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
-           <!-- s_sc -->
+
         </form>
       </div>
       <!-- row -->

@@ -7,7 +7,7 @@
                 </div>
                 <form method="GET" action="<?php echo base_url('site/addCard') ?>">
                     <input type="hidden" id="card_number" name="card_number" value="">
-                    <div class="row slick-carousel type-columns-carousel cards">
+                    <div class="row slick-carousel type-columns-carousel type-one-carousel cards">
                         <?php 
 
                             $dir = __DIR__.'/../../uploads/cards/imgs';
